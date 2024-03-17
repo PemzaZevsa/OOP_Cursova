@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
+      "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
       "projectName": "CourseScreen",
-      "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
+      "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
       "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\obj\\",
+      "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

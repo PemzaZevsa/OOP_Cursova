@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj": {}
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
         "projectName": "CourseScreen",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
         "projectName": "CourseworkOOP",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,17 +99,17 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj": {
-                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj"
+              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj": {
+                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj"
               },
-              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj": {
-                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj"
+              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Header.csproj": {
+                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Header.csproj"
               },
-              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
-                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj"
+              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
+                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj"
               },
-              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
-                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj"
+              "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
+                "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Header.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Header.csproj",
         "projectName": "Header",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Header.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -218,14 +218,14 @@
         }
       }
     },
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
         "projectName": "MainScreen",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -285,14 +285,14 @@
         }
       }
     },
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
         "projectName": "UserProfileScreen",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

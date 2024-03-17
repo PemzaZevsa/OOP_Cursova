@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {}
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
         "projectName": "UserProfileScreen",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

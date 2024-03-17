@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CourseScreen
-build_property.ProjectDir = C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\CourseScreen\
+build_property.ProjectDir = C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

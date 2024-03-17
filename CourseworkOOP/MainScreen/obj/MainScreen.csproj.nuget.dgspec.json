@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {}
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
+    "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
+        "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
         "projectName": "MainScreen",
-        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
+        "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj",
         "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\obj\\",
+        "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
