@@ -1,0 +1,14 @@
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.deps.json
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.csproj.GenerateResource.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.AssemblyInfoInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.AssemblyInfo.cs
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.csproj.CoreCompileInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\refint\Header.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\ref\Header.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.Properties.Resources.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-windows\HeaderSpace.Header.resources

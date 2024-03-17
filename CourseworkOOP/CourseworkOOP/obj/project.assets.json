@@ -1,0 +1,173 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "CourseScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CourseScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CourseScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Header/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Header.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Header.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "MainScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MainScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MainScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "UserProfileScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UserProfileScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserProfileScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "CourseScreen/1.0.0": {
+      "type": "project",
+      "path": "../CourseScreen/CourseScreen.csproj",
+      "msbuildProject": "../CourseScreen/CourseScreen.csproj"
+    },
+    "Header/1.0.0": {
+      "type": "project",
+      "path": "../Header/Header.csproj",
+      "msbuildProject": "../Header/Header.csproj"
+    },
+    "MainScreen/1.0.0": {
+      "type": "project",
+      "path": "../MainScreen/MainScreen.csproj",
+      "msbuildProject": "../MainScreen/MainScreen.csproj"
+    },
+    "UserProfileScreen/1.0.0": {
+      "type": "project",
+      "path": "../UserProfileScreen/UserProfileScreen.csproj",
+      "msbuildProject": "../UserProfileScreen/UserProfileScreen.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "CourseScreen >= 1.0.0",
+      "Header >= 1.0.0",
+      "MainScreen >= 1.0.0",
+      "UserProfileScreen >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Pemza\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
+      "projectName": "CourseworkOOP",
+      "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP.csproj",
+      "packagesPath": "C:\\Users\\Pemza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseworkOOP\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Pemza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj": {
+              "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\CourseScreen\\CourseScreen.csproj"
+            },
+            "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj": {
+              "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\Header\\Header.csproj"
+            },
+            "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
+              "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\MainScreen\\MainScreen.csproj"
+            },
+            "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj": {
+              "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\CourseworkOOP\\UserProfileScreen\\UserProfileScreen.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.deps.json
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.MainScreen.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.GenerateResource.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.AssemblyInfoInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.AssemblyInfo.cs
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.CoreCompileInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\refint\MainScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\ref\MainScreen.dll

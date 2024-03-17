@@ -1,0 +1,13 @@
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.deps.json
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.csproj.GenerateResource.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.AssemblyInfoInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.AssemblyInfo.cs
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.csproj.CoreCompileInputs.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\refint\UserProfileScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\ref\UserProfileScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.UserProfileScreen.resources
