@@ -1,9 +1,11 @@
 using HeaderSpace;
+using CourseworkOOP.Entities;
 
 namespace CourseworkOOP
 {
     public partial class Form1 : Form
     {
+        public CoursesApp coursesApp;
         public enum splitContainerState
         {
             MainState = 0,
