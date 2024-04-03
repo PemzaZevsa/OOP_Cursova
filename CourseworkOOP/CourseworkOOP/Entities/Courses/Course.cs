@@ -38,5 +38,13 @@ namespace CourseworkOOP.Entities.Courses
             this.tegs = tegs;
             this.modules = modules;
         }
+        public void StartNModule()
+        {
+            throw new NotImplementedException();
+        }
+        public void CompleteCourse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -37,5 +37,9 @@ namespace CourseworkOOP.Entities.Courses
         {
             throw new NotImplementedException();
         }
+        public void CompleteModule()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

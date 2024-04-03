@@ -6,7 +6,6 @@
 
         public event ButtonClick toMainScreen;
         public event ButtonClick search;
-        public event ButtonClick changeLanguage;
         public event ButtonClick notifications;
         public event ButtonClick toUserProfile;
         public Header()
@@ -22,11 +21,6 @@
         private void ToSearch(object sender, EventArgs e)
         {
             search?.Invoke();
-        }
-
-        private void ChangeLanguage(object sender, EventArgs e)
-        {
-            changeLanguage?.Invoke();
         }
 
         private void Notifications(object sender, EventArgs e)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Header));
-            languageButton = new Button();
             userProfileButton = new Button();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
@@ -39,17 +38,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // languageButton
-            // 
-            languageButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            languageButton.Image = (Image)resources.GetObject("languageButton.Image");
-            languageButton.Location = new Point(753, 5);
-            languageButton.Name = "languageButton";
-            languageButton.Size = new Size(90, 90);
-            languageButton.TabIndex = 1;
-            languageButton.UseVisualStyleBackColor = true;
-            languageButton.Click += ChangeLanguage;
             // 
             // userProfileButton
             // 
@@ -128,7 +116,6 @@
             Controls.Add(notificationButton);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
-            Controls.Add(languageButton);
             Name = "Header";
             Size = new Size(1183, 100);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -138,7 +125,6 @@
         }
 
         #endregion
-        private Button languageButton;
         private Button userProfileButton;
         private PictureBox pictureBox1;
         private Panel panel1;
