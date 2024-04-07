@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 
 namespace CourseworkOOP.Entities.Users
 {
-    public class Admin : User, ITeacheble
+    public class Admin : User, ITeacheble, IControlable
     {
+        public Admin()
+        {
+            UserType = 0;
+        }
+        public Admin(string name, string surname) 
+        {
+            Id = counter++;
+            Name = name;
+            Surname = surname;
+            UserType = 0;
+        }
         public void CreateCourse()
         {
             throw new NotImplementedException();
@@ -19,19 +30,19 @@ namespace CourseworkOOP.Entities.Users
             throw new NotImplementedException();
         }
 
-        public void CreateeUser()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteUser()
-        {
-            throw new NotImplementedException();
-        }
-
         public void WatchStatistics()
         {
 
+        }
+
+        public bool CreateUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteUser()
+        {
+            throw new NotImplementedException();
         }
     }
 }

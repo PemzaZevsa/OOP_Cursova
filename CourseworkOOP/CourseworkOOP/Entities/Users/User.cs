@@ -22,16 +22,18 @@ namespace CourseworkOOP.Entities.Users
 
         public static uint counter;
         public event Action<String> UpdatePassword;
+        public short UserType { get; set; }
 
         public User() 
         {
-            Id = counter++;
+            Notifications = new List<string>();
         }
         public User(string name, string surname)
         {
             Id = counter++;
             Name = name;
             Surname = surname;
+            Notifications = new List<string>();
         }
         public User(uint id, string name, string surname, string login, string password, List<string> notifications)
         {
@@ -45,7 +47,10 @@ namespace CourseworkOOP.Entities.Users
 
         public int CompareTo(User? other)
         {
-            throw new NotImplementedException();
+            if (other == null)
+                return 1;
+
+            return string.Compare(Name, other.Name);
         }
     }
 }

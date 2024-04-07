@@ -1,5 +1,10 @@
 using HeaderSpace;
 using CourseworkOOP.Entities;
+using CourseworkOOP.Entities.Courses;
+using System.Diagnostics;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Diagnostics.Metrics;
+using CourseworkOOP.Entities.Users;
 
 namespace CourseworkOOP
 {
@@ -18,6 +23,65 @@ namespace CourseworkOOP
             header1.toMainScreen += ToMainScreen;
             header1.toUserProfile += ToUserProfileScreen;
             splitState =  splitContainerState.MainState;
+
+            coursesApp = new CoursesApp();
+
+            Course testCourse = new Course("TestCourse", "Testing");
+            //testCourse.Tegs.Add(Teg.Development); 
+            //testCourse.Tegs.Add(Teg.DataScience);
+
+            //Module module1 = new Module("Module1", "testing");
+            //Lesson lesson1 = new Lesson("Lesson1","desc",@"Data\Courses\TestCourse\Module1");
+            //lesson1.SaveMaterials("The topic about something.1 There should be a lot of text.");
+            //module1.Lessons.Add(lesson1);
+
+            //Module module2 = new Module("Module2", "testing");
+            //Lesson lesson2 = new Lesson("Lesson1", "desc", @"Data\Courses\TestCourse\Module2");
+            //lesson2.SaveMaterials("The topic about something.2 There should be a lot of text.");
+            //module2.Lessons.Add(lesson2);
+
+            //testCourse.Modules.Add(module1); 
+            //testCourse.Modules.Add(module2);
+
+            //coursesApp.Courses.Add(testCourse);
+
+
+            //coursesApp.LoadingError += 
+            //    {
+            //    ShowDialog(ex)
+            //    };
+
+            coursesApp.LoadData();
+
+            foreach (var item in coursesApp.Courses)
+            {
+                Debug.WriteLine(item.Name);
+                item.Load();
+                foreach (var item2 in item.Tegs)
+                {
+                    Debug.WriteLine(item2);
+                }
+                foreach (var item2 in item.Modules)
+                {
+                    Debug.WriteLine(item2.Name);
+                }
+            }
+
+            coursesApp.Users.Add(new Admin("administrator", "admin"));
+            coursesApp.Users.Add(new Teacher("Tim", "Kenedy"));
+            Authorised student = new Authorised("Steve", "Smith") ;
+            student.Courses.Add(testCourse);
+            coursesApp.Users.Add(student); 
+
+            Debug.WriteLine(Course.counter);
+            Debug.WriteLine(Module.counter);
+            Debug.WriteLine(Lesson.counter);
+            Debug.WriteLine(Teacher.counter);
+            Debug.WriteLine(Admin.counter);
+            Debug.WriteLine(Authorised.counter);
+            Debug.WriteLine(UnAuthorised.counter);
+
+            coursesApp.SaveData();            
         }
 
         public void ToMainScreen()
