@@ -16,8 +16,46 @@ namespace CourseworkOOP.Entities.Courses
         public string Description { get; set; }
         public string ModulePath { get; set; }
         public uint AuthorId { get; set; }
-        public double Rating { get; set; }
-        public decimal Cost { get; set; }
+        private double rating;
+        public double Rating 
+        { 
+            get => rating; 
+            set 
+            {
+                if (value > 10 || value < 0)
+                {
+                    throw new ArgumentException("Wrong rating value");
+                }
+
+                if (rating == 0)
+                {
+                    rating = value;
+                    RatingsAmount++;
+                }
+                else
+                {
+                    rating = ((rating * RatingsAmount) + value)/(RatingsAmount + 1);
+                    RatingsAmount++;
+                }
+            } 
+        }
+        public int RatingsAmount {  get; set; }
+        private decimal cost;
+        public decimal Cost 
+        {
+            get => cost;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Wrong cost value");
+                }
+                else
+                {
+                    cost = value;
+                }
+            }
+        }
         private List<Teg> tegs;
 
         public List<Teg> Tegs { get => tegs; set => tegs = value; }
@@ -36,6 +74,8 @@ namespace CourseworkOOP.Entities.Courses
         {
             tegs = new List<Teg>();
             modules = new List<Module>();
+            RatingsAmount = 0;
+            rating = 0;
         }
         public Course(string name, string description)
         {
@@ -44,10 +84,12 @@ namespace CourseworkOOP.Entities.Courses
             Description = description;
             tegs = new List<Teg>();
             modules = new List<Module>();
+            RatingsAmount = 0;
+            rating = 0;
 
             ModulePath = @$"Data\Courses\{Id}";
         }
-        public Course(string name, string description, string modulePath, uint author, double rating, decimal cost, List<Teg> tegs)
+        public Course(string name, string description, string modulePath, uint author, double rating, int ratingsAmount, decimal cost, List<Teg> tegs)
         {
             Id = counter++;
             Name = name;
@@ -57,9 +99,10 @@ namespace CourseworkOOP.Entities.Courses
             Cost = cost;
             this.tegs = tegs;
             this.modules = new List<Module>();
-            Rating = rating;
+            this.rating = rating;
+            RatingsAmount = ratingsAmount;
         }
-        public Course(uint id, string name, string description, string modulePath, uint author, double rating, decimal cost, List<Teg> tegs)
+        public Course(uint id, string name, string description, string modulePath, uint author, double rating, int ratingsAmount, decimal cost, List<Teg> tegs)
         {
             Id = id;
             Name = name;
@@ -70,6 +113,7 @@ namespace CourseworkOOP.Entities.Courses
             this.tegs = tegs;
             this.modules = new List<Module>();
             Rating = rating;
+            RatingsAmount = ratingsAmount;
         }
         public bool Save()
         {
