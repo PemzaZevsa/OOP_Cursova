@@ -15,14 +15,12 @@ namespace CourseworkOOP.Entities.Courses
         public string Name { get; set; }
         public string Description { get; set; }
         public string ModulePath { get; set; }
-        public ITeacheble Author { get; set; }
-        //public string AuthorId { get; set; } = Guid.NewGuid().ToString();
+        public uint AuthorId { get; set; }
         public double Rating { get; set; }
         public decimal Cost { get; set; }
-        [JsonConverter(typeof(Teg))]
         private List<Teg> tegs;
 
-        public List<Teg> Tegs { get => tegs; }
+        public List<Teg> Tegs { get => tegs; set => tegs = value; }
 
         private List<Module> modules;
         [JsonIgnore]
@@ -49,21 +47,29 @@ namespace CourseworkOOP.Entities.Courses
 
             ModulePath = @$"Data\Courses\{Id}";
         }
-        public Course(uint id, string name, string description, string modulePath, ITeacheble author, double rating, decimal cost, List<Teg> tegs)
+        public Course(string name, string description, string modulePath, uint author, double rating, decimal cost, List<Teg> tegs)
         {
-            Id = id;
+            Id = counter++;
             Name = name;
             Description = description;
-            Author = author;
+            AuthorId = author;
             ModulePath = modulePath;
             Cost = cost;
             this.tegs = tegs;
             this.modules = new List<Module>();
             Rating = rating;
         }
-        public void StartNModule()
+        public Course(uint id, string name, string description, string modulePath, uint author, double rating, decimal cost, List<Teg> tegs)
         {
-            throw new NotImplementedException();
+            Id = id;
+            Name = name;
+            Description = description;
+            AuthorId = author;
+            ModulePath = modulePath;
+            Cost = cost;
+            this.tegs = tegs;
+            this.modules = new List<Module>();
+            Rating = rating;
         }
         public bool Save()
         {

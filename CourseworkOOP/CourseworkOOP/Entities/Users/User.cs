@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,31 +19,26 @@ namespace CourseworkOOP.Entities.Users
         public string Name { get; set; }
         private string surname;
         public string Surname { get; set; }
-        public List<string> Notifications;
-
         public static uint counter;
         public event Action<String> UpdatePassword;
         public short UserType { get; set; }
 
         public User() 
         {
-            Notifications = new List<string>();
         }
         public User(string name, string surname)
         {
             Id = counter++;
             Name = name;
             Surname = surname;
-            Notifications = new List<string>();
         }
-        public User(uint id, string name, string surname, string login, string password, List<string> notifications)
+        public User(uint id, string name, string surname, string login, string password)
         {
             Id = id;
             Name = name;
             Surname = surname;
             Login = login;
             Password = password;
-            Notifications = notifications;
         }
 
         public int CompareTo(User? other)
@@ -52,5 +48,6 @@ namespace CourseworkOOP.Entities.Users
 
             return string.Compare(Name, other.Name);
         }
+
     }
 }

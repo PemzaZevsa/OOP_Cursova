@@ -10,15 +10,18 @@ using System.Diagnostics;
 using static System.Windows.Forms.LinkLabel;
 using System.Security.Principal;
 using System.Text.Json;
+using CourseworkOOP.Iterfaces;
 
 
 namespace CourseworkOOP.Entities
 {
-    public class CoursesApp
+    public class CoursesApp : ISaveble
     {
-        public delegate void Action<Exception>(Exception ex);
-        public event Action<Exception>? LoadingError;
-        public event Action<Exception>? SavingError;
+        public event Action LoadError;
+        public event Action SaveError;
+        public event Action LoadComplete;
+        public event Action SaveComplete;
+
         public User CurrentUser { get; set; }
         private List<User> users;
         public List<User> Users { get { return users; } }
@@ -30,14 +33,16 @@ namespace CourseworkOOP.Entities
             users = new List<User>();
             courses = new List<Course>();
         }
-        public CoursesApp(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
+        //public CoursesApp(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
+        //{
+        //    users = new List<User>();
+        //    courses = new List<Course>();
+        //    Load();
+        //}
+        public bool Save(string path = @"Data")
         {
-            users = new List<User>();
-            courses = new List<Course>();
-            LoadData(coursesPath, usersPath);
-        }
-        public bool SaveData(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
-        {
+            string coursesPath = path + @"\Courses\CoursesData.txt";
+            string usersPath = path + @"\Users\UsersData.txt";
             try
             {
                 SaveCourses();
@@ -46,10 +51,11 @@ namespace CourseworkOOP.Entities
             }
             catch (Exception e)
             {
-                LoadingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
 
+            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveUsers(string usersPath = @"Data\Users\UsersData.txt")
@@ -67,8 +73,8 @@ namespace CourseworkOOP.Entities
                         case Teacher:
                             jsonstring += JsonSerializer.Serialize<Teacher>((Teacher)item);
                             break;
-                        case Authorised:
-                            jsonstring += JsonSerializer.Serialize<Authorised>((Authorised)item);
+                        case Student:
+                            jsonstring += JsonSerializer.Serialize<Student>((Student)item);
                             break;
                     }
                     jsonstring += "\n";
@@ -77,15 +83,16 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
 
+            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveCourses(string coursesPath = @"Data\Courses\CoursesData.txt")
@@ -103,15 +110,16 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
 
+            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveSettings(string dataPath = @"Data\Config\Settings.txt")
@@ -128,19 +136,22 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SavingError?.Invoke(e);
+                SaveError?.Invoke();
                 return false;
             }
 
+            SaveComplete?.Invoke() ;
             return true;
         }
-        public bool LoadData(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
+        public bool Load(string path = @"Data")
         {
+            string coursesPath = path + @"\Courses\CoursesData.txt";
+            string usersPath = path + @"\Users\UsersData.txt";
             try
             {
                 LoadCourses();
@@ -149,10 +160,11 @@ namespace CourseworkOOP.Entities
             }
             catch (Exception e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
 
+            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadCourses(string coursesPath = @"Data\Courses\CoursesData.txt")
@@ -169,14 +181,16 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
+
+            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadUsers(string usersPath = @"Data\Users\UsersData.txt")
@@ -197,7 +211,7 @@ namespace CourseworkOOP.Entities
                             user = JsonSerializer.Deserialize<Teacher>(item);
                             break;
                         case '2':
-                            user = JsonSerializer.Deserialize<Authorised>(item);
+                            user = JsonSerializer.Deserialize<Student>(item);
                             break;
                     }
 
@@ -206,14 +220,16 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
+
+            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadSettings(string dataPath = @"Data\Config\Settings.txt")
@@ -231,30 +247,36 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadingError?.Invoke(e);
+                LoadError?.Invoke();
                 return false;
             }
+
+            LoadComplete?.Invoke();
             return true;
         }
         
         public List<Course> SearchCourses(string stringToSearch)
         {
-            return courses.FindAll(x => x.Name.Contains(stringToSearch));
+            return courses.FindAll(x => x.Name.ToUpperInvariant().Contains(stringToSearch.ToUpperInvariant()));
         }
         public List<Course> SearchCourses(params Teg[] tegs)
         {
             List<Course> coursesWithTags = new List<Course>();
+
             foreach (var course in courses)
             {
-                if (tegs.All(teg => course.Tegs.Contains(teg)))
+                for (int i = 0; i < tegs.Length; i++)
                 {
-                    coursesWithTags.Add(course);
-                }
+                    if (course.Tegs.Contains(tegs[i]))
+                    {
+                        coursesWithTags.Add(course);
+                    }
+                }                
             }
 
             return coursesWithTags;

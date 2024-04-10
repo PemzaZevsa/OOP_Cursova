@@ -27,6 +27,7 @@ namespace CourseworkOOP
             coursesApp = new CoursesApp();
 
             Course testCourse = new Course("TestCourse", "Testing");
+
             //testCourse.Tegs.Add(Teg.Development); 
             //testCourse.Tegs.Add(Teg.DataScience);
 
@@ -51,7 +52,7 @@ namespace CourseworkOOP
             //    ShowDialog(ex)
             //    };
 
-            coursesApp.LoadData();
+            coursesApp.Load();
 
             foreach (var item in coursesApp.Courses)
             {
@@ -67,9 +68,8 @@ namespace CourseworkOOP
                 }
             }
 
-            coursesApp.Users.Add(new Admin("administrator", "admin"));
             coursesApp.Users.Add(new Teacher("Tim", "Kenedy"));
-            Authorised student = new Authorised("Steve", "Smith") ;
+            Student student = new Student("Steve", "Smith") ;
             student.Courses.Add(testCourse);
             coursesApp.Users.Add(student); 
 
@@ -78,10 +78,10 @@ namespace CourseworkOOP
             Debug.WriteLine(Lesson.counter);
             Debug.WriteLine(Teacher.counter);
             Debug.WriteLine(Admin.counter);
-            Debug.WriteLine(Authorised.counter);
+            Debug.WriteLine(Student.counter);
             Debug.WriteLine(UnAuthorised.counter);
 
-            coursesApp.SaveData();            
+            coursesApp.Save();            
         }
 
         public void ToMainScreen()

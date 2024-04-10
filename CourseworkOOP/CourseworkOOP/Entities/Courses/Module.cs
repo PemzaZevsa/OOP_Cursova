@@ -16,9 +16,6 @@ namespace CourseworkOOP.Entities.Courses
         public string Name { get; set; }
         public string Description { get; set; }
         public string LessonsPath { get; set; }
-        //public string Author { get; set; }
-        //public bool IsCompleted { get; set; }
-        //public int LessonsComplete { get; set; }
         private List<Lesson> lessons;
         [JsonIgnore]
         public List<Lesson> Lessons { get => lessons; }
@@ -40,8 +37,7 @@ namespace CourseworkOOP.Entities.Courses
             Description = description;
             lessons = new List<Lesson>();
         }
-
-        public Module(uint id, string name, string description,/* bool isCompleted, int lessonsComplete,*/ List<Lesson> lessons)
+        public Module(uint id, string name, string description, List<Lesson> lessons)
         {
             Id = id;
             Name = name;
@@ -49,14 +45,6 @@ namespace CourseworkOOP.Entities.Courses
             //IsCompleted = isCompleted;
             //LessonsComplete = lessonsComplete;
             this.lessons = lessons;
-        }
-        public Lesson StartNLesson(int lesson)
-        {
-            throw new NotImplementedException();
-        }
-        public void CompleteModule()
-        {
-            throw new NotImplementedException();
         }
         public bool Save(string path)
         {

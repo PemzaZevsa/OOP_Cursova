@@ -2,8 +2,8 @@
 {
     public interface IPayble
     {
-        event Action paymentError;
-        event Action paymentComplete;
+        static event Action paymentError;
+        static event Action paymentComplete;
         decimal Payment();
     }
 }

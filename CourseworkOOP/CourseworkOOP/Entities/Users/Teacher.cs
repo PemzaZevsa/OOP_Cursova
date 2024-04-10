@@ -1,4 +1,5 @@
-﻿using CourseworkOOP.Iterfaces;
+﻿using CourseworkOOP.Entities.Courses;
+using CourseworkOOP.Iterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +22,30 @@ namespace CourseworkOOP.Entities.Users
             Surname = surname;
             UserType = 1;
         }
-        public void CreateCourse()
+        public bool AddCourse(List<Course> courses, Course newCourse)
         {
-            throw new NotImplementedException();
+            if (courses is null) return false;
+            if (newCourse is null) return false;
+
+            newCourse.AuthorId = Id;
+            courses.Add(newCourse);
+            return true;
         }
 
-        public void DeleteCourse()
+        public bool DeleteCourse(List<Course> courses, uint courseId)
         {
-            throw new NotImplementedException();
+            if (courses is null) return false;
+            Course? cToDelete = courses.Find(x => x.Id == courseId);
+            if (cToDelete is null) return false;
+            if (this.Id != cToDelete.AuthorId) return false;
+
+            courses.RemoveAll(x => x.Id == courseId);
+            return true;
+        }
+
+        public Course? GetCourse(List<Course> courses, uint courseId)
+        {
+            return courses.Find(x => x.Id == courseId).AuthorId == Id ? courses.Find(x => x.Id == courseId) : null;
         }
     }
 }

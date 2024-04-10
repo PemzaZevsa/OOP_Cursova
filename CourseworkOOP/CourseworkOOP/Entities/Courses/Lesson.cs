@@ -13,39 +13,28 @@ namespace CourseworkOOP.Entities.Courses
         public uint Id { get; set; }
         public string Name { get; set; }
         public string Materials { get; set; }
-        //public bool IsCompleted { get; set; }
         public static uint counter;
 
         public event Action LoadError;
         public event Action SaveError;
         public event Action LoadComplete;
         public event Action SaveComplete;
+        public event Action<string> LoadLessonMaterials;
 
         public Lesson()
         {
         }
-        public Lesson(string name, string description, string materials)
+        public Lesson(string name, string materials)
         {
             Id = counter++;
             Name = name;
             Materials = materials;
         }
-
-        public Lesson(uint id, string name, string materials, bool isCompleted)
+        public Lesson(uint id, string name, string materials)
         {
             Id = id;
             Name = name;
             Materials = materials;
-            //IsCompleted = isCompleted; 
-        }
-        public void DoLesson()
-        {
-            throw new NotImplementedException();    
-        }
-
-        public void CompleteLesson()
-        {
-            throw new NotImplementedException();
         }
         public bool Save(string text)
         {
@@ -70,10 +59,31 @@ namespace CourseworkOOP.Entities.Courses
             SaveComplete?.Invoke();
             return true;
         }
-        public bool Load(string path )
+        public bool Load(string text)
         {
-            if (path is null) path = Materials;
-            throw new NotImplementedException();
+            string path = Materials;
+
+            path += @$"\{Id}\Materials.txt";
+
+            try
+            {
+                string lines = File.ReadAllText(path);
+                
+                LoadLessonMaterials?.Invoke(lines);
+            }
+            catch (IOException e)
+            {
+                LoadError?.Invoke();
+                return false;
+            }
+            catch (Exception e)
+            {
+                LoadError?.Invoke();
+                return false;
+            }
+
+            LoadComplete?.Invoke();
+            return true;
         }
     }
 }

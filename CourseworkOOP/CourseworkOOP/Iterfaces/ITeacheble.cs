@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CourseworkOOP.Entities;
+using CourseworkOOP.Entities.Courses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,8 @@ namespace CourseworkOOP.Iterfaces
 {
     public interface ITeacheble
     {
-        void CreateCourse();
-        void DeleteCourse();
+        bool AddCourse(List<Course> courses, Course newCourse);
+        Course? GetCourse(List<Course> courses, uint courseId);
+        bool DeleteCourse(List<Course> courses, uint courseId);
     }
 }
