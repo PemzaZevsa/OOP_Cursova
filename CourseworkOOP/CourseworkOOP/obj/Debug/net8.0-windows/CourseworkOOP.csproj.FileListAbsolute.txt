@@ -53,3 +53,5 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOO
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\obj\Debug\net8.0-windows\CourseworkOOP.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\obj\Debug\net8.0-windows\CourseworkOOP.genruntimeconfig.cache
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\obj\Debug\net8.0-windows\ref\CourseworkOOP.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\RegistrationScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\RegistrationScreen.pdb

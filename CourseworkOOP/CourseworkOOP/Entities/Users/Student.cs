@@ -34,6 +34,18 @@ namespace CourseworkOOP.Entities.Users
             courses = new List<Course>();
             CoursesIds = new List<uint>();
         }
+        public Student(string name, string surname, string login, string password, byte age)
+        {
+            Id = counter++;
+            Name = name;
+            Surname = surname;
+            Login = login;
+            Password = password;
+            Age = age;
+            UserType = 2;
+            courses = new List<Course>();
+            CoursesIds = new List<uint>();
+        }
         public Student(string name, string surname, List<Course> courses):base (name, surname)
         {
             this.courses = courses;

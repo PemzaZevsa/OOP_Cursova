@@ -67,5 +67,20 @@ namespace Tests
             Assert.IsNotNull(testCourse);
             Assert.AreEqual(testCourse.Cost, 199.99M);
         }
+        [TestMethod]
+        public void SetCourseAvgAge()
+        {
+            throw new NotImplementedException();
+        }
+        [TestMethod]
+        public void ChangeCourseAvgAge()
+        {
+            throw new NotImplementedException();
+        }
+        [TestMethod]
+        public void SetCourseAvgAgeWithWrongValue()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

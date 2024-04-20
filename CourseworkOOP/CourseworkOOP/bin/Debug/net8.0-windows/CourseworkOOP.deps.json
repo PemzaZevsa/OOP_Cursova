@@ -11,6 +11,7 @@
           "CourseScreen": "1.0.0",
           "Header": "1.0.0",
           "MainScreen": "1.0.0",
+          "RegistrationScreen": "1.0.0",
           "UserProfileScreen": "1.0.0"
         },
         "runtime": {
@@ -30,6 +31,11 @@
       "MainScreen/1.0.0": {
         "runtime": {
           "MainScreen.dll": {}
+        }
+      },
+      "RegistrationScreen/1.0.0": {
+        "runtime": {
+          "RegistrationScreen.dll": {}
         }
       },
       "UserProfileScreen/1.0.0": {
@@ -56,6 +62,11 @@
       "sha512": ""
     },
     "MainScreen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RegistrationScreen/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

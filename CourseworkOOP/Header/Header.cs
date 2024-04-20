@@ -6,11 +6,12 @@
 
         public event ButtonClick toMainScreen;
         public event ButtonClick search;
-        public event ButtonClick notifications;
         public event ButtonClick toUserProfile;
+        public event Action<string,string> changeCurrentUserLabel;
         public Header()
         {
             InitializeComponent();
+            changeCurrentUserLabel += ChangeCurrentUserLabel;
         }
 
         private void ToMainScreen(object sender, EventArgs e)
@@ -23,14 +24,18 @@
             search?.Invoke();
         }
 
-        private void Notifications(object sender, EventArgs e)
-        {
-            notifications?.Invoke();
-        }
-
         private void ToUserProfileScreen(object sender, EventArgs e)
         {
             toUserProfile?.Invoke();
+        }
+
+        public void ActivateChangeCurrentUserLabel(string name,string surname)
+        {
+            changeCurrentUserLabel?.Invoke(name, surname);
+        }
+        public void ChangeCurrentUserLabel(string name, string surname)
+        {
+            nameLabel.Text = $"{name} {surname}";
         }
     }
 }

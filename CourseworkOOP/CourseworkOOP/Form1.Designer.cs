@@ -18,6 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+            coursesApp.Save();
         }
 
         #region Windows Form Designer generated code
@@ -61,9 +62,9 @@
             toolStripSeparator5 = new ToolStripSeparator();
             опрограммеToolStripMenuItem = new ToolStripMenuItem();
             headPanel = new Panel();
+            header1 = new HeaderSpace.Header();
             mainPanel = new Panel();
             mainScreen1 = new MainScreen.MainScreen();
-            header1 = new HeaderSpace.Header();
             menuStrip1.SuspendLayout();
             headPanel.SuspendLayout();
             mainPanel.SuspendLayout();
@@ -295,6 +296,14 @@
             headPanel.Size = new Size(1291, 100);
             headPanel.TabIndex = 3;
             // 
+            // header1
+            // 
+            header1.Dock = DockStyle.Fill;
+            header1.Location = new Point(0, 0);
+            header1.Name = "header1";
+            header1.Size = new Size(1291, 100);
+            header1.TabIndex = 0;
+            // 
             // mainPanel
             // 
             mainPanel.Controls.Add(mainScreen1);
@@ -312,14 +321,6 @@
             mainScreen1.Name = "mainScreen1";
             mainScreen1.Size = new Size(1291, 600);
             mainScreen1.TabIndex = 0;
-            // 
-            // header1
-            // 
-            header1.Dock = DockStyle.Fill;
-            header1.Location = new Point(0, 0);
-            header1.Name = "header1";
-            header1.Size = new Size(1291, 100);
-            header1.TabIndex = 0;
             // 
             // Form1
             // 

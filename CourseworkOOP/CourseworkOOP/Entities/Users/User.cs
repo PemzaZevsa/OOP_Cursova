@@ -19,6 +19,8 @@ namespace CourseworkOOP.Entities.Users
         public string Name { get; set; }
         private string surname;
         public string Surname { get; set; }
+        private byte age;
+        public byte Age { get; set; }
         public static uint counter;
         public event Action<String> UpdatePassword;
         public short UserType { get; set; }
@@ -32,13 +34,14 @@ namespace CourseworkOOP.Entities.Users
             Name = name;
             Surname = surname;
         }
-        public User(uint id, string name, string surname, string login, string password)
+        public User(uint id, string name, string surname, string login, string password, byte age)
         {
             Id = id;
             Name = name;
             Surname = surname;
             Login = login;
             Password = password;
+            Age = age;
         }
 
         public int CompareTo(User? other)

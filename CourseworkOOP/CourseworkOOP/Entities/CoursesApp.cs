@@ -21,8 +21,23 @@ namespace CourseworkOOP.Entities
         public event Action SaveError;
         public event Action LoadComplete;
         public event Action SaveComplete;
+        public event Action<string,string> CurrentUserNameLabel;
 
-        public User CurrentUser { get; set; }
+        private User currentUser;
+        public User CurrentUser 
+        {
+            get => currentUser;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(currentUser));
+                }
+
+                currentUser = value;
+                CurrentUserNameLabel?.Invoke(currentUser.Name, currentUser.Surname);                
+            }
+        }
         private List<User> users;
         public List<User> Users { get { return users; } }
         private List<Course> courses;
@@ -32,6 +47,12 @@ namespace CourseworkOOP.Entities
         {
             users = new List<User>();
             courses = new List<Course>();
+        }
+        public CoursesApp(Action<string, string> currentUserNameLabel)
+        {
+            users = new List<User>();
+            courses = new List<Course>();
+            CurrentUserNameLabel = currentUserNameLabel;
         }
         //public CoursesApp(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
         //{

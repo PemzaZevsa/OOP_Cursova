@@ -22,6 +22,16 @@ namespace CourseworkOOP.Entities.Users
             Surname = surname;
             UserType = 1;
         }
+        public Teacher(string name, string surname,string login, string password, byte age)
+        {
+            Id = counter++;
+            Name = name;
+            Surname = surname;
+            UserType = 1;
+            Login = login;
+            Password = password;
+            Age = age;
+        }
         public bool AddCourse(List<Course> courses, Course newCourse)
         {
             if (courses is null) return false;

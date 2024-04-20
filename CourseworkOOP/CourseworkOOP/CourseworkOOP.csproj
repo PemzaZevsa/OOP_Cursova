@@ -12,6 +12,7 @@
     <ProjectReference Include="..\CourseScreen\CourseScreen.csproj" />
     <ProjectReference Include="..\Header\Header.csproj" />
     <ProjectReference Include="..\MainScreen\MainScreen.csproj" />
+    <ProjectReference Include="..\RegistrationScreen\RegistrationScreen.csproj" />
     <ProjectReference Include="..\UserProfileScreen\UserProfileScreen.csproj" />
   </ItemGroup>
 

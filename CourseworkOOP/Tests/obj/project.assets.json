@@ -410,6 +410,7 @@
           "CourseScreen": "1.0.0",
           "Header": "1.0.0",
           "MainScreen": "1.0.0",
+          "RegistrationScreen": "1.0.0",
           "UserProfileScreen": "1.0.0"
         },
         "compile": {
@@ -443,6 +444,19 @@
         },
         "runtime": {
           "bin/placeholder/MainScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "RegistrationScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/RegistrationScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistrationScreen.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
@@ -1077,6 +1091,11 @@
       "type": "project",
       "path": "../MainScreen/MainScreen.csproj",
       "msbuildProject": "../MainScreen/MainScreen.csproj"
+    },
+    "RegistrationScreen/1.0.0": {
+      "type": "project",
+      "path": "../RegistrationScreen/RegistrationScreen.csproj",
+      "msbuildProject": "../RegistrationScreen/RegistrationScreen.csproj"
     },
     "UserProfileScreen/1.0.0": {
       "type": "project",

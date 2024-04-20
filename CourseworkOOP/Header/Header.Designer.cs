@@ -32,9 +32,9 @@
             userProfileButton = new Button();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            notificationButton = new Button();
             SearchBar = new TextBox();
             searchButton = new Button();
+            nameLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -66,6 +66,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(userProfileButton);
             panel1.Dock = DockStyle.Right;
             panel1.Location = new Point(983, 0);
@@ -73,39 +74,36 @@
             panel1.Size = new Size(200, 100);
             panel1.TabIndex = 5;
             // 
-            // notificationButton
-            // 
-            notificationButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            notificationButton.Image = (Image)resources.GetObject("notificationButton.Image");
-            notificationButton.Location = new Point(873, 5);
-            notificationButton.Name = "notificationButton";
-            notificationButton.Size = new Size(90, 90);
-            notificationButton.TabIndex = 6;
-            notificationButton.UseVisualStyleBackColor = true;
-            notificationButton.Click += Notifications;
-            // 
             // SearchBar
             // 
-            SearchBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             SearchBar.BorderStyle = BorderStyle.None;
-            SearchBar.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            SearchBar.Location = new Point(135, 25);
+            SearchBar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            SearchBar.Location = new Point(186, 25);
             SearchBar.Multiline = true;
             SearchBar.Name = "SearchBar";
-            SearchBar.Size = new Size(485, 50);
+            SearchBar.PlaceholderText = "Шукайте що завгодно";
+            SearchBar.Size = new Size(639, 50);
             SearchBar.TabIndex = 7;
-            SearchBar.Text = "Шукайте що завгодно";
             // 
             // searchButton
             // 
             searchButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             searchButton.Image = (Image)resources.GetObject("searchButton.Image");
-            searchButton.Location = new Point(619, 24);
+            searchButton.Location = new Point(824, 25);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(50, 50);
             searchButton.TabIndex = 8;
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += ToSearch;
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(3, 44);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(50, 20);
+            nameLabel.TabIndex = 4;
+            nameLabel.Text = "label1";
             // 
             // Header
             // 
@@ -113,13 +111,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(searchButton);
             Controls.Add(SearchBar);
-            Controls.Add(notificationButton);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Name = "Header";
             Size = new Size(1183, 100);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,8 +126,8 @@
         private Button userProfileButton;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Button notificationButton;
         private TextBox SearchBar;
         private Button searchButton;
+        private Label nameLabel;
     }
 }
