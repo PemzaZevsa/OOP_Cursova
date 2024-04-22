@@ -22,7 +22,7 @@ namespace CourseworkOOP.Entities.Users
             Surname = surname;
             UserType = 1;
         }
-        public Teacher(string name, string surname,string login, string password, byte age)
+        public Teacher(string name, string surname,string login, string password)
         {
             Id = counter++;
             Name = name;
@@ -30,7 +30,6 @@ namespace CourseworkOOP.Entities.Users
             UserType = 1;
             Login = login;
             Password = password;
-            Age = age;
         }
         public bool AddCourse(List<Course> courses, Course newCourse)
         {

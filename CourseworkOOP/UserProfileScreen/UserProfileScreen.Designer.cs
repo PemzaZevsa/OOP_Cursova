@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
-            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -50,6 +50,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(231, 450);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(25, 11);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(175, 175);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // button3
             // 
@@ -77,6 +85,7 @@
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -86,14 +95,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(569, 450);
             panel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(25, 11);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(175, 175);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
             // 
             // UserProfileScreen
             // 

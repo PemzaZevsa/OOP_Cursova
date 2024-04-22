@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeaderSpace.Properties {
+namespace Header.Properties {
     using System;
     
     

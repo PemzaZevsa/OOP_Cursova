@@ -35,12 +35,9 @@
             errorLabel = new Label();
             AlreadyHaveAccountLabel = new Label();
             headingLabel = new Label();
-            ageValueLabel = new Label();
             loginLabel = new Label();
             RegestrationButton = new Button();
-            ageTrackBar = new TrackBar();
             loginBox = new TextBox();
-            ageLabel = new Label();
             passwordLabel = new Label();
             surnameLabel = new Label();
             passwordBox = new TextBox();
@@ -49,7 +46,6 @@
             surnameBox = new TextBox();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ageTrackBar).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -71,12 +67,9 @@
             panel1.Controls.Add(errorLabel);
             panel1.Controls.Add(AlreadyHaveAccountLabel);
             panel1.Controls.Add(headingLabel);
-            panel1.Controls.Add(ageValueLabel);
             panel1.Controls.Add(loginLabel);
             panel1.Controls.Add(RegestrationButton);
-            panel1.Controls.Add(ageTrackBar);
             panel1.Controls.Add(loginBox);
-            panel1.Controls.Add(ageLabel);
             panel1.Controls.Add(passwordLabel);
             panel1.Controls.Add(surnameLabel);
             panel1.Controls.Add(passwordBox);
@@ -85,13 +78,13 @@
             panel1.Controls.Add(surnameBox);
             panel1.Location = new Point(164, 39);
             panel1.Name = "panel1";
-            panel1.Size = new Size(272, 498);
+            panel1.Size = new Size(272, 441);
             panel1.TabIndex = 14;
             // 
             // WhoAreYouLabel
             // 
             WhoAreYouLabel.AutoSize = true;
-            WhoAreYouLabel.Location = new Point(4, 361);
+            WhoAreYouLabel.Location = new Point(4, 268);
             WhoAreYouLabel.Name = "WhoAreYouLabel";
             WhoAreYouLabel.Size = new Size(54, 20);
             WhoAreYouLabel.TabIndex = 16;
@@ -101,16 +94,16 @@
             // 
             userTypeBox.FormattingEnabled = true;
             userTypeBox.Items.AddRange(new object[] { "Студент", "Вчитель" });
-            userTypeBox.Location = new Point(64, 353);
+            userTypeBox.Location = new Point(4, 291);
             userTypeBox.Name = "userTypeBox";
-            userTypeBox.Size = new Size(190, 28);
+            userTypeBox.Size = new Size(250, 28);
             userTypeBox.TabIndex = 15;
             // 
             // errorLabel
             // 
             errorLabel.AutoSize = true;
             errorLabel.ForeColor = Color.Red;
-            errorLabel.Location = new Point(4, 381);
+            errorLabel.Location = new Point(4, 322);
             errorLabel.Name = "errorLabel";
             errorLabel.Size = new Size(0, 20);
             errorLabel.TabIndex = 14;
@@ -121,7 +114,7 @@
             AlreadyHaveAccountLabel.Cursor = Cursors.Hand;
             AlreadyHaveAccountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
             AlreadyHaveAccountLabel.ForeColor = SystemColors.Highlight;
-            AlreadyHaveAccountLabel.Location = new Point(4, 467);
+            AlreadyHaveAccountLabel.Location = new Point(4, 408);
             AlreadyHaveAccountLabel.Name = "AlreadyHaveAccountLabel";
             AlreadyHaveAccountLabel.Size = new Size(104, 20);
             AlreadyHaveAccountLabel.TabIndex = 12;
@@ -138,14 +131,6 @@
             headingLabel.TabIndex = 0;
             headingLabel.Text = "Реєстрація";
             // 
-            // ageValueLabel
-            // 
-            ageValueLabel.AutoSize = true;
-            ageValueLabel.Location = new Point(239, 268);
-            ageValueLabel.Name = "ageValueLabel";
-            ageValueLabel.Size = new Size(0, 20);
-            ageValueLabel.TabIndex = 13;
-            // 
             // loginLabel
             // 
             loginLabel.AutoSize = true;
@@ -157,7 +142,7 @@
             // 
             // RegestrationButton
             // 
-            RegestrationButton.Location = new Point(3, 404);
+            RegestrationButton.Location = new Point(4, 345);
             RegestrationButton.Name = "RegestrationButton";
             RegestrationButton.Size = new Size(250, 60);
             RegestrationButton.TabIndex = 2;
@@ -165,32 +150,12 @@
             RegestrationButton.UseVisualStyleBackColor = true;
             RegestrationButton.Click += RegestrationButton_Click;
             // 
-            // ageTrackBar
-            // 
-            ageTrackBar.Location = new Point(4, 291);
-            ageTrackBar.Maximum = 100;
-            ageTrackBar.Minimum = 10;
-            ageTrackBar.Name = "ageTrackBar";
-            ageTrackBar.Size = new Size(250, 56);
-            ageTrackBar.TabIndex = 11;
-            ageTrackBar.Value = 10;
-            ageTrackBar.Scroll += onScroll;
-            // 
             // loginBox
             // 
             loginBox.Location = new Point(4, 79);
             loginBox.Name = "loginBox";
             loginBox.Size = new Size(250, 27);
             loginBox.TabIndex = 3;
-            // 
-            // ageLabel
-            // 
-            ageLabel.AutoSize = true;
-            ageLabel.Location = new Point(4, 268);
-            ageLabel.Name = "ageLabel";
-            ageLabel.Size = new Size(29, 20);
-            ageLabel.TabIndex = 10;
-            ageLabel.Text = "Вік";
             // 
             // passwordLabel
             // 
@@ -250,7 +215,6 @@
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ageTrackBar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,15 +227,12 @@
         private Button RegestrationButton;
         private Label loginLabel;
         private Label headingLabel;
-        private TrackBar ageTrackBar;
-        private Label ageLabel;
         private Label surnameLabel;
         private Label nameLabel;
         private TextBox surnameBox;
         private TextBox nameBox;
         private TextBox passwordBox;
         private Label AlreadyHaveAccountLabel;
-        private Label ageValueLabel;
         private Panel panel1;
         private Label errorLabel;
         private ComboBox userTypeBox;

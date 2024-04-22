@@ -62,7 +62,7 @@
             toolStripSeparator5 = new ToolStripSeparator();
             опрограммеToolStripMenuItem = new ToolStripMenuItem();
             headPanel = new Panel();
-            header1 = new HeaderSpace.Header();
+            myHeader = new HeaderSpace.HeaderBlock();
             mainPanel = new Panel();
             mainScreen1 = new MainScreen.MainScreen();
             menuStrip1.SuspendLayout();
@@ -289,28 +289,28 @@
             // 
             // headPanel
             // 
-            headPanel.Controls.Add(header1);
+            headPanel.Controls.Add(myHeader);
             headPanel.Dock = DockStyle.Top;
             headPanel.Location = new Point(0, 28);
             headPanel.Name = "headPanel";
-            headPanel.Size = new Size(1291, 100);
+            headPanel.Size = new Size(1291, 110);
             headPanel.TabIndex = 3;
             // 
-            // header1
+            // header
             // 
-            header1.Dock = DockStyle.Fill;
-            header1.Location = new Point(0, 0);
-            header1.Name = "header1";
-            header1.Size = new Size(1291, 100);
-            header1.TabIndex = 0;
+            myHeader.Dock = DockStyle.Fill;
+            myHeader.Location = new Point(0, 0);
+            myHeader.Name = "header";
+            myHeader.Size = new Size(1291, 110);
+            myHeader.TabIndex = 0;
             // 
             // mainPanel
             // 
             mainPanel.Controls.Add(mainScreen1);
             mainPanel.Dock = DockStyle.Fill;
-            mainPanel.Location = new Point(0, 128);
+            mainPanel.Location = new Point(0, 138);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1291, 600);
+            mainPanel.Size = new Size(1291, 590);
             mainPanel.TabIndex = 4;
             // 
             // mainScreen1
@@ -319,7 +319,7 @@
             mainScreen1.Dock = DockStyle.Fill;
             mainScreen1.Location = new Point(0, 0);
             mainScreen1.Name = "mainScreen1";
-            mainScreen1.Size = new Size(1291, 600);
+            mainScreen1.Size = new Size(1291, 590);
             mainScreen1.TabIndex = 0;
             // 
             // Form1
@@ -380,6 +380,6 @@
         private Panel headPanel;
         private Panel mainPanel;
         private MainScreen.MainScreen mainScreen1;
-        private HeaderSpace.Header header1;
+        private HeaderSpace.HeaderBlock myHeader;
     }
 }

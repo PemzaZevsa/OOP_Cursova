@@ -29,95 +29,118 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            authorLabel = new Label();
+            buyButton = new Button();
+            coursePictureBox = new PictureBox();
             panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            descriptionLabel = new Label();
+            raitingLabel = new Label();
+            nameLabel = new Label();
+            costLabel = new Label();
+            tegsLabel = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)coursePictureBox).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonShadow;
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(costLabel);
+            panel1.Controls.Add(buyButton);
+            panel1.Controls.Add(coursePictureBox);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(500, 0);
+            panel1.Location = new Point(567, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 450);
+            panel1.Size = new Size(300, 510);
             panel1.TabIndex = 0;
+            // 
+            // authorLabel
+            // 
+            authorLabel.AutoSize = true;
+            authorLabel.Location = new Point(37, 250);
+            authorLabel.Name = "authorLabel";
+            authorLabel.Size = new Size(54, 20);
+            authorLabel.TabIndex = 2;
+            authorLabel.Text = "Author";
+            // 
+            // buyButton
+            // 
+            buyButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            buyButton.Location = new Point(30, 405);
+            buyButton.Name = "buyButton";
+            buyButton.Size = new Size(240, 61);
+            buyButton.TabIndex = 1;
+            buyButton.Text = "Придбати";
+            buyButton.UseVisualStyleBackColor = true;
+            buyButton.Click += buyButton_Click;
+            // 
+            // coursePictureBox
+            // 
+            coursePictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            coursePictureBox.Location = new Point(30, 100);
+            coursePictureBox.Name = "coursePictureBox";
+            coursePictureBox.Size = new Size(240, 240);
+            coursePictureBox.TabIndex = 0;
+            coursePictureBox.TabStop = false;
             // 
             // panel2
             // 
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(tegsLabel);
+            panel2.Controls.Add(authorLabel);
+            panel2.Controls.Add(descriptionLabel);
+            panel2.Controls.Add(raitingLabel);
+            panel2.Controls.Add(nameLabel);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(500, 450);
+            panel2.Size = new Size(567, 510);
             panel2.TabIndex = 1;
             // 
-            // pictureBox1
+            // descriptionLabel
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Location = new Point(30, 100);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(240, 240);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new Point(37, 100);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(85, 20);
+            descriptionLabel.TabIndex = 2;
+            descriptionLabel.Text = "Description";
             // 
-            // button1
+            // raitingLabel
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Location = new Point(30, 386);
-            button1.Name = "button1";
-            button1.Size = new Size(240, 61);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            raitingLabel.AutoSize = true;
+            raitingLabel.Location = new Point(37, 200);
+            raitingLabel.Name = "raitingLabel";
+            raitingLabel.Size = new Size(64, 20);
+            raitingLabel.TabIndex = 1;
+            raitingLabel.Text = "Рейтинг";
             // 
-            // label1
+            // nameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(37, 49);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(37, 50);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(98, 20);
+            nameLabel.TabIndex = 0;
+            nameLabel.Text = "Course Name";
             // 
-            // label2
+            // costLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(37, 100);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            costLabel.AutoSize = true;
+            costLabel.Location = new Point(30, 368);
+            costLabel.Name = "costLabel";
+            costLabel.Size = new Size(38, 20);
+            costLabel.TabIndex = 3;
+            costLabel.Text = "Cost";
             // 
-            // label3
+            // tegsLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(37, 320);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(30, 353);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 2;
-            label4.Text = "label4";
+            tegsLabel.AutoSize = true;
+            tegsLabel.Location = new Point(37, 150);
+            tegsLabel.Name = "tegsLabel";
+            tegsLabel.Size = new Size(39, 20);
+            tegsLabel.TabIndex = 3;
+            tegsLabel.Text = "Tegs";
             // 
             // CourseScreen
             // 
@@ -126,12 +149,12 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "CourseScreen";
-            Size = new Size(800, 450);
+            Size = new Size(867, 510);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)coursePictureBox).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -139,11 +162,13 @@
 
         private Panel panel1;
         private Panel panel2;
-        private PictureBox pictureBox1;
-        private Label label4;
-        private Button button1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private PictureBox coursePictureBox;
+        private Label authorLabel;
+        private Button buyButton;
+        private Label descriptionLabel;
+        private Label raitingLabel;
+        private Label nameLabel;
+        private Label costLabel;
+        private Label tegsLabel;
     }
 }

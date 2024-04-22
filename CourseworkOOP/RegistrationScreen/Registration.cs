@@ -15,7 +15,7 @@ namespace RegistrationScreen
 {
     public partial class Registration : UserControl
     {
-        public event Action<string,string,string,string,byte,int> regestrationButtonClick;
+        public event Action<string,string,string,string,int> regestrationButtonClick;
         public event Action alreadyHaveAccountLabelClick;
         public event Action errorRegistrstion;
         public Registration()
@@ -42,7 +42,7 @@ namespace RegistrationScreen
             {
                 if (!string.IsNullOrEmpty(loginBox.Text) && loginBox.Text.Length>=5 && !string.IsNullOrEmpty(passwordBox.Text) && passwordBox.Text.Length>=5 && !string.IsNullOrEmpty(nameBox.Text) && !string.IsNullOrEmpty(surnameBox.Text))
                 {
-                    regestrationButtonClick?.Invoke(loginBox.Text,passwordBox.Text,nameBox.Text,surnameBox.Text,(byte)ageTrackBar.Value, userType);
+                    regestrationButtonClick?.Invoke(loginBox.Text,passwordBox.Text,nameBox.Text,surnameBox.Text, userType);
                 }
                 else
                 {
@@ -54,11 +54,6 @@ namespace RegistrationScreen
         private void AlreadyHaveAccountLabel_Click(object sender, EventArgs e)
         {
             alreadyHaveAccountLabelClick?.Invoke();
-        }
-
-        private void onScroll(object sender, EventArgs e)
-        {
-            ageValueLabel.Text = $"{ageTrackBar.Value}";
         }
         public void ActivateError()
         {

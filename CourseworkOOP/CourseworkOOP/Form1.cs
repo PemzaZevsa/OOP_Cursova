@@ -16,18 +16,17 @@ namespace CourseworkOOP
         public Form1()
         {
             InitializeComponent();
-            header1.toMainScreen += ToMainScreen;
-            header1.toUserProfile += ToRegistration;
+
+            myHeader.toMainScreen += ToMain;
+            myHeader.toRegistrationScreen += ToRegistration;
+            myHeader.toUserProfileScreen += ToUserProfile;
+
 
             coursesApp = new CoursesApp((name,surname) =>
             {
-                header1.ActivateChangeCurrentUserLabel(name,surname);
+                myHeader.ActivateChangeCurrentUserLabel(name,surname);
             });
-            coursesApp.Load();
-
-
-
-            //coursesApp.Save();            
+            coursesApp.Load();          
         }
         public void ToRegistration()
         {
@@ -39,6 +38,9 @@ namespace CourseworkOOP
                 if (tempUser != null)
                 {
                     coursesApp.CurrentUser = tempUser;
+                    myHeader.ChangeToAuthorised();
+                    //message about succsesfull authorising?
+                    ToMain();
                 }
                 else
                 {
@@ -46,19 +48,19 @@ namespace CourseworkOOP
                 }
             };
 
-            registration.registration.regestrationButtonClick += (string login, string password, string name, string surname, byte age,int userType) =>
+            registration.registration.regestrationButtonClick += (string login, string password, string name, string surname,int userType) =>
             {
                 if (coursesApp.Users.Where(u => u.Login == login).Take(1).FirstOrDefault() is null)
                 {
                     switch (userType)
                     {
                         case 1: 
-                            Teacher teacher = new Teacher(name,surname,login,password,age);
+                            Teacher teacher = new Teacher(name,surname,login,password);
                             coursesApp.Users.Add(teacher);
                             coursesApp.CurrentUser = teacher;
                             break;
                         case 2: 
-                            Student student = new Student(name,surname,login,password,age);
+                            Student student = new Student(name,surname,login,password);
                             coursesApp.Users.Add(student);
                             coursesApp.CurrentUser = student;
                             break;
@@ -78,7 +80,7 @@ namespace CourseworkOOP
             registration.Dock = DockStyle.Fill;
         }
 
-        public void ToMainScreen()
+        public void ToMain()
         {
             mainPanel.Controls.Clear();
             MainScreen.MainScreen screen = new MainScreen.MainScreen();
@@ -86,13 +88,14 @@ namespace CourseworkOOP
             screen.Dock = DockStyle.Fill;
         }
 
-        public void ToUserProfileScreen()
+        public void ToUserProfile()
         {
             mainPanel.Controls.Clear();
             UserProfileScreen.UserProfileScreen screen = new UserProfileScreen.UserProfileScreen();
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }
+
         
     }
 }

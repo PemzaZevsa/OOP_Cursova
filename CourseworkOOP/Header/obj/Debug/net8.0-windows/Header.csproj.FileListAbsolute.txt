@@ -15,7 +15,6 @@ C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\Header\obj\Debug\net8.0-
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.deps.json
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\bin\Debug\net8.0-windows\Header.pdb
-C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\HeaderSpace.Header.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.Properties.Resources.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.csproj.GenerateResource.cache
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.GeneratedMSBuildEditorConfig.editorconfig
@@ -27,3 +26,6 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\D
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\refint\Header.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\ref\Header.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.Authorised.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.UnAuthorised.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\HeaderSpace.HeaderBlock.resources
