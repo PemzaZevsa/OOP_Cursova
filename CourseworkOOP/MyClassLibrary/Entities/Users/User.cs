@@ -19,6 +19,7 @@ namespace CourseworkOOP.Entities.Users
         public string Name { get; set; }
         private string surname;
         public string Surname { get; set; }
+        public string ProfilePicturePath { get; set; }
 
         public static uint counter;
         public event Action<String> UpdatePassword;
@@ -40,6 +41,15 @@ namespace CourseworkOOP.Entities.Users
             Surname = surname;
             Login = login;
             Password = password;
+        }
+        public User(uint id, string name, string surname, string login, string password, string profilePicturePath)
+        {
+            Id = id;
+            Name = name;
+            Surname = surname;
+            Login = login;
+            Password = password;
+            ProfilePicturePath = profilePicturePath;
         }
 
         public int CompareTo(User? other)

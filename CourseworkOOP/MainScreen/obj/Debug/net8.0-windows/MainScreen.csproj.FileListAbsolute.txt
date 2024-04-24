@@ -25,3 +25,11 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\o
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\refint\MainScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\ref\MainScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\CourseScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MyClassLibrary.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\CourseScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MyClassLibrary.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.AssemblyReference.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.Up2Date
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.CourseElement.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.Properties.Resources.resources

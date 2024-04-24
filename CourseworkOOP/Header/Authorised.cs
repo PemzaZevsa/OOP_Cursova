@@ -14,6 +14,7 @@ namespace Header
     {
         public event Action toUserScreen;
         public event Action<string, string> changeCurrentUserLabel;
+        public event Action<string> changePicToUserPic;
         public Authorised()
         {
             InitializeComponent();
@@ -28,6 +29,21 @@ namespace Header
         public void ChangeCurrentUserLabel(string name, string surname)
         {
             nameLabel.Text = $"{name} {surname}";
+        }
+        public void SetPic(string path)
+        {
+            changePicToUserPic?.Invoke(path);
+            //try
+            //{
+            //    Image image = Image.FromFile(path);
+            //    coursePictureBox.Image = image;
+            //}
+            //catch (Exception ex)
+            //{
+            //    Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
+            //    coursePictureBox.Image = image2;
+            //    MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
+            //}            
         }
     }
 }

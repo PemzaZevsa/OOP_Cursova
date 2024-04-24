@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "MainScreen/1.0.0": {
+        "dependencies": {
+          "CourseScreen": "1.0.0",
+          "MyClassLibrary": "1.0.0"
+        },
         "runtime": {
           "MainScreen.dll": {}
+        }
+      },
+      "CourseScreen/1.0.0": {
+        "dependencies": {
+          "MyClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "CourseScreen.dll": {}
+        }
+      },
+      "MyClassLibrary/1.0.0": {
+        "runtime": {
+          "MyClassLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MainScreen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CourseScreen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyClassLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

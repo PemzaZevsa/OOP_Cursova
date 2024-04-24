@@ -29,3 +29,7 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\D
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.Authorised.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.UnAuthorised.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\HeaderSpace.HeaderBlock.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\bin\Debug\net8.0-windows\MyClassLibrary.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\bin\Debug\net8.0-windows\MyClassLibrary.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.csproj.AssemblyReference.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\Header\obj\Debug\net8.0-windows\Header.csproj.Up2Date

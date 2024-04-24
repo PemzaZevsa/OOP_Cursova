@@ -12,6 +12,7 @@ namespace CourseworkOOP
     public partial class Form1 : Form
     {
         public CoursesApp coursesApp;
+        public UserProfileScreen.UserProfileScreenBlock UserProfile {  get; set; }
 
         public Form1()
         {
@@ -20,7 +21,7 @@ namespace CourseworkOOP
             myHeader.toMainScreen += ToMain;
             myHeader.toRegistrationScreen += ToRegistration;
             myHeader.toUserProfileScreen += ToUserProfile;
-
+            //UserProfile = new UserProfileScreen.UserProfileScreenBlock(coursesApp.CurrentUser);
 
             coursesApp = new CoursesApp((name,surname) =>
             {
@@ -39,7 +40,7 @@ namespace CourseworkOOP
                 {
                     coursesApp.CurrentUser = tempUser;
                     myHeader.ChangeToAuthorised();
-                    //message about succsesfull authorising?
+                    MessageBox.Show("Успішна авторизація!");
                     ToMain();
                 }
                 else
@@ -83,7 +84,20 @@ namespace CourseworkOOP
         public void ToMain()
         {
             mainPanel.Controls.Clear();
-            MainScreen.MainScreen screen = new MainScreen.MainScreen();
+            MainScreen.MainScreen screen = new MainScreen.MainScreen(coursesApp);
+            screen.openCourse += (someCourse) =>
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(someCourse);
+                someCourse.Dock = DockStyle.Fill;
+            };
+
+            screen.returnTo += () =>
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(screen);
+                screen.Dock = DockStyle.Fill;
+            };
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }
@@ -91,11 +105,20 @@ namespace CourseworkOOP
         public void ToUserProfile()
         {
             mainPanel.Controls.Clear();
-            UserProfileScreen.UserProfileScreen screen = new UserProfileScreen.UserProfileScreen();
+            UserProfileScreen.UserProfileScreenBlock screen = new UserProfileScreen.UserProfileScreenBlock(coursesApp.CurrentUser);
+            screen.logOut += () =>
+            {
+                coursesApp.CurrentUser = null;
+                myHeader.ChangeToUnAuthorised();
+                ToMain();
+            };
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }
 
-        
+        private void Screen_logOut()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Header;
+using CourseworkOOP.Entities.Users;
 
 namespace HeaderSpace
 {
@@ -16,7 +17,7 @@ namespace HeaderSpace
         //
         public event Action<string,string> changeCurrentUserLabel;
         //
-
+        //public User User { get; set; }
         public Authorised authorised;
         public HeaderBlock()
         {

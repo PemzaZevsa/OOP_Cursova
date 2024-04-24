@@ -14,7 +14,6 @@ C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\UserProfileScreen\obj\De
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.deps.json
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\UserProfileScreen.pdb
-C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.UserProfileScreen.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.csproj.GenerateResource.cache
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.AssemblyInfoInputs.cache
@@ -25,3 +24,13 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileS
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\refint\UserProfileScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\ref\UserProfileScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\MyClassLibrary.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\MyClassLibrary.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.csproj.AssemblyReference.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.UserProfileScreenBlock.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProf.0FE00D9D.Up2Date
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.AdminUsers.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.Statistics.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.StudentCourses.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.TeacherCourses.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.UserSettings.resources

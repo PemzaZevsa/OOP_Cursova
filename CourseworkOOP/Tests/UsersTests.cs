@@ -28,7 +28,7 @@ namespace Tests
         [TestMethod]
         public void StudentBuysCourse()
         {
-            Course testCourse = new Course((uint)0, "TestCourse", "Testing", "", 0,0,0, 400, null);
+            Course testCourse = new Course((uint)0, "TestCourse", "Testing", "", 0,"","",0,0, 400,0, null);
             Student student = new Student("Steve", "Smith");
 
             Assert.IsTrue(student.BuyCourse(testCourse, 400));
@@ -37,7 +37,7 @@ namespace Tests
         [TestMethod]
         public void StudentBuysCourseWithNotEnoughMoney()
         {
-            Course testCourse = new Course((uint)0, "TestCourse", "Testing", "", 0, 0, 0, 400, null);
+            Course testCourse = new Course((uint)0, "TestCourse", "Testing", "", 0,"","", 0, 0, 400,0, null);
             Student student = new Student("Steve", "Smith");
 
             Assert.IsFalse(student.BuyCourse(testCourse, 300));

@@ -45,7 +45,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(10, 10);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(90, 90);
+            pictureBox1.Size = new Size(90, 88);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -68,7 +68,7 @@
             searchButton.Image = (Image)resources.GetObject("searchButton.Image");
             searchButton.Location = new Point(831, 30);
             searchButton.Name = "searchButton";
-            searchButton.Size = new Size(50, 50);
+            searchButton.Size = new Size(50, 48);
             searchButton.TabIndex = 8;
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += ToSearch;
@@ -78,9 +78,9 @@
             panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(unAuthorised);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(983, 0);
+            panel1.Location = new Point(981, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 110);
+            panel1.Size = new Size(200, 108);
             panel1.TabIndex = 5;
             // 
             // unAuthorised
@@ -88,19 +88,20 @@
             unAuthorised.Dock = DockStyle.Fill;
             unAuthorised.Location = new Point(0, 0);
             unAuthorised.Name = "unAuthorised";
-            unAuthorised.Size = new Size(200, 110);
+            unAuthorised.Size = new Size(200, 108);
             unAuthorised.TabIndex = 0;
             // 
             // HeaderBlock
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(searchButton);
             Controls.Add(SearchBar);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Name = "HeaderBlock";
-            Size = new Size(1183, 110);
+            Size = new Size(1181, 108);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);

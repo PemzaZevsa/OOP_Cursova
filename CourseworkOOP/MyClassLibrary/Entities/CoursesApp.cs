@@ -7,7 +7,6 @@ using CourseworkOOP.Entities.Users;
 using CourseworkOOP.Entities.Courses;
 using System.IO;
 using System.Diagnostics;
-using static System.Windows.Forms.LinkLabel;
 using System.Security.Principal;
 using System.Text.Json;
 using CourseworkOOP.Iterfaces;
@@ -29,13 +28,19 @@ namespace CourseworkOOP.Entities
             get => currentUser;
             set
             {
-                if (value is null)
+                if (currentUser is not null && value is null)
+                {
+                    currentUser = value;
+                }
+                else if (value is null)
                 {
                     throw new ArgumentNullException(nameof(currentUser));
                 }
-
-                currentUser = value;
-                CurrentUserNameLabel?.Invoke(currentUser.Name, currentUser.Surname);                
+                else
+                {
+                    currentUser = value;
+                    CurrentUserNameLabel?.Invoke(currentUser.Name, currentUser.Surname);
+                }                      
             }
         }
         private List<User> users;

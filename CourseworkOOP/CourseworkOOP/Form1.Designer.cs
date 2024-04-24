@@ -64,17 +64,15 @@
             headPanel = new Panel();
             myHeader = new HeaderSpace.HeaderBlock();
             mainPanel = new Panel();
-            mainScreen1 = new MainScreen.MainScreen();
             menuStrip1.SuspendLayout();
             headPanel.SuspendLayout();
-            mainPanel.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Bottom;
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Location = new Point(0, 728);
+            toolStrip1.Location = new Point(0, 928);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1291, 25);
             toolStrip1.TabIndex = 1;
@@ -296,51 +294,41 @@
             headPanel.Size = new Size(1291, 110);
             headPanel.TabIndex = 3;
             // 
-            // header
+            // myHeader
             // 
+            myHeader.BorderStyle = BorderStyle.FixedSingle;
             myHeader.Dock = DockStyle.Fill;
             myHeader.Location = new Point(0, 0);
-            myHeader.Name = "header";
+            myHeader.Name = "myHeader";
             myHeader.Size = new Size(1291, 110);
             myHeader.TabIndex = 0;
             // 
             // mainPanel
             // 
-            mainPanel.Controls.Add(mainScreen1);
             mainPanel.Dock = DockStyle.Fill;
             mainPanel.Location = new Point(0, 138);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1291, 590);
+            mainPanel.Size = new Size(1291, 790);
             mainPanel.TabIndex = 4;
-            // 
-            // mainScreen1
-            // 
-            mainScreen1.AutoScroll = true;
-            mainScreen1.Dock = DockStyle.Fill;
-            mainScreen1.Location = new Point(0, 0);
-            mainScreen1.Name = "mainScreen1";
-            mainScreen1.Size = new Size(1291, 590);
-            mainScreen1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1291, 753);
+            ClientSize = new Size(1291, 953);
             Controls.Add(mainPanel);
             Controls.Add(headPanel);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(1000, 800);
+            MinimumSize = new Size(1100, 800);
             Name = "Form1";
             Text = "Learnopia";
             WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             headPanel.ResumeLayout(false);
-            mainPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -379,7 +367,6 @@
         private ToolStripMenuItem опрограммеToolStripMenuItem;
         private Panel headPanel;
         private Panel mainPanel;
-        private MainScreen.MainScreen mainScreen1;
         private HeaderSpace.HeaderBlock myHeader;
     }
 }

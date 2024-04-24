@@ -16,6 +16,9 @@ namespace CourseworkOOP.Entities.Courses
         public string Description { get; set; }
         public string ModulePath { get; set; }
         public uint AuthorId { get; set; }
+        public string AuthorName { get; set; }
+        public string AuthorSurname { get; set; }        
+        public string PicturePath { get; set; }
         private double rating;
         public double Rating 
         { 
@@ -56,6 +59,7 @@ namespace CourseworkOOP.Entities.Courses
                 }
             }
         }
+        public uint BoughtCourseAmount { get; set; }
         private List<Teg> tegs;
 
         public List<Teg> Tegs { get => tegs; set => tegs = value; }
@@ -76,6 +80,7 @@ namespace CourseworkOOP.Entities.Courses
             modules = new List<Module>();
             RatingsAmount = 0;
             rating = 0;
+            BoughtCourseAmount = 0;
         }
         public Course(string name, string description)
         {
@@ -86,6 +91,7 @@ namespace CourseworkOOP.Entities.Courses
             modules = new List<Module>();
             RatingsAmount = 0;
             rating = 0;
+            BoughtCourseAmount = 0;
 
             ModulePath = @$"Data\Courses\{Id}";
         }
@@ -102,18 +108,22 @@ namespace CourseworkOOP.Entities.Courses
             this.rating = rating;
             RatingsAmount = ratingsAmount;
         }
-        public Course(uint id, string name, string description, string modulePath, uint author, double rating, int ratingsAmount, decimal cost, List<Teg> tegs)
+        public Course(uint id, string name, string description, string modulePath, uint author, string authorName, string authorSurname, double rating, int ratingsAmount, decimal cost,uint boughtCourseAmount, List<Teg> tegs)
         {
             Id = id;
             Name = name;
             Description = description;
             AuthorId = author;
+            AuthorName = authorName;
+            AuthorSurname = authorSurname;
             ModulePath = modulePath;
             Cost = cost;
+            BoughtCourseAmount = boughtCourseAmount;
             this.tegs = tegs;
             this.modules = new List<Module>();
             Rating = rating;
             RatingsAmount = ratingsAmount;
+
         }
         public bool Save()
         {

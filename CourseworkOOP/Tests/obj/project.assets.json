@@ -393,6 +393,9 @@
       "CourseScreen/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MyClassLibrary": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CourseScreen.dll": {}
         },
@@ -410,6 +413,7 @@
           "CourseScreen": "1.0.0",
           "Header": "1.0.0",
           "MainScreen": "1.0.0",
+          "MyClassLibrary": "1.0.0",
           "RegistrationScreen": "1.0.0",
           "UserProfileScreen": "1.0.0"
         },
@@ -426,6 +430,9 @@
       "Header/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MyClassLibrary": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Header.dll": {}
         },
@@ -439,6 +446,10 @@
       "MainScreen/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CourseScreen": "1.0.0",
+          "MyClassLibrary": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/MainScreen.dll": {}
         },
@@ -448,6 +459,16 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
+      },
+      "MyClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MyClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyClassLibrary.dll": {}
+        }
       },
       "RegistrationScreen/1.0.0": {
         "type": "project",
@@ -465,6 +486,9 @@
       "UserProfileScreen/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MyClassLibrary": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/UserProfileScreen.dll": {}
         },
@@ -1091,6 +1115,11 @@
       "type": "project",
       "path": "../MainScreen/MainScreen.csproj",
       "msbuildProject": "../MainScreen/MainScreen.csproj"
+    },
+    "MyClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../MyClassLibrary/MyClassLibrary.csproj",
+      "msbuildProject": "../MyClassLibrary/MyClassLibrary.csproj"
     },
     "RegistrationScreen/1.0.0": {
       "type": "project",

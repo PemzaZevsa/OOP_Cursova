@@ -14,7 +14,6 @@ C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\CourseScreen\obj\Debug\n
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\bin\Debug\net8.0-windows\CourseScreen.deps.json
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\bin\Debug\net8.0-windows\CourseScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\bin\Debug\net8.0-windows\CourseScreen.pdb
-C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreenSpace.CourseScreen.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.csproj.GenerateResource.cache
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.AssemblyInfoInputs.cache
@@ -25,3 +24,11 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\refint\CourseScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\ref\CourseScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.Properties.Resources.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\bin\Debug\net8.0-windows\MyClassLibrary.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\bin\Debug\net8.0-windows\MyClassLibrary.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.csproj.AssemblyReference.cache
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseSc.CDB5D646.Up2Date
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.CantBuy.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.CanBuy.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreenSpace.CourseScreenBlock.resources
