@@ -30,14 +30,12 @@
         {
             panel3 = new Panel();
             buyButton = new Button();
-            costLabel = new Label();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel3
             // 
             panel3.Controls.Add(buyButton);
-            panel3.Controls.Add(costLabel);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
@@ -47,22 +45,16 @@
             // buyButton
             // 
             buyButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            buyButton.Location = new Point(50, 38);
+            buyButton.BackColor = SystemColors.HotTrack;
+            buyButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            buyButton.ForeColor = SystemColors.Control;
+            buyButton.Location = new Point(30, 26);
             buyButton.Name = "buyButton";
-            buyButton.Size = new Size(250, 61);
+            buyButton.Size = new Size(291, 93);
             buyButton.TabIndex = 1;
             buyButton.Text = "Придбати";
-            buyButton.UseVisualStyleBackColor = true;
+            buyButton.UseVisualStyleBackColor = false;
             buyButton.Click += buyButton_Click;
-            // 
-            // costLabel
-            // 
-            costLabel.AutoSize = true;
-            costLabel.Location = new Point(50, 15);
-            costLabel.Name = "costLabel";
-            costLabel.Size = new Size(48, 20);
-            costLabel.TabIndex = 3;
-            costLabel.Text = "Ціна :";
             // 
             // CanBuy
             // 
@@ -72,7 +64,6 @@
             Name = "CanBuy";
             Size = new Size(350, 150);
             panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -80,6 +71,5 @@
 
         private Panel panel3;
         private Button buyButton;
-        private Label costLabel;
     }
 }

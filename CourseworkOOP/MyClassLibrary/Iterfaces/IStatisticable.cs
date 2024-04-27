@@ -10,7 +10,7 @@ namespace CourseworkOOP.Iterfaces
 {
     internal interface IStatisticable
     {
-        void WatchStatistics(Settings settings);
-        event Action<Settings> Statistics;
+        void WatchStatistics(CoursesAppSettings settings);
+        event Action<CoursesAppSettings> Statistics;
     }
 }

@@ -34,7 +34,7 @@ namespace CourseworkOOP.Entities
                 }
                 else if (value is null)
                 {
-                    throw new ArgumentNullException(nameof(currentUser));
+                    throw new ArgumentNullException(nameof(value),"Користувач має null значення");
                 }
                 else
                 {
@@ -53,22 +53,14 @@ namespace CourseworkOOP.Entities
             users = new List<User>();
             courses = new List<Course>();
         }
-        public CoursesApp(Action<string, string> currentUserNameLabel)
-        {
-            users = new List<User>();
-            courses = new List<Course>();
-            CurrentUserNameLabel = currentUserNameLabel;
-        }
-        //public CoursesApp(string coursesPath = @"Data\Courses\CoursesData.txt", string usersPath = @"Data\Users\UsersData.txt")
+        //public CoursesApp(Action<string, string> currentUserNameLabel)
         //{
         //    users = new List<User>();
         //    courses = new List<Course>();
-        //    Load();
+        //    CurrentUserNameLabel = currentUserNameLabel;
         //}
         public bool Save(string path = @"Data")
         {
-            string coursesPath = path + @"\Courses\CoursesData.txt";
-            string usersPath = path + @"\Users\UsersData.txt";
             try
             {
                 SaveCourses();
@@ -84,7 +76,7 @@ namespace CourseworkOOP.Entities
             SaveComplete?.Invoke();
             return true;
         }
-        public bool SaveUsers(string usersPath = @"Data\Users\UsersData.txt")
+        public bool SaveUsers(string usersPath = @"Data\Users\UsersData.json")
         {
             try
             {
@@ -121,7 +113,7 @@ namespace CourseworkOOP.Entities
             SaveComplete?.Invoke();
             return true;
         }
-        public bool SaveCourses(string coursesPath = @"Data\Courses\CoursesData.txt")
+        public bool SaveCourses(string coursesPath = @"Data\Courses\CoursesData.json")
         {
             try
             {
@@ -148,14 +140,14 @@ namespace CourseworkOOP.Entities
             SaveComplete?.Invoke();
             return true;
         }
-        public bool SaveSettings(string dataPath = @"Data\Config\Settings.txt")
+        public bool SaveSettings(string dataPath = @"Data\Config\Settings.json")
         {
             try
             {
                 string jsonstring = "";
-                Settings settings = new Settings(Course.counter, Module.counter, Lesson.counter, User.counter);
+                CoursesAppSettings settings = new CoursesAppSettings(Course.counter, Module.counter, Lesson.counter, User.counter);
 
-                jsonstring += JsonSerializer.Serialize<Settings>(settings);
+                jsonstring += JsonSerializer.Serialize<CoursesAppSettings>(settings);
                 jsonstring += "\n";
 
                 File.WriteAllText(dataPath, jsonstring);
@@ -176,8 +168,6 @@ namespace CourseworkOOP.Entities
         }
         public bool Load(string path = @"Data")
         {
-            string coursesPath = path + @"\Courses\CoursesData.txt";
-            string usersPath = path + @"\Users\UsersData.txt";
             try
             {
                 LoadCourses();
@@ -193,7 +183,7 @@ namespace CourseworkOOP.Entities
             LoadComplete?.Invoke();
             return true;
         }
-        public bool LoadCourses(string coursesPath = @"Data\Courses\CoursesData.txt")
+        public bool LoadCourses(string coursesPath = @"Data\Courses\CoursesData.json")
         {
             try
             {
@@ -203,6 +193,7 @@ namespace CourseworkOOP.Entities
                 {
                     Course? course = JsonSerializer.Deserialize<Course>(item);
                     if (course != null) courses.Add(course);
+                    course.Load();
                 }
             }
             catch (IOException e)
@@ -219,7 +210,7 @@ namespace CourseworkOOP.Entities
             LoadComplete?.Invoke();
             return true;
         }
-        public bool LoadUsers(string usersPath = @"Data\Users\UsersData.txt")
+        public bool LoadUsers(string usersPath = @"Data\Users\UsersData.json")
         {
             try
             {
@@ -258,13 +249,13 @@ namespace CourseworkOOP.Entities
             LoadComplete?.Invoke();
             return true;
         }
-        public bool LoadSettings(string dataPath = @"Data\Config\Settings.txt")
+        public bool LoadSettings(string dataPath = @"Data\Config\Settings.json")
         {
             try
             {
                 List<string> lines = File.ReadAllLines(dataPath).ToList();
 
-                Settings settings = JsonSerializer.Deserialize<Settings>(lines[0]);
+                CoursesAppSettings settings = JsonSerializer.Deserialize<CoursesAppSettings>(lines[0]);
 
                 Course.counter = settings.CourseCounter;
                 Module.counter = settings.ModuleCounter;

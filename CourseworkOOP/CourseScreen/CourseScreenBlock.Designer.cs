@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            costLabel = new Label();
             buyPanel = new Panel();
             backButton = new Button();
             coursePictureBox = new PictureBox();
@@ -49,6 +50,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(costLabel);
             panel1.Controls.Add(buyPanel);
             panel1.Controls.Add(backButton);
             panel1.Controls.Add(coursePictureBox);
@@ -57,6 +59,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(392, 649);
             panel1.TabIndex = 0;
+            // 
+            // costLabel
+            // 
+            costLabel.AutoSize = true;
+            costLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            costLabel.ForeColor = SystemColors.ButtonHighlight;
+            costLabel.Location = new Point(6, 464);
+            costLabel.Name = "costLabel";
+            costLabel.Size = new Size(65, 25);
+            costLabel.TabIndex = 6;
+            costLabel.Text = "Ціна :";
             // 
             // buyPanel
             // 
@@ -68,9 +81,9 @@
             // 
             // backButton
             // 
-            backButton.Location = new Point(191, 7);
+            backButton.Location = new Point(221, 15);
             backButton.Name = "backButton";
-            backButton.Size = new Size(113, 61);
+            backButton.Size = new Size(160, 60);
             backButton.TabIndex = 4;
             backButton.Text = "Повернутися";
             backButton.UseVisualStyleBackColor = true;
@@ -88,9 +101,10 @@
             // authorLabel
             // 
             authorLabel.AutoSize = true;
-            authorLabel.Location = new Point(3, 411);
+            authorLabel.Font = new Font("Segoe UI", 11F);
+            authorLabel.Location = new Point(3, 480);
             authorLabel.Name = "authorLabel";
-            authorLabel.Size = new Size(58, 20);
+            authorLabel.Size = new Size(73, 25);
             authorLabel.TabIndex = 2;
             authorLabel.Text = "Автор :";
             // 
@@ -116,7 +130,7 @@
             tableLayoutPanel1.Controls.Add(raitingLabel, 0, 3);
             tableLayoutPanel1.Controls.Add(descriptionLabel, 0, 1);
             tableLayoutPanel1.Controls.Add(studentsLabel, 0, 5);
-            tableLayoutPanel1.Location = new Point(50, 100);
+            tableLayoutPanel1.Location = new Point(34, 15);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
@@ -125,7 +139,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(600, 515);
+            tableLayoutPanel1.Size = new Size(616, 600);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // nameLabel
@@ -141,41 +155,43 @@
             // tegsLabel
             // 
             tegsLabel.AutoSize = true;
-            tegsLabel.Location = new Point(3, 309);
+            tegsLabel.Font = new Font("Segoe UI", 11F);
+            tegsLabel.Location = new Point(3, 360);
             tegsLabel.Name = "tegsLabel";
-            tegsLabel.Size = new Size(47, 20);
+            tegsLabel.Size = new Size(59, 25);
             tegsLabel.TabIndex = 3;
             tegsLabel.Text = "Теги :";
             // 
             // raitingLabel
             // 
             raitingLabel.AutoSize = true;
-            raitingLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            raitingLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             raitingLabel.ForeColor = Color.Goldenrod;
-            raitingLabel.Location = new Point(3, 360);
+            raitingLabel.Location = new Point(3, 420);
             raitingLabel.Name = "raitingLabel";
-            raitingLabel.Size = new Size(74, 20);
+            raitingLabel.Size = new Size(96, 25);
             raitingLabel.TabIndex = 1;
             raitingLabel.Text = "Рейтинг :";
             // 
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            descriptionLabel.Location = new Point(3, 103);
+            descriptionLabel.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
+            descriptionLabel.Location = new Point(3, 120);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(82, 20);
+            descriptionLabel.Size = new Size(105, 25);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = "Description";
             // 
             // studentsLabel
             // 
             studentsLabel.AutoSize = true;
-            studentsLabel.Location = new Point(3, 462);
+            studentsLabel.Font = new Font("Segoe UI", 11F);
+            studentsLabel.Location = new Point(3, 540);
             studentsLabel.Name = "studentsLabel";
-            studentsLabel.Size = new Size(123, 20);
+            studentsLabel.Size = new Size(188, 25);
             studentsLabel.TabIndex = 4;
-            studentsLabel.Text = "Students Amount";
+            studentsLabel.Text = "Кількість студентів : ";
             // 
             // CourseScreenBlock
             // 
@@ -186,6 +202,7 @@
             Name = "CourseScreenBlock";
             Size = new Size(1080, 649);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)coursePictureBox).EndInit();
             panel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
@@ -208,5 +225,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label studentsLabel;
         private Panel buyPanel;
+        private Label costLabel;
     }
 }

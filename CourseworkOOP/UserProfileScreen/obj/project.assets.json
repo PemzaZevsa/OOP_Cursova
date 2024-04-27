@@ -2,6 +2,39 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "CourseScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MyClassLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CourseScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CourseScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "MainScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CourseScreen": "1.0.0",
+          "MyClassLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MainScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MainScreen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "MyClassLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -15,6 +48,16 @@
     }
   },
   "libraries": {
+    "CourseScreen/1.0.0": {
+      "type": "project",
+      "path": "../CourseScreen/CourseScreen.csproj",
+      "msbuildProject": "../CourseScreen/CourseScreen.csproj"
+    },
+    "MainScreen/1.0.0": {
+      "type": "project",
+      "path": "../MainScreen/MainScreen.csproj",
+      "msbuildProject": "../MainScreen/MainScreen.csproj"
+    },
     "MyClassLibrary/1.0.0": {
       "type": "project",
       "path": "../MyClassLibrary/MyClassLibrary.csproj",
@@ -23,6 +66,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "MainScreen >= 1.0.0",
       "MyClassLibrary >= 1.0.0"
     ]
   },
@@ -58,6 +102,9 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
+            "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj": {
+              "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.csproj"
+            },
             "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MyClassLibrary\\MyClassLibrary.csproj": {
               "projectPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MyClassLibrary\\MyClassLibrary.csproj"
             }

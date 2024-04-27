@@ -12,9 +12,40 @@ namespace UserProfileScreen
 {
     public partial class UserSettings : UserControl
     {
+        public event Action<string, string, string, Image> profileUpdate;
         public UserSettings()
         {
             InitializeComponent();
+        }
+
+        private void pictureButton_Click(object sender, EventArgs e)
+        {
+            if (pictureFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Image newProfilePic = Image.FromFile(pictureFileDialog.FileName);
+                    previevPictureBox.Image = newProfilePic;
+                }
+                catch (Exception ex)
+                {
+                    //TODO?
+                    MessageBox.Show("Помилка при завантаженні зображення: " + ex.Message);
+                }
+            }
+        }
+
+        private void saveUserButton_Click(object sender, EventArgs e)
+        {
+            string newPasword = passwordTextBox.Text;
+
+            string newName = nameTextBox.Text;
+
+            string newSurname = surnameTextBox.Text;
+
+            Image newProfilePic = previevPictureBox.Image;
+
+            profileUpdate?.Invoke(newPasword, newName, newSurname,newProfilePic);
         }
     }
 }

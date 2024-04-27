@@ -81,6 +81,8 @@ namespace CourseworkOOP.Entities.Courses
             RatingsAmount = 0;
             rating = 0;
             BoughtCourseAmount = 0;
+            ModulePath = $"Data\\Courses\\{Id}\\Modules.json";
+            PicturePath = $"Data\\Courses\\{Id}\\Icon.bmp";
         }
         public Course(string name, string description)
         {
@@ -92,23 +94,26 @@ namespace CourseworkOOP.Entities.Courses
             RatingsAmount = 0;
             rating = 0;
             BoughtCourseAmount = 0;
-
-            ModulePath = @$"Data\Courses\{Id}";
+            ModulePath = $"Data\\Courses\\{Id}\\Modules.json";
+            PicturePath = $"Data\\Courses\\{Id}\\Icon.bmp";
         }
-        public Course(string name, string description, string modulePath, uint author, double rating, int ratingsAmount, decimal cost, List<Teg> tegs)
+        public Course(string name, string description, uint author, string authorName, string authorSurname, double rating, int ratingsAmount, decimal cost, List<Teg> tegs, List<Module> modules)
         {
             Id = counter++;
             Name = name;
             Description = description;
             AuthorId = author;
-            ModulePath = modulePath;
+            AuthorName = authorName;
+            AuthorSurname = authorSurname;
+            ModulePath = $"Data\\Courses\\{Id}\\Modules.json";
+            PicturePath = $"Data\\Courses\\{Id}\\Icon.bmp";
             Cost = cost;
-            this.tegs = tegs;
-            this.modules = new List<Module>();
+            Tegs = tegs;
+            this.modules = modules;
             this.rating = rating;
             RatingsAmount = ratingsAmount;
         }
-        public Course(uint id, string name, string description, string modulePath, uint author, string authorName, string authorSurname, double rating, int ratingsAmount, decimal cost,uint boughtCourseAmount, List<Teg> tegs)
+        public Course(uint id, string name, string description, uint author, string authorName, string authorSurname, double rating, int ratingsAmount, decimal cost,uint boughtCourseAmount, List<Teg> tegs, List<Module> modules)
         {
             Id = id;
             Name = name;
@@ -116,31 +121,33 @@ namespace CourseworkOOP.Entities.Courses
             AuthorId = author;
             AuthorName = authorName;
             AuthorSurname = authorSurname;
-            ModulePath = modulePath;
+            ModulePath = $"Data\\Courses\\{Id}\\Modules.json";
+            PicturePath = $"Data\\Courses\\{Id}\\Icon.bmp";
             Cost = cost;
             BoughtCourseAmount = boughtCourseAmount;
             this.tegs = tegs;
-            this.modules = new List<Module>();
+            this.modules = modules;
             Rating = rating;
             RatingsAmount = ratingsAmount;
 
         }
         public bool Save()
         {
-            return Save(ModulePath + @"\Modules.txt");
+            return Save(ModulePath);
         }
         public bool Save(string path)
         {
-            //if (path is null) path = ModulePath + @"\Modules.txt";
             try
             {
                 string jsonstring = "";
-                foreach (var item in modules)
-                {
-                    item.Save(ModulePath);
-                    jsonstring += JsonSerializer.Serialize<Module>(item);
-                    jsonstring += "\n";
-                }
+                jsonstring += JsonSerializer.Serialize<List<Module>>(modules);
+
+                //foreach (var item in modules)
+                //{
+                //    item.Save(ModulePath);
+                //    jsonstring += JsonSerializer.Serialize<Module>(item);
+                //    jsonstring += "\n";
+                //}
                 File.WriteAllText(path, jsonstring);
             }
             catch (IOException e)
@@ -159,24 +166,27 @@ namespace CourseworkOOP.Entities.Courses
         }
         public bool Load()
         {
-            return Load(ModulePath + @"\Modules.txt");
+            return Load(ModulePath);
         }
         public bool Load(string path)
         {
-            //if (path is null) path = ModulePath + @"\Modules.txt";
+            //TODO
             try
             {
-                List<string> lines = File.ReadAllLines(path).ToList();
+                string lines = File.ReadAllText(path);
+                modules = JsonSerializer.Deserialize<List<Module>>(lines);
 
-                foreach (var item in lines)
-                {
-                    Module? module = JsonSerializer.Deserialize<Module>(item);
-                    if (module != null) 
-                    { 
-                        modules.Add(module);
-                        module.Load(ModulePath);
-                    }
-                }
+                //List<string> lines = File.ReadAllLines(path).ToList();
+
+                //foreach (var item in lines)
+                //{
+                //    Module? module = JsonSerializer.Deserialize<Module>(item);
+                //    if (module != null) 
+                //    { 
+                //        modules.Add(module);
+                //        module.Load(ModulePath);
+                //    }
+                //}
             }
             catch (IOException e)
             {

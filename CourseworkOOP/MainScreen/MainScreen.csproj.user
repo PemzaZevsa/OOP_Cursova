@@ -4,7 +4,7 @@
     <Compile Update="CourseElement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="MainScreen.cs">
+    <Compile Update="MainScreenBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

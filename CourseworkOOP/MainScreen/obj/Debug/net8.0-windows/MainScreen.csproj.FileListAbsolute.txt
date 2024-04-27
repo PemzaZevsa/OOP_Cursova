@@ -14,7 +14,6 @@ C:\Users\Pemza\source\repos\CourseworkOOP\CourseworkOOP\MainScreen\obj\Debug\net
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.deps.json
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\bin\Debug\net8.0-windows\MainScreen.pdb
-C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.MainScreen.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.GenerateResource.cache
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.AssemblyInfoInputs.cache
@@ -33,3 +32,4 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\o
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.csproj.Up2Date
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.CourseElement.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.Properties.Resources.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\MainScreen\obj\Debug\net8.0-windows\MainScreen.MainScreenBlock.resources

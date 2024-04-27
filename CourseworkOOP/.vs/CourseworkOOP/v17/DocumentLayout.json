@@ -3,72 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\header\\headerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|solutionrelative:header\\headerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\userprofilescreen\\studentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\studentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|solutionrelative:coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\userprofilescreen\\studentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\studentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|solutionrelative:coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F187D326-FFE8-4BA6-B0D3-5B10B6F17740}|CourseworkOOP\\CourseworkOOP.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\courseworkoop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F187D326-FFE8-4BA6-B0D3-5B10B6F17740}|CourseworkOOP\\CourseworkOOP.csproj|solutionrelative:courseworkoop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\header\\headerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|solutionrelative:header\\headerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|c:\\users\\pemza\\source\\repos\\courseworkoop\\oop_cursova\\courseworkoop\\header\\authorised.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|solutionrelative:header\\authorised.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\header\\authorised.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AE1D65F1-7FF3-4F12-ADA4-18119F2BC225}|Header\\Header.csproj|solutionrelative:header\\authorised.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|solutionrelative:coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|solutionrelative:coursescreen\\coursescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\mainscreen\\mainscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\mainscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\mainscreen\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\userprofilescreen\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{070FD5CA-BD36-4085-B3B8-62FE3CDF6A6B}|UserProfileScreen\\UserProfileScreen.csproj|solutionrelative:userprofilescreen\\userprofilescreenblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\mainscreen\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\coursescreen\\canbuy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2B08CEC9-E1FD-4750-9A5B-231ED22B5B98}|CourseScreen\\CourseScreen.csproj|solutionrelative:coursescreen\\canbuy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{32417469-E521-4BFA-AFCB-C8A5DC88CBF2}|MainScreen\\MainScreen.csproj|solutionrelative:mainscreen\\courseelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F187D326-FFE8-4BA6-B0D3-5B10B6F17740}|CourseworkOOP\\CourseworkOOP.csproj|C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\courseworkoop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F187D326-FFE8-4BA6-B0D3-5B10B6F17740}|CourseworkOOP\\CourseworkOOP.csproj|solutionrelative:courseworkoop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,29 +46,17 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\Form1.cs",
               "RelativeDocumentMoniker": "CourseworkOOP\\Form1.cs",
               "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\Form1.cs",
               "RelativeToolTip": "CourseworkOOP\\Form1.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwCQAAAANAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T21:32:55.744Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HeaderBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\HeaderBlock.cs",
-              "RelativeDocumentMoniker": "Header\\HeaderBlock.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\HeaderBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "Header\\HeaderBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T10:11:33.211Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Bookmark",
@@ -116,186 +68,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HeaderBlock.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\HeaderBlock.cs",
-              "RelativeDocumentMoniker": "Header\\HeaderBlock.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\HeaderBlock.cs",
-              "RelativeToolTip": "Header\\HeaderBlock.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBMAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:44:34.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Authorised.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Authorised.cs",
-              "RelativeDocumentMoniker": "Header\\Authorised.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Authorised.cs",
-              "RelativeToolTip": "Header\\Authorised.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAArAAAA",
+              "Title": "StudentCourses.cs",
+              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\StudentCourses.cs",
+              "RelativeDocumentMoniker": "UserProfileScreen\\StudentCourses.cs",
+              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\StudentCourses.cs*",
+              "RelativeToolTip": "UserProfileScreen\\StudentCourses.cs*",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAB0AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:32:23.715Z",
+              "WhenOpened": "2024-04-27T16:37:38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Authorised.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Authorised.cs",
-              "RelativeDocumentMoniker": "Header\\Authorised.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\Header\\Authorised.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "Header\\Authorised.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentIndex": 0,
+              "Title": "StudentCourses.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\StudentCourses.cs",
+              "RelativeDocumentMoniker": "UserProfileScreen\\StudentCourses.cs",
+              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\StudentCourses.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]*",
+              "RelativeToolTip": "UserProfileScreen\\StudentCourses.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:32:14.418Z",
+              "WhenOpened": "2024-04-27T16:37:03.433Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainScreen.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.Designer.cs",
-              "RelativeDocumentMoniker": "MainScreen\\MainScreen.Designer.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.Designer.cs",
-              "RelativeToolTip": "MainScreen\\MainScreen.Designer.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAMwB8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T14:45:51.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CourseElement.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs",
-              "RelativeDocumentMoniker": "MainScreen\\CourseElement.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs",
-              "RelativeToolTip": "MainScreen\\CourseElement.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAADkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T14:38:26.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs",
-              "RelativeDocumentMoniker": "MainScreen\\CourseElement.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "MainScreen\\CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:26:30.361Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserSettings.cs",
-              "RelativeDocumentMoniker": "UserProfileScreen\\UserSettings.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "UserProfileScreen\\UserSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T11:27:20.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserProfileScreenBlock.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
-              "RelativeDocumentMoniker": "UserProfileScreen\\UserProfileScreenBlock.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
-              "RelativeToolTip": "UserProfileScreen\\UserProfileScreenBlock.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAiwBwAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T10:48:30.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
-              "RelativeDocumentMoniker": "UserProfileScreen\\UserProfileScreenBlock.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "UserProfileScreen\\UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T10:48:20.378Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CanBuy.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CanBuy.cs",
-              "RelativeDocumentMoniker": "CourseScreen\\CanBuy.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CanBuy.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "CourseScreen\\CanBuy.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T18:22:05.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.cs",
-              "RelativeDocumentMoniker": "MainScreen\\MainScreen.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.cs",
-              "RelativeToolTip": "MainScreen\\MainScreen.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAADwvwoAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T12:50:04.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainScreen.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.cs",
-              "RelativeDocumentMoniker": "MainScreen\\MainScreen.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\MainScreen.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "MainScreen\\MainScreen.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T12:49:47.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "CourseScreenBlock.cs",
               "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreenBlock.cs",
               "RelativeDocumentMoniker": "CourseScreen\\CourseScreenBlock.cs",
               "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreenBlock.cs",
               "RelativeToolTip": "CourseScreen\\CourseScreenBlock.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAawDAAAAAIAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T08:19:11.94Z",
+              "WhenOpened": "2024-04-27T16:00:20.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "CourseScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreenBlock.cs",
               "RelativeDocumentMoniker": "CourseScreen\\CourseScreenBlock.cs",
               "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseScreen\\CourseScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "RelativeToolTip": "CourseScreen\\CourseScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T07:05:52.256Z",
+              "WhenOpened": "2024-04-27T15:52:01.463Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\Form1.cs",
-              "RelativeDocumentMoniker": "CourseworkOOP\\Form1.cs",
-              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\CourseworkOOP\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "CourseworkOOP\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentIndex": 4,
+              "Title": "CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs",
+              "RelativeDocumentMoniker": "MainScreen\\CourseElement.cs",
+              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\MainScreen\\CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "MainScreen\\CourseElement.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T21:09:05.692Z",
+              "WhenOpened": "2024-04-27T15:51:53.26Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
+              "RelativeDocumentMoniker": "UserProfileScreen\\UserProfileScreenBlock.cs",
+              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "UserProfileScreen\\UserProfileScreenBlock.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T19:09:23.045Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserProfileScreenBlock.cs",
+              "DocumentMoniker": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
+              "RelativeDocumentMoniker": "UserProfileScreen\\UserProfileScreenBlock.cs",
+              "ToolTip": "C:\\Users\\Pemza\\source\\repos\\CourseworkOOP\\OOP_Cursova\\CourseworkOOP\\UserProfileScreen\\UserProfileScreenBlock.cs",
+              "RelativeToolTip": "UserProfileScreen\\UserProfileScreenBlock.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAqwFkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T19:10:31.799Z",
+              "EditorCaption": ""
             }
           ]
         },

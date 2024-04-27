@@ -1,5 +1,6 @@
 ﻿using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace MainScreen
 {
     public partial class CourseElement : UserControl
     {
-        public event Action toCourse;
+        public event Action<Course> toCourse;
         public Course Course { get; set; }
         public CourseElement(Course course)
         {
@@ -35,11 +36,11 @@ namespace MainScreen
         }
         private void SetDescription(string description)
         {
-            descriptionLabel.Text = description + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" + "22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222";
+            descriptionLabel.Text = description;
         }
         private void SetRaiting(double raiting, int raitingsAmount)
         {
-            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount})");
+            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount} відгуків)");
         }
         private void SetTegs(List<Teg> Tegs)
         {
@@ -66,7 +67,7 @@ namespace MainScreen
 
         private void toCourseButton_Click(object sender, EventArgs e)
         {
-            toCourse?.Invoke();
+            toCourse?.Invoke(Course);
         }
     }
 }

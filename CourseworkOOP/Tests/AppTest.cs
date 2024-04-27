@@ -33,10 +33,10 @@ namespace Tests
         public void SeacrchCourseByTegs()
         {
             CoursesApp coursesApp = new CoursesApp();
-            Course course1 = new Course("The Test course", "nothing","",3,4,0,10,new List<Teg>() { Teg.Cybersecurity, Teg.Development});
-            Course course2 = new Course("The Test courseword", "nothing", "", 3, 4,0, 10, new List<Teg>() { Teg.Development });
-            Course course3 = new Course("The word course", "nothing", "", 3, 4,0, 10, new List<Teg>() { Teg.Cybersecurity });
-            Course course4 = new Course("The WoRD course 2", "nothing", "", 3, 4,0, 10, new List<Teg>() { Teg.Marketing });
+            Course course1 = new Course("The Test course", "nothing",0,"","",3,4,10,new List<Teg>() { Teg.Cybersecurity, Teg.Development},null);
+            Course course2 = new Course("The Test courseword", "nothing",0, "","", 3, 4, 10, new List<Teg>() { Teg.Development }, null);
+            Course course3 = new Course("The word course", "nothing", 0, "", "", 3, 4,10, new List<Teg>() { Teg.Cybersecurity }, null);
+            Course course4 = new Course("The WoRD course 2", "nothing", 0, "", "", 3, 4, 10, new List<Teg>() { Teg.Marketing }, null);
             coursesApp.Courses.Add(course1);
             coursesApp.Courses.Add(course2);
             coursesApp.Courses.Add(course3);

@@ -34,3 +34,10 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileS
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.StudentCourses.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.TeacherCourses.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.UserSettings.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\CourseScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\MainScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\MainScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\bin\Debug\net8.0-windows\CourseScreen.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.CourseCreation.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.LessonCreation.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.ModuleCreation.resources

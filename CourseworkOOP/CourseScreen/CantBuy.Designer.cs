@@ -34,9 +34,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(61, 57);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(30, 59);
             label1.Name = "label1";
-            label1.Size = new Size(216, 20);
+            label1.Size = new Size(292, 25);
             label1.TabIndex = 0;
             label1.Text = "Ви не можете покупати курси";
             // 

@@ -39,14 +39,14 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 110);
+            panel1.Size = new Size(200, 120);
             panel1.TabIndex = 6;
             // 
             // registationButton
             // 
-            registationButton.Location = new Point(55, 10);
+            registationButton.Location = new Point(50, 10);
             registationButton.Name = "registationButton";
-            registationButton.Size = new Size(90, 90);
+            registationButton.Size = new Size(100, 100);
             registationButton.TabIndex = 0;
             registationButton.Text = "Вхід";
             registationButton.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "UnAuthorised";
-            Size = new Size(200, 110);
+            Size = new Size(200, 120);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

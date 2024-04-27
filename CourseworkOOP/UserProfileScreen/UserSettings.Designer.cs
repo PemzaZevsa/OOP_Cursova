@@ -29,106 +29,110 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            previevPictureBox = new PictureBox();
             settingsLabel = new Label();
-            button1 = new Button();
+            pictureButton = new Button();
             label5 = new Label();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            surnameTextBox = new TextBox();
+            nameTextBox = new TextBox();
+            passwordTextBox = new TextBox();
             saveUserButton = new Button();
             label3 = new Label();
             label2 = new Label();
             passwordLabel = new Label();
+            pictureFileDialog = new OpenFileDialog();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)previevPictureBox).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(previevPictureBox);
             panel1.Controls.Add(settingsLabel);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(pictureButton);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(surnameTextBox);
+            panel1.Controls.Add(nameTextBox);
+            panel1.Controls.Add(passwordTextBox);
             panel1.Controls.Add(saveUserButton);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(passwordLabel);
             panel1.Location = new Point(24, 18);
             panel1.Name = "panel1";
-            panel1.Size = new Size(558, 512);
+            panel1.Size = new Size(558, 564);
             panel1.TabIndex = 0;
+            // 
+            // previevPictureBox
+            // 
+            previevPictureBox.BorderStyle = BorderStyle.FixedSingle;
+            previevPictureBox.Location = new Point(370, 226);
+            previevPictureBox.Name = "previevPictureBox";
+            previevPictureBox.Size = new Size(150, 150);
+            previevPictureBox.TabIndex = 12;
+            previevPictureBox.TabStop = false;
             // 
             // settingsLabel
             // 
             settingsLabel.AutoSize = true;
             settingsLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            settingsLabel.Location = new Point(135, 20);
+            settingsLabel.Location = new Point(145, 10);
             settingsLabel.Name = "settingsLabel";
             settingsLabel.Size = new Size(265, 46);
             settingsLabel.TabIndex = 11;
             settingsLabel.Text = "Налаштування";
             // 
-            // button1
+            // pictureButton
             // 
-            button1.Location = new Point(399, 266);
-            button1.Name = "button1";
-            button1.Size = new Size(121, 54);
-            button1.TabIndex = 3;
-            button1.Text = "Вибрати файл";
-            button1.UseVisualStyleBackColor = true;
+            pictureButton.Location = new Point(320, 382);
+            pictureButton.Name = "pictureButton";
+            pictureButton.Size = new Size(200, 54);
+            pictureButton.TabIndex = 3;
+            pictureButton.Text = "Вибрати файл";
+            pictureButton.UseVisualStyleBackColor = true;
+            pictureButton.Click += pictureButton_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(20, 300);
+            label5.Location = new Point(20, 416);
             label5.Name = "label5";
             label5.Size = new Size(221, 20);
             label5.TabIndex = 10;
             label5.Text = "Змінити зображення профілю";
             // 
-            // label4
+            // surnameTextBox
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(20, 250);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 9;
-            label4.Text = "label4";
+            surnameTextBox.Location = new Point(320, 193);
+            surnameTextBox.Name = "surnameTextBox";
+            surnameTextBox.Size = new Size(200, 27);
+            surnameTextBox.TabIndex = 8;
             // 
-            // textBox3
+            // nameTextBox
             // 
-            textBox3.Location = new Point(348, 193);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(172, 27);
-            textBox3.TabIndex = 8;
+            nameTextBox.Location = new Point(320, 143);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.Size = new Size(200, 27);
+            nameTextBox.TabIndex = 7;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            textBox2.Location = new Point(348, 143);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(172, 27);
-            textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(348, 93);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(172, 27);
-            textBox1.TabIndex = 6;
+            passwordTextBox.Location = new Point(320, 93);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(200, 27);
+            passwordTextBox.TabIndex = 6;
             // 
             // saveUserButton
             // 
             saveUserButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             saveUserButton.ForeColor = Color.FromArgb(0, 192, 0);
-            saveUserButton.Location = new Point(120, 400);
+            saveUserButton.Location = new Point(120, 480);
             saveUserButton.Name = "saveUserButton";
             saveUserButton.Size = new Size(300, 60);
             saveUserButton.TabIndex = 4;
             saveUserButton.Text = "Зберегти зміни";
             saveUserButton.UseVisualStyleBackColor = true;
+            saveUserButton.Click += saveUserButton_Click;
             // 
             // label3
             // 
@@ -157,31 +161,38 @@
             passwordLabel.TabIndex = 0;
             passwordLabel.Text = "Пароль";
             // 
+            // pictureFileDialog
+            // 
+            pictureFileDialog.FileName = "openFileDialog1";
+            pictureFileDialog.Filter = "Image Files|*.jpg;*.png;*.bmp";
+            // 
             // UserSettings
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "UserSettings";
-            Size = new Size(639, 551);
+            Size = new Size(660, 606);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)previevPictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox surnameTextBox;
+        private TextBox nameTextBox;
+        private TextBox passwordTextBox;
         private Button saveUserButton;
-        private Button button1;
+        private Button pictureButton;
         private Label label3;
         private Label label2;
         private Label passwordLabel;
         private Label label5;
-        private Label label4;
         private Label settingsLabel;
+        private OpenFileDialog pictureFileDialog;
+        private PictureBox previevPictureBox;
     }
 }

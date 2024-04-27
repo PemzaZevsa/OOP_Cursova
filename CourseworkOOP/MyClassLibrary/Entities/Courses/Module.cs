@@ -15,9 +15,9 @@ namespace CourseworkOOP.Entities.Courses
         public uint Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string LessonsPath { get; set; }
+        //public string LessonsPath { get; set; }
         private List<Lesson> lessons;
-        [JsonIgnore]
+        //[JsonIgnore]
         public List<Lesson> Lessons { get => lessons; }
         public static uint counter;
 
@@ -37,13 +37,18 @@ namespace CourseworkOOP.Entities.Courses
             Description = description;
             lessons = new List<Lesson>();
         }
+        public Module( string name, string description, List<Lesson> lessons)
+        {
+            Id = counter++;
+            Name = name;
+            Description = description;
+            this.lessons = lessons;
+        }
         public Module(uint id, string name, string description, List<Lesson> lessons)
         {
             Id = id;
             Name = name;
             Description = description;
-            //IsCompleted = isCompleted;
-            //LessonsComplete = lessonsComplete;
             this.lessons = lessons;
         }
         public bool Save(string path)

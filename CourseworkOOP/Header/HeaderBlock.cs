@@ -14,16 +14,20 @@ namespace HeaderSpace
         public event Action changeToAuthorised;
         public event Action changeToUnAuthorised;
 
+        //last
+        //public event Action<string,string> changeCurrentUserLabel;
         //
-        public event Action<string,string> changeCurrentUserLabel;
-        //
-        //public User User { get; set; }
-        public Authorised authorised;
+
+        private Authorised authorised;
         public HeaderBlock()
         {
             InitializeComponent();
-            changeCurrentUserLabel += ChangeCurrentUserLabel;
-            authorised = new Authorised();
+            //last
+            //changeCurrentUserLabel += ChangeCurrentUserLabel;
+
+            authorised = new Authorised();         
+            //authorised.changeCurrentUserLabel += ChangeCurrentUserLabel;
+            //authorised.changePicToUserPic += ChangePicToUserPic;
 
             authorised.toUserScreen += ToUserProfileScreen;
             unAuthorised.toRegistationScreen += ToRegistrationScreen;
@@ -33,12 +37,10 @@ namespace HeaderSpace
         {
             toMainScreen?.Invoke();
         }
-
         private void ToSearch(object sender, EventArgs e)
         {
             toSearchScreen?.Invoke();
         }
-
         private void ToUserProfileScreen()
         {
             toUserProfileScreen?.Invoke();
@@ -48,14 +50,16 @@ namespace HeaderSpace
             toRegistrationScreen?.Invoke();
         }
 
-        public void ActivateChangeCurrentUserLabel(string name,string surname)
-        {
-            changeCurrentUserLabel?.Invoke(name, surname);
-        }
+
 
         public void ChangeCurrentUserLabel(string name, string surname)
         {
             authorised.ChangeCurrentUserLabel(name, surname);
+        }
+
+        public void ChangePicToUserPic(string picPath)
+        {
+            authorised.ChangePicToUserPic(picPath);
         }
 
         public void ChangeToAuthorised()

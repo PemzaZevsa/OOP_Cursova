@@ -4,6 +4,15 @@
     <Compile Update="AdminUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="CourseCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LessonCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ModuleCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Statistics.cs">
       <SubType>UserControl</SubType>
     </Compile>

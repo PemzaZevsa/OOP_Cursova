@@ -32,3 +32,4 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.CantBuy.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.CanBuy.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreenSpace.CourseScreenBlock.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseScreen\obj\Debug\net8.0-windows\CourseScreen.MoneyInputForm.resources

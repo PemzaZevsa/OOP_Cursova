@@ -14,6 +14,7 @@
     <ProjectReference Include="..\MainScreen\MainScreen.csproj" />
     <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj" />
     <ProjectReference Include="..\RegistrationScreen\RegistrationScreen.csproj" />
+    <ProjectReference Include="..\SeachScreen\SeachScreen.csproj" />
     <ProjectReference Include="..\UserProfileScreen\UserProfileScreen.csproj" />
   </ItemGroup>
 

@@ -57,3 +57,5 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOO
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\RegistrationScreen.pdb
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\MyClassLibrary.dll
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\MyClassLibrary.pdb
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\SeachScreen.dll
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\CourseworkOOP\bin\Debug\net8.0-windows\SeachScreen.pdb

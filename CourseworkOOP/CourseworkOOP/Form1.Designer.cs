@@ -291,7 +291,7 @@
             headPanel.Dock = DockStyle.Top;
             headPanel.Location = new Point(0, 28);
             headPanel.Name = "headPanel";
-            headPanel.Size = new Size(1291, 110);
+            headPanel.Size = new Size(1291, 120);
             headPanel.TabIndex = 3;
             // 
             // myHeader
@@ -300,15 +300,15 @@
             myHeader.Dock = DockStyle.Fill;
             myHeader.Location = new Point(0, 0);
             myHeader.Name = "myHeader";
-            myHeader.Size = new Size(1291, 110);
+            myHeader.Size = new Size(1291, 120);
             myHeader.TabIndex = 0;
             // 
             // mainPanel
             // 
             mainPanel.Dock = DockStyle.Fill;
-            mainPanel.Location = new Point(0, 138);
+            mainPanel.Location = new Point(0, 148);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1291, 790);
+            mainPanel.Size = new Size(1291, 780);
             mainPanel.TabIndex = 4;
             // 
             // Form1

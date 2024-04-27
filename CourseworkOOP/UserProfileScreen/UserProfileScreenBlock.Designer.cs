@@ -30,18 +30,17 @@
         {
             buttonPanel = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            statisticButton = new Button();
             iTeachebleButton = new Button();
             settingsButton = new Button();
-            logOutButton = new Button();
             istudyableButton = new Button();
             iControlableButton = new Button();
             userProfilePictureBox = new PictureBox();
+            logOutButton = new Button();
             infoPanel = new Panel();
-            userSettings1 = new UserSettings();
             buttonPanel.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userProfilePictureBox).BeginInit();
-            infoPanel.SuspendLayout();
             SuspendLayout();
             // 
             // buttonPanel
@@ -49,19 +48,20 @@
             buttonPanel.BackColor = SystemColors.ActiveBorder;
             buttonPanel.Controls.Add(tableLayoutPanel1);
             buttonPanel.Controls.Add(userProfilePictureBox);
+            buttonPanel.Controls.Add(logOutButton);
             buttonPanel.Dock = DockStyle.Left;
             buttonPanel.Location = new Point(0, 0);
             buttonPanel.Name = "buttonPanel";
-            buttonPanel.Size = new Size(300, 598);
+            buttonPanel.Size = new Size(300, 683);
             buttonPanel.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(statisticButton, 0, 4);
             tableLayoutPanel1.Controls.Add(iTeachebleButton, 0, 2);
             tableLayoutPanel1.Controls.Add(settingsButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(logOutButton, 0, 4);
             tableLayoutPanel1.Controls.Add(istudyableButton, 0, 1);
             tableLayoutPanel1.Controls.Add(iControlableButton, 0, 3);
             tableLayoutPanel1.Location = new Point(25, 306);
@@ -76,6 +76,16 @@
             tableLayoutPanel1.Size = new Size(250, 301);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // statisticButton
+            // 
+            statisticButton.Location = new Point(3, 243);
+            statisticButton.Name = "statisticButton";
+            statisticButton.Size = new Size(244, 55);
+            statisticButton.TabIndex = 4;
+            statisticButton.Text = "Статистика";
+            statisticButton.UseVisualStyleBackColor = true;
+            statisticButton.Click += statisticButton_Click;
+            // 
             // iTeachebleButton
             // 
             iTeachebleButton.Location = new Point(3, 123);
@@ -84,6 +94,7 @@
             iTeachebleButton.TabIndex = 3;
             iTeachebleButton.Text = "Створені курси";
             iTeachebleButton.UseVisualStyleBackColor = true;
+            iTeachebleButton.Click += iTeachebleButton_Click;
             // 
             // settingsButton
             // 
@@ -93,18 +104,7 @@
             settingsButton.TabIndex = 0;
             settingsButton.Text = "Налаштування";
             settingsButton.UseVisualStyleBackColor = true;
-            settingsButton.Click += button1_Click;
-            // 
-            // logOutButton
-            // 
-            logOutButton.ForeColor = Color.Red;
-            logOutButton.Location = new Point(3, 243);
-            logOutButton.Name = "logOutButton";
-            logOutButton.Size = new Size(244, 55);
-            logOutButton.TabIndex = 2;
-            logOutButton.Text = "Вийти з облікового запису";
-            logOutButton.UseVisualStyleBackColor = true;
-            logOutButton.Click += logOutButton_Click;
+            settingsButton.Click += settingsButton_Click;
             // 
             // istudyableButton
             // 
@@ -114,6 +114,7 @@
             istudyableButton.TabIndex = 1;
             istudyableButton.Text = "Моє навчання";
             istudyableButton.UseVisualStyleBackColor = true;
+            istudyableButton.Click += istudyableButton_Click;
             // 
             // iControlableButton
             // 
@@ -123,6 +124,7 @@
             iControlableButton.TabIndex = 4;
             iControlableButton.Text = "Користувачі";
             iControlableButton.UseVisualStyleBackColor = true;
+            iControlableButton.Click += iControlableButton_Click;
             // 
             // userProfilePictureBox
             // 
@@ -133,23 +135,25 @@
             userProfilePictureBox.TabIndex = 3;
             userProfilePictureBox.TabStop = false;
             // 
+            // logOutButton
+            // 
+            logOutButton.ForeColor = Color.Red;
+            logOutButton.Location = new Point(31, 613);
+            logOutButton.Name = "logOutButton";
+            logOutButton.Size = new Size(244, 55);
+            logOutButton.TabIndex = 2;
+            logOutButton.Text = "Вийти з облікового запису";
+            logOutButton.UseVisualStyleBackColor = true;
+            logOutButton.Click += logOutButton_Click;
+            // 
             // infoPanel
             // 
             infoPanel.BackColor = SystemColors.ControlLightLight;
-            infoPanel.Controls.Add(userSettings1);
             infoPanel.Dock = DockStyle.Fill;
             infoPanel.Location = new Point(300, 0);
             infoPanel.Name = "infoPanel";
-            infoPanel.Size = new Size(702, 598);
+            infoPanel.Size = new Size(702, 683);
             infoPanel.TabIndex = 1;
-            // 
-            // userSettings1
-            // 
-            userSettings1.Dock = DockStyle.Fill;
-            userSettings1.Location = new Point(0, 0);
-            userSettings1.Name = "userSettings1";
-            userSettings1.Size = new Size(702, 598);
-            userSettings1.TabIndex = 0;
             // 
             // UserProfileScreenBlock
             // 
@@ -158,11 +162,10 @@
             Controls.Add(infoPanel);
             Controls.Add(buttonPanel);
             Name = "UserProfileScreenBlock";
-            Size = new Size(1002, 598);
+            Size = new Size(1002, 683);
             buttonPanel.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)userProfilePictureBox).EndInit();
-            infoPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -175,8 +178,8 @@
         private Panel infoPanel;
         private PictureBox userProfilePictureBox;
         private TableLayoutPanel tableLayoutPanel1;
-        private UserSettings userSettings1;
         private Button iTeachebleButton;
         private Button iControlableButton;
+        private Button statisticButton;
     }
 }

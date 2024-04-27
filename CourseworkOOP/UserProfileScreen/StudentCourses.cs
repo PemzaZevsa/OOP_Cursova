@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CourseworkOOP.Entities.Courses;
+using MainScreen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,25 @@ namespace UserProfileScreen
 {
     public partial class StudentCourses : UserControl
     {
-        public StudentCourses()
+        public StudentCourses(List<Course> courses,List<uint> ids)
         {
             InitializeComponent();
+
+            if (courses != null && courses.Count > 0)
+            {
+                Load(courses, ids);
+            }
+            
+        }
+
+        private void Load(List<Course> courses, List<uint> ids)
+        {
+            var MyCouses = courses.Where(x =>  ids.Contains(x.Id));
+            foreach (Course course in MyCouses)
+            {
+                var courseEl = new CourseElement(course);
+                coursesFlowLayoutPanel.Controls.Add(courseEl);
+            }
         }
     }
 }

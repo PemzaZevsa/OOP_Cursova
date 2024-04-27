@@ -13,12 +13,13 @@ namespace Header
     public partial class Authorised : UserControl
     {
         public event Action toUserScreen;
-        public event Action<string, string> changeCurrentUserLabel;
-        public event Action<string> changePicToUserPic;
+        //public event Action<string, string> changeCurrentUserLabel;
+        //public event Action<string> changePicToUserPic;
         public Authorised()
         {
             InitializeComponent();
-            changeCurrentUserLabel += ChangeCurrentUserLabel;
+            //changeCurrentUserLabel += ChangeCurrentUserLabel;
+            //changePicToUserPic += ChangePicToUserPic;
         }
 
         private void userProfileButton_Click(object sender, EventArgs e)
@@ -30,20 +31,18 @@ namespace Header
         {
             nameLabel.Text = $"{name} {surname}";
         }
-        public void SetPic(string path)
+        public void ChangePicToUserPic(string path)
         {
-            changePicToUserPic?.Invoke(path);
-            //try
-            //{
-            //    Image image = Image.FromFile(path);
-            //    coursePictureBox.Image = image;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
-            //    coursePictureBox.Image = image2;
-            //    MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
-            //}            
+            try
+            {
+                Image image = Image.FromFile(path);
+                userProfileButton.BackgroundImage = image;
+            }
+            catch (Exception ex)
+            {
+                Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
+                userProfileButton.BackgroundImage = image2;
+            }
         }
     }
 }

@@ -12,13 +12,65 @@ namespace CourseworkOOP.Entities.Users
         private uint id;
         public uint Id { get; set; }
         private string login;
-        public string Login { get; set; }
+        public string Login {
+            get => login;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+                if (value.Length < 4)
+                {
+                    throw new ArgumentException("Логін занадто короткий",nameof(value));
+                }
+
+                login = value;
+            }
+        }
         private string password;
-        public string Password { get; set; }
+        public string Password { 
+            get => password;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+                if (value.Length < 4)
+                {
+                    throw new ArgumentException("Пароль занадто короткий", nameof(value));
+                }
+
+                password = value;
+            }
+        }
         private string name;
-        public string Name { get; set; }
+        public string Name {
+            get => name;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                name = value;
+            }
+        }
         private string surname;
-        public string Surname { get; set; }
+        public string Surname { 
+            get => surname;
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                surname = value;
+            }
+        }
         public string ProfilePicturePath { get; set; }
 
         public static uint counter;

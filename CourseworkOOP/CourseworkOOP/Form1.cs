@@ -6,13 +6,14 @@ using Microsoft.VisualBasic.ApplicationServices;
 using System.Diagnostics.Metrics;
 using CourseworkOOP.Entities.Users;
 using System.Linq;
+using SeachScreen;
+using System.Windows.Forms;
 
 namespace CourseworkOOP
 {
     public partial class Form1 : Form
     {
-        public CoursesApp coursesApp;
-        public UserProfileScreen.UserProfileScreenBlock UserProfile {  get; set; }
+        private CoursesApp coursesApp;
 
         public Form1()
         {
@@ -21,25 +22,29 @@ namespace CourseworkOOP
             myHeader.toMainScreen += ToMain;
             myHeader.toRegistrationScreen += ToRegistration;
             myHeader.toUserProfileScreen += ToUserProfile;
-            //UserProfile = new UserProfileScreen.UserProfileScreenBlock(coursesApp.CurrentUser);
+            myHeader.toSearchScreen += Search;
 
-            coursesApp = new CoursesApp((name,surname) =>
-            {
-                myHeader.ActivateChangeCurrentUserLabel(name,surname);
-            });
+            coursesApp = new CoursesApp();
             coursesApp.Load();          
+            ToMain();
         }
+
         public void ToRegistration()
         {
             mainPanel.Controls.Clear();
             RegistrationScreen.RegistrationScreen registration = new RegistrationScreen.RegistrationScreen();
+
+            //натискання на кнопку авторизації
             registration.authorisation.authorisationButtonClick += (string login, string password) =>
             {
+                // перевірка корректоності логіна та пароля => далі зміна картинки й елемента label
                 var tempUser = coursesApp.Users.Where(u => u.Login == login).Where(u => u.Password == password).Take(1).FirstOrDefault();
                 if (tempUser != null)
                 {
                     coursesApp.CurrentUser = tempUser;
                     myHeader.ChangeToAuthorised();
+                    myHeader.ChangePicToUserPic(coursesApp.CurrentUser.ProfilePicturePath);
+                    myHeader.ChangeCurrentUserLabel(coursesApp.CurrentUser.Name, coursesApp.CurrentUser.Surname);
                     MessageBox.Show("Успішна авторизація!");
                     ToMain();
                 }
@@ -48,27 +53,44 @@ namespace CourseworkOOP
                     registration.authorisation.ActivateError();
                 }
             };
-
+            
+            //натискання на кнопку реєстрації
             registration.registration.regestrationButtonClick += (string login, string password, string name, string surname,int userType) =>
             {
+                //перевірка чи є такий самий логін
                 if (coursesApp.Users.Where(u => u.Login == login).Take(1).FirstOrDefault() is null)
                 {
+                    //відповідно до userType створюється відповідний класс
                     switch (userType)
                     {
                         case 1: 
                             Teacher teacher = new Teacher(name,surname,login,password);
                             coursesApp.Users.Add(teacher);
                             coursesApp.CurrentUser = teacher;
+
+                            //TODO delete folder and prof pic
+                            Directory.CreateDirectory($"Data\\Users\\{teacher.Id}");
+                            myHeader.ChangeToAuthorised();
+                            myHeader.ChangePicToUserPic(coursesApp.CurrentUser.ProfilePicturePath);
+                            myHeader.ChangeCurrentUserLabel(coursesApp.CurrentUser.Name, coursesApp.CurrentUser.Surname);
+                            MessageBox.Show("Успішна регістрація!");
+                            ToMain();
                             break;
                         case 2: 
                             Student student = new Student(name,surname,login,password);
                             coursesApp.Users.Add(student);
                             coursesApp.CurrentUser = student;
+
+                            Directory.CreateDirectory($"Data\\Users\\{student.Id}");
+                            myHeader.ChangeToAuthorised();
+                            myHeader.ChangePicToUserPic(coursesApp.CurrentUser.ProfilePicturePath);
+                            myHeader.ChangeCurrentUserLabel(coursesApp.CurrentUser.Name, coursesApp.CurrentUser.Surname);
+                            MessageBox.Show("Успішна регістрація!");
+                            ToMain();
                             break;
                         default:
                             break;
-                    }
-                    
+                    }                    
                 }
                 else
                 {
@@ -84,7 +106,9 @@ namespace CourseworkOOP
         public void ToMain()
         {
             mainPanel.Controls.Clear();
-            MainScreen.MainScreen screen = new MainScreen.MainScreen(coursesApp);
+            MainScreen.MainScreenBlock screen = new MainScreen.MainScreenBlock(coursesApp);
+
+            //кнопка відкриття курсу з головної сторінки
             screen.openCourse += (someCourse) =>
             {
                 mainPanel.Controls.Clear();
@@ -92,12 +116,14 @@ namespace CourseworkOOP
                 someCourse.Dock = DockStyle.Fill;
             };
 
+            //кнопка повернення з сторінки курса до головної сторінки
             screen.returnTo += () =>
             {
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(screen);
                 screen.Dock = DockStyle.Fill;
             };
+
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }
@@ -105,20 +131,44 @@ namespace CourseworkOOP
         public void ToUserProfile()
         {
             mainPanel.Controls.Clear();
-            UserProfileScreen.UserProfileScreenBlock screen = new UserProfileScreen.UserProfileScreenBlock(coursesApp.CurrentUser);
+            UserProfileScreen.UserProfileScreenBlock screen = new UserProfileScreen.UserProfileScreenBlock(coursesApp);
+
+            //кнопка виходу з облікового запису
             screen.logOut += () =>
             {
                 coursesApp.CurrentUser = null;
                 myHeader.ChangeToUnAuthorised();
                 ToMain();
             };
+
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }
 
-        private void Screen_logOut()
+        public void Search()
         {
-            throw new NotImplementedException();
+            mainPanel.Controls.Clear();
+            var search = new SeacrchScreenBlock(myHeader.searchBar.Text,coursesApp);
+
+            //кнопка відкриття курсу з головної сторінки
+            search.openCourse += (someCourse) =>
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(someCourse);
+                someCourse.Dock = DockStyle.Fill;
+            };
+
+            //кнопка повернення з сторінки курса до головної сторінки
+            search.returnTo += () =>
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(search);
+                search.Dock = DockStyle.Fill;
+            };
+
+
+            mainPanel.Controls.Add(search);
+            search.Dock = DockStyle.Fill;
         }
     }
 }

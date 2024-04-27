@@ -10,7 +10,7 @@ namespace CourseworkOOP.Entities.Users
 {
     public class Admin : User, ITeacheble, IControlable, IStatisticable
     {
-        public event Action<Settings> Statistics;
+        public event Action<CoursesAppSettings> Statistics;
         public Admin()
         {
             UserType = 0;
@@ -23,7 +23,7 @@ namespace CourseworkOOP.Entities.Users
             UserType = 0;
         }        
 
-        public void WatchStatistics(Settings settings)
+        public void WatchStatistics(CoursesAppSettings settings)
         {
             Statistics?.Invoke(settings);
         }

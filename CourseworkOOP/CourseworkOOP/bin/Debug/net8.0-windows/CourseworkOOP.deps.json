@@ -13,6 +13,7 @@
           "MainScreen": "1.0.0",
           "MyClassLibrary": "1.0.0",
           "RegistrationScreen": "1.0.0",
+          "SeachScreen": "1.0.0",
           "UserProfileScreen": "1.0.0"
         },
         "runtime": {
@@ -54,8 +55,19 @@
           "RegistrationScreen.dll": {}
         }
       },
+      "SeachScreen/1.0.0": {
+        "dependencies": {
+          "CourseScreen": "1.0.0",
+          "MainScreen": "1.0.0",
+          "MyClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "SeachScreen.dll": {}
+        }
+      },
       "UserProfileScreen/1.0.0": {
         "dependencies": {
+          "MainScreen": "1.0.0",
           "MyClassLibrary": "1.0.0"
         },
         "runtime": {
@@ -91,6 +103,11 @@
       "sha512": ""
     },
     "RegistrationScreen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SeachScreen/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorised));
             panel1 = new Panel();
             nameLabel = new Label();
             userProfileButton = new Button();
@@ -42,13 +41,13 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 110);
+            panel1.Size = new Size(200, 120);
             panel1.TabIndex = 6;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(3, 90);
+            nameLabel.Location = new Point(3, 96);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(111, 20);
             nameLabel.TabIndex = 4;
@@ -56,10 +55,11 @@
             // 
             // userProfileButton
             // 
+            userProfileButton.BackgroundImage = Properties.Resources.UserProfile_Icon;
+            userProfileButton.BackgroundImageLayout = ImageLayout.Stretch;
             userProfileButton.Font = new Font("Times New Roman", 15F, FontStyle.Bold);
             userProfileButton.ForeColor = SystemColors.Control;
-            userProfileButton.Image = (Image)resources.GetObject("userProfileButton.Image");
-            userProfileButton.Location = new Point(55, 3);
+            userProfileButton.Location = new Point(51, 3);
             userProfileButton.Name = "userProfileButton";
             userProfileButton.Size = new Size(90, 90);
             userProfileButton.TabIndex = 3;
@@ -72,7 +72,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "Authorised";
-            Size = new Size(200, 110);
+            Size = new Size(200, 120);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

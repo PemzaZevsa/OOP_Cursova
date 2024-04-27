@@ -12,15 +12,43 @@ namespace CourseScreenSpace
         public event Action returnToScreen;
         public Course Course { get; set; }
         public User MyUser { get; set; }
-        public CanBuy CanBuy { get; set; }
-        public CantBuy CantBuy { get; set; }
+        public CanBuy MyCanBuy { get; set; }
+        public CantBuy MyCantBuy { get; set; }
         public CourseScreenBlock(Course course, User user)
         {
             InitializeComponent();
             Course = course;
             MyUser = user;
-            CantBuy = new CantBuy();
-            CanBuy = new CanBuy();
+            MyCantBuy = new CantBuy();
+            MyCanBuy = new CanBuy();
+            MyCanBuy.buyCourse += () =>
+            {
+                if (MessageBox.Show($"Купити курс?\nНазва : {course.Name}\nЦіна : {course.Cost}","Покупка курса",MessageBoxButtons.OKCancel) == DialogResult.Cancel) 
+                {
+                    return;
+                }
+
+                var buyer = (Student)user;
+                var buyForm = new MoneyInputForm();
+                decimal moneyPayed = 0;
+
+                buyForm.payment += (gottedMoney) =>
+                {
+                    moneyPayed = gottedMoney;
+                };
+
+                buyForm.ShowDialog();
+
+                if (buyer.BuyCourse(course, moneyPayed))
+                {
+                    MessageBox.Show("Курс придбано успішно");
+                }
+                else
+                {
+                    MessageBox.Show("Курс не було придбано : нестача грошей на рахунку");
+                }
+            };
+
             SetName(Course.Name);
             SetDescription(Course.Description);
             SetRaiting(Course.Rating, Course.RatingsAmount);
@@ -36,11 +64,11 @@ namespace CourseScreenSpace
         }
         private void SetDescription(string description)
         {
-            descriptionLabel.Text = description + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "qwertyuiop[]';lkjhgfdszxcvbnm,./';lkjhgfdsaqwertyuiop[]" + "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" + "22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222";
+            descriptionLabel.Text = description;
         }
         private void SetRaiting(double raiting, int raitingsAmount)
         {
-            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount})");
+            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount} відгуків)");
         }
         private void SetTegs(List<Teg> Tegs)
         {
@@ -67,15 +95,15 @@ namespace CourseScreenSpace
         }
         private void SetCost(decimal cost)
         {
+            if (cost == 0)
+                costLabel.Text += $" Безкоштовно";
+            else
+                costLabel.Text += $" {cost}";
+
             if (MyUser is IStudyable)
             {
-                buyPanel.Controls.Add(CanBuy);
-                CanBuy.Dock = DockStyle.Fill;
-
-                //if (cost == 0)
-                //buyButton1?.costLabel.Text += $" Безкоштовно";
-                //else
-                //buyButton1?.costLabel.Text += $" {cost}";
+                buyPanel.Controls.Add(MyCanBuy);
+                MyCanBuy.Dock = DockStyle.Fill;                
             }
             if (MyUser is null)
             {
@@ -95,7 +123,7 @@ namespace CourseScreenSpace
         }
         private void SetStudents(uint studentsAmount)
         {
-            studentsLabel.Text = $"Студентів : {studentsAmount}";
+            studentsLabel.Text += $"{studentsAmount}";
         }
 
         private void buyButton_Click(object sender, EventArgs e)
