@@ -51,29 +51,32 @@ namespace CourseworkOOP.Entities.Users
             UserType = 2;
             CoursesIds = new List<uint>();
         }
-        public bool BuyCourse(Course course)
-        {
-            if (course is null) throw new ArgumentNullException(nameof(course));
+        //public bool BuyCourse(Course course)
+        //{
+        //    if (course is null) throw new ArgumentNullException(nameof(course));
 
-            decimal money = Payment();
-            if (course.Cost > money)
-            {
-                paymentError?.Invoke();
-                return false;
-            }
-            else
-            {
-                courses.Add(course);
-                CoursesIds.Add(course.Id);
-                paymentComplete?.Invoke();
-                return true;
-            }            
-        }
+        //    decimal money = Payment();
+        //    if (course.Cost > money)
+        //    {
+        //        paymentError?.Invoke();
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        if (CoursesIds.Contains(course.Id))
+        //        {
+        //            return false;
+        //        }
+        //        courses.Add(course);
+        //        CoursesIds.Add(course.Id);
+        //        paymentComplete?.Invoke();
+        //        return true;
+        //    }            
+        //}
         public bool BuyCourse(Course course, decimal MoneyAmount)
         {
             if (course is null) throw new ArgumentNullException(nameof(course));
 
-            decimal money = Payment();
             if (course.Cost > MoneyAmount)
             {
                 paymentError?.Invoke();
@@ -81,6 +84,12 @@ namespace CourseworkOOP.Entities.Users
             }
             else
             {
+                if (CoursesIds.Contains(course.Id))
+                {
+                    return false;
+                }
+
+                course.BoughtCourseAmount++;
                 courses.Add(course);
                 CoursesIds.Add(course.Id);
                 paymentComplete?.Invoke();
@@ -92,15 +101,15 @@ namespace CourseworkOOP.Entities.Users
             Random random = new Random();
             return (decimal)random.Next(0, 1000);
         }
-        public void LoadListOfCourses(List<Course> AllCourses)
-        {
-            foreach (var course in AllCourses)
-            {
-                if (CoursesIds.Contains( course.Id ))
-                {
-                    Courses.Add(course);
-                }
-            }
-        }
+        //public void LoadListOfCourses(List<Course> AllCourses)
+        //{
+        //    foreach (var course in AllCourses)
+        //    {
+        //        if (CoursesIds.Contains( course.Id ))
+        //        {
+        //            Courses.Add(course);
+        //        }
+        //    }
+        //}
     }
 }

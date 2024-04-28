@@ -3,6 +3,7 @@ using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
 using CourseworkOOP.Entities.Users;
 using CourseworkOOP.Iterfaces;
+using System.Xml.Linq;
 
 namespace CourseScreenSpace
 {
@@ -10,14 +11,14 @@ namespace CourseScreenSpace
     {
         public event Predicate<Course> buyCourse;
         public event Action returnToScreen;
-        public Course Course { get; set; }
+        public Course MyCourse { get; set; }
         public User MyUser { get; set; }
         public CanBuy MyCanBuy { get; set; }
         public CantBuy MyCantBuy { get; set; }
         public CourseScreenBlock(Course course, User user)
         {
             InitializeComponent();
-            Course = course;
+            MyCourse = course;
             MyUser = user;
             MyCantBuy = new CantBuy();
             MyCanBuy = new CanBuy();
@@ -49,30 +50,15 @@ namespace CourseScreenSpace
                 }
             };
 
-            SetName(Course.Name);
-            SetDescription(Course.Description);
-            SetRaiting(Course.Rating, Course.RatingsAmount);
-            SetTegs(Course.Tegs);
-            SetPicture(Course.PicturePath);
-            SetAuthor(Course.AuthorName, Course.AuthorSurname);
-            SetCost(Course.Cost);
-            SetStudents(Course.BoughtCourseAmount);
-        }
-        private void SetName(string name)
-        {
-            nameLabel.Text = name;
-        }
-        private void SetDescription(string description)
-        {
-            descriptionLabel.Text = description;
-        }
-        private void SetRaiting(double raiting, int raitingsAmount)
-        {
-            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount} відгуків)");
-        }
-        private void SetTegs(List<Teg> Tegs)
-        {
-            tegsLabel.Text += " " + string.Join(", ", Tegs);
+            SetPicture(MyCourse.PicturePath);
+            SetCost(MyCourse.Cost);
+
+            nameLabel.Text = MyCourse.Name;
+            descriptionLabel.Text = MyCourse.Description;
+            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(MyCourse.Rating, 2)}", $"({MyCourse.RatingsAmount} відгуків)");
+            tegsLabel.Text += " " + string.Join(", ", MyCourse.Tegs);
+            authorLabel.Text += " " + string.Join(" ", MyCourse.AuthorName, MyCourse.AuthorSurname);
+            studentsLabel.Text += $"{MyCourse.BoughtCourseAmount}";
         }
         private void SetPicture(string path)
         {
@@ -85,13 +71,8 @@ namespace CourseScreenSpace
             {
                 Image image2 = Image.FromFile(@"Data/Config/CoursePlaceholder.png");
                 coursePictureBox.Image = image2;
-                MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
             }
 
-        }
-        private void SetAuthor(string authorName, string authorSurname)
-        {
-            authorLabel.Text += " " + string.Join(" ", authorName, authorSurname);
         }
         private void SetCost(decimal cost)
         {
@@ -121,14 +102,10 @@ namespace CourseScreenSpace
             }
             
         }
-        private void SetStudents(uint studentsAmount)
-        {
-            studentsLabel.Text += $"{studentsAmount}";
-        }
 
         private void buyButton_Click(object sender, EventArgs e)
         {
-            buyCourse?.Invoke(Course);
+            buyCourse?.Invoke(MyCourse);
         }
 
         private void backButton_Click(object sender, EventArgs e)

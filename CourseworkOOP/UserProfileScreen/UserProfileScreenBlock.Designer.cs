@@ -35,19 +35,22 @@
             settingsButton = new Button();
             istudyableButton = new Button();
             iControlableButton = new Button();
-            userProfilePictureBox = new PictureBox();
             logOutButton = new Button();
             infoPanel = new Panel();
+            nameLabel = new Label();
+            surnameLabel = new Label();
+            userTypeLabel = new Label();
             buttonPanel.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)userProfilePictureBox).BeginInit();
             SuspendLayout();
             // 
             // buttonPanel
             // 
             buttonPanel.BackColor = SystemColors.ActiveBorder;
+            buttonPanel.Controls.Add(userTypeLabel);
+            buttonPanel.Controls.Add(surnameLabel);
+            buttonPanel.Controls.Add(nameLabel);
             buttonPanel.Controls.Add(tableLayoutPanel1);
-            buttonPanel.Controls.Add(userProfilePictureBox);
             buttonPanel.Controls.Add(logOutButton);
             buttonPanel.Dock = DockStyle.Left;
             buttonPanel.Location = new Point(0, 0);
@@ -126,15 +129,6 @@
             iControlableButton.UseVisualStyleBackColor = true;
             iControlableButton.Click += iControlableButton_Click;
             // 
-            // userProfilePictureBox
-            // 
-            userProfilePictureBox.Location = new Point(25, 50);
-            userProfilePictureBox.Name = "userProfilePictureBox";
-            userProfilePictureBox.Size = new Size(250, 250);
-            userProfilePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            userProfilePictureBox.TabIndex = 3;
-            userProfilePictureBox.TabStop = false;
-            // 
             // logOutButton
             // 
             logOutButton.ForeColor = Color.Red;
@@ -155,6 +149,33 @@
             infoPanel.Size = new Size(702, 683);
             infoPanel.TabIndex = 1;
             // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(25, 30);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(46, 20);
+            nameLabel.TabIndex = 3;
+            nameLabel.Text = "Ім'я : ";
+            // 
+            // surnameLabel
+            // 
+            surnameLabel.AutoSize = true;
+            surnameLabel.Location = new Point(25, 80);
+            surnameLabel.Name = "surnameLabel";
+            surnameLabel.Size = new Size(88, 20);
+            surnameLabel.TabIndex = 4;
+            surnameLabel.Text = "Прізвище : ";
+            // 
+            // userTypeLabel
+            // 
+            userTypeLabel.AutoSize = true;
+            userTypeLabel.Location = new Point(25, 130);
+            userTypeLabel.Name = "userTypeLabel";
+            userTypeLabel.Size = new Size(136, 20);
+            userTypeLabel.TabIndex = 5;
+            userTypeLabel.Text = "Тип користувача : ";
+            // 
             // UserProfileScreenBlock
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -164,8 +185,8 @@
             Name = "UserProfileScreenBlock";
             Size = new Size(1002, 683);
             buttonPanel.ResumeLayout(false);
+            buttonPanel.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)userProfilePictureBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -176,10 +197,12 @@
         private Button istudyableButton;
         private Button settingsButton;
         private Panel infoPanel;
-        private PictureBox userProfilePictureBox;
         private TableLayoutPanel tableLayoutPanel1;
         private Button iTeachebleButton;
         private Button iControlableButton;
         private Button statisticButton;
+        private Label userTypeLabel;
+        private Label surnameLabel;
+        private Label nameLabel;
     }
 }

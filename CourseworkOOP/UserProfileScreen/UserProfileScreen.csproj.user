@@ -7,6 +7,9 @@
     <Compile Update="CourseCreation.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="CourseEducation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="LessonCreation.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -11,8 +11,8 @@ namespace HeaderSpace
         public event Action toSearchScreen;
         public event Action toUserProfileScreen;
         public event Action toRegistrationScreen;
-        public event Action changeToAuthorised;
-        public event Action changeToUnAuthorised;
+        //public event Action changeToAuthorised;
+        //public event Action changeToUnAuthorised;
 
         //last
         //public event Action<string,string> changeCurrentUserLabel;
@@ -57,10 +57,10 @@ namespace HeaderSpace
             authorised.ChangeCurrentUserLabel(name, surname);
         }
 
-        public void ChangePicToUserPic(string picPath)
-        {
-            authorised.ChangePicToUserPic(picPath);
-        }
+        //public void ChangePicToUserPic(string picPath)
+        //{
+        //    authorised.ChangePicToUserPic(picPath);
+        //}
 
         public void ChangeToAuthorised()
         {

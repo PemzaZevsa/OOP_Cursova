@@ -2,16 +2,7 @@
 using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
 using MainScreen;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace UserProfileScreen
 {
@@ -56,6 +47,7 @@ namespace UserProfileScreen
         {
             createNewCourse?.Invoke();
         }
+
 
     }
 }

@@ -19,6 +19,7 @@ namespace CourseworkOOP.Entities.Courses
         public string AuthorName { get; set; }
         public string AuthorSurname { get; set; }        
         public string PicturePath { get; set; }
+        //public uint CourseLength { get; set; }
         private double rating;
         public double Rating 
         { 
@@ -142,20 +143,14 @@ namespace CourseworkOOP.Entities.Courses
                 string jsonstring = "";
                 jsonstring += JsonSerializer.Serialize<List<Module>>(modules);
 
-                //foreach (var item in modules)
-                //{
-                //    item.Save(ModulePath);
-                //    jsonstring += JsonSerializer.Serialize<Module>(item);
-                //    jsonstring += "\n";
-                //}
                 File.WriteAllText(path, jsonstring);
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 SaveError?.Invoke();
                 return false;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 SaveError?.Invoke();
                 return false;
@@ -169,31 +164,18 @@ namespace CourseworkOOP.Entities.Courses
             return Load(ModulePath);
         }
         public bool Load(string path)
-        {
-            //TODO
+        {            
             try
             {
                 string lines = File.ReadAllText(path);
                 modules = JsonSerializer.Deserialize<List<Module>>(lines);
-
-                //List<string> lines = File.ReadAllLines(path).ToList();
-
-                //foreach (var item in lines)
-                //{
-                //    Module? module = JsonSerializer.Deserialize<Module>(item);
-                //    if (module != null) 
-                //    { 
-                //        modules.Add(module);
-                //        module.Load(ModulePath);
-                //    }
-                //}
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 LoadError?.Invoke();
                 return false;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 LoadError?.Invoke();
                 return false;

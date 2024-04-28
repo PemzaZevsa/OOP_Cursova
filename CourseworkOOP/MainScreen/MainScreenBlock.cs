@@ -1,16 +1,7 @@
 ﻿using CourseScreenSpace;
 using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
-using CourseworkOOP.Entities.Users;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MainScreen
 {
@@ -29,10 +20,10 @@ namespace MainScreen
         private void LoadCourses(List<Course> courses)
         {
             Random rnd = new Random();
-            int randNum = rnd.Next(0, 10);
+            int randNum = rnd.Next(1, 10);
 
             //change
-            var loadingCourses = courses.Take(10);
+            var loadingCourses = courses.Where(x => x.Id % randNum == 0).Take(20);
 
             foreach (var course in loadingCourses)
             {

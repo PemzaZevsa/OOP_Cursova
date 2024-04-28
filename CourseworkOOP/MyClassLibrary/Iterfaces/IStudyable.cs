@@ -10,6 +10,6 @@ namespace CourseworkOOP.Iterfaces
     public interface IStudyable : IPayble
     {
         List<Course> Courses {  get; }
-        bool BuyCourse(Course course);
+        bool BuyCourse(Course course, decimal cost);
     }
 }

@@ -18,7 +18,7 @@ namespace CourseworkOOP.Entities.Courses
         //public string LessonsPath { get; set; }
         private List<Lesson> lessons;
         //[JsonIgnore]
-        public List<Lesson> Lessons { get => lessons; }
+        public List<Lesson> Lessons { get => lessons; set => lessons = value; }
         public static uint counter;
 
         public event Action LoadError;

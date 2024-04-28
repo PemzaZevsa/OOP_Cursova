@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace MainScreen
 {
@@ -22,30 +23,16 @@ namespace MainScreen
         {
             InitializeComponent();
             Course = course;
-            SetName(Course.Name);
-            SetDescription(Course.Description);
-            SetRaiting(Course.Rating, Course.RatingsAmount);
-            SetTegs(Course.Tegs);
             SetPicture(Course.PicturePath);
-            SetAuthor(Course.AuthorName, Course.AuthorSurname);
+
+
+            nameLabel.Text = Course.Name;
+            descriptionLabel.Text = Course.Description;
+            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(Course.Rating, 2)}", $"({Course.RatingsAmount} відгуків)");
+            tegsLabel.Text += " " + string.Join(", ", Course.Tegs);
+            authorLabel.Text += " " + string.Join(" ", Course.AuthorName, Course.AuthorSurname);
         }
 
-        private void SetName(string name)
-        {
-            nameLabel.Text = name;
-        }
-        private void SetDescription(string description)
-        {
-            descriptionLabel.Text = description;
-        }
-        private void SetRaiting(double raiting, int raitingsAmount)
-        {
-            raitingLabel.Text += " " + string.Join(" ", $"{Math.Round(raiting, 2)}", $"({raitingsAmount} відгуків)");
-        }
-        private void SetTegs(List<Teg> Tegs)
-        {
-            tegsLabel.Text += " " + string.Join(", ", Tegs);
-        }
         private void SetPicture(string path)
         {
             try
@@ -59,10 +46,6 @@ namespace MainScreen
                 coursePictureBox.Image = image2;
             }
 
-        }
-        private void SetAuthor(string authorName, string authorSurname)
-        {
-            authorLabel.Text += " " + string.Join(" ", authorName, authorSurname);
         }
 
         private void toCourseButton_Click(object sender, EventArgs e)

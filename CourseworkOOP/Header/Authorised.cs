@@ -31,18 +31,19 @@ namespace Header
         {
             nameLabel.Text = $"{name} {surname}";
         }
-        public void ChangePicToUserPic(string path)
-        {
-            try
-            {
-                Image image = Image.FromFile(path);
-                userProfileButton.BackgroundImage = image;
-            }
-            catch (Exception ex)
-            {
-                Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
-                userProfileButton.BackgroundImage = image2;
-            }
-        }
+
+        //public void ChangePicToUserPic(string path)
+        //{
+        //    try
+        //    {
+        //        Image image = Image.FromFile(path);
+        //        userProfileButton.BackgroundImage = image;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
+        //        userProfileButton.BackgroundImage = image2;
+        //    }
+        //}
     }
 }

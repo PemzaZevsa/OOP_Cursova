@@ -63,7 +63,7 @@ namespace MainScreen
             coursesFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             coursesFlowLayoutPanel.Location = new Point(43, 74);
             coursesFlowLayoutPanel.Name = "coursesFlowLayoutPanel";
-            coursesFlowLayoutPanel.Size = new Size(652, 356);
+            coursesFlowLayoutPanel.Size = new Size(915, 456);
             coursesFlowLayoutPanel.TabIndex = 0;
             // 
             // MainScreenBlock

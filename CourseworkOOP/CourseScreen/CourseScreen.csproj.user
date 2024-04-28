@@ -10,8 +10,5 @@
     <Compile Update="CourseScreenBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="MoneyInputForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

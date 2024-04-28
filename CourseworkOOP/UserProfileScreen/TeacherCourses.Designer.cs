@@ -36,14 +36,14 @@
             // 
             coursesFlowLayoutPanel.AutoSize = true;
             coursesFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
-            coursesFlowLayoutPanel.Location = new Point(40, 120);
+            coursesFlowLayoutPanel.Location = new Point(40, 87);
             coursesFlowLayoutPanel.Name = "coursesFlowLayoutPanel";
-            coursesFlowLayoutPanel.Size = new Size(719, 387);
+            coursesFlowLayoutPanel.Size = new Size(719, 420);
             coursesFlowLayoutPanel.TabIndex = 0;
             // 
             // createButton
             // 
-            createButton.Location = new Point(40, 40);
+            createButton.Location = new Point(40, 21);
             createButton.Name = "createButton";
             createButton.Size = new Size(200, 60);
             createButton.TabIndex = 1;

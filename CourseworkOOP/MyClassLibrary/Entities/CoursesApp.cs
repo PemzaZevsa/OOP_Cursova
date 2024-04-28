@@ -192,8 +192,11 @@ namespace CourseworkOOP.Entities
                 foreach (var item in lines)
                 {
                     Course? course = JsonSerializer.Deserialize<Course>(item);
-                    if (course != null) courses.Add(course);
-                    course.Load();
+                    if (course != null) 
+                    {
+                        courses.Add(course);
+                        course.Load();
+                    }                    
                 }
             }
             catch (IOException e)
