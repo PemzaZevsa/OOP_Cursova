@@ -41,6 +41,10 @@
             previevPictureBox = new PictureBox();
             backButton = new Button();
             panel1 = new Panel();
+            buttonsFlowLayoutPanel = new FlowLayoutPanel();
+            createButton = new Button();
+            changeButton = new Button();
+            deleteButton = new Button();
             tagsGroupBox = new GroupBox();
             marketingCheckBox = new CheckBox();
             designCheckBox = new CheckBox();
@@ -55,10 +59,10 @@
             deleteModuleButton = new Button();
             moduleFlowLayoutPanel = new FlowLayoutPanel();
             addModuleButton = new Button();
-            createButton = new Button();
             pictureFileDialog = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)previevPictureBox).BeginInit();
             panel1.SuspendLayout();
+            buttonsFlowLayoutPanel.SuspendLayout();
             tagsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -114,7 +118,7 @@
             // tegsLabel
             // 
             tegsLabel.AutoSize = true;
-            tegsLabel.Location = new Point(27, 350);
+            tegsLabel.Location = new Point(27, 290);
             tegsLabel.Name = "tegsLabel";
             tegsLabel.Size = new Size(40, 20);
             tegsLabel.TabIndex = 7;
@@ -123,16 +127,16 @@
             // courseCreationLabel
             // 
             courseCreationLabel.AutoSize = true;
-            courseCreationLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            courseCreationLabel.Location = new Point(223, 23);
+            courseCreationLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            courseCreationLabel.Location = new Point(213, 17);
             courseCreationLabel.Name = "courseCreationLabel";
-            courseCreationLabel.Size = new Size(242, 25);
+            courseCreationLabel.Size = new Size(305, 32);
             courseCreationLabel.TabIndex = 9;
             courseCreationLabel.Text = "Створення нового курсу";
             // 
             // loadPicButton
             // 
-            loadPicButton.Location = new Point(342, 487);
+            loadPicButton.Location = new Point(332, 422);
             loadPicButton.Name = "loadPicButton";
             loadPicButton.Size = new Size(133, 54);
             loadPicButton.TabIndex = 10;
@@ -143,7 +147,7 @@
             // profilePicLabel
             // 
             profilePicLabel.AutoSize = true;
-            profilePicLabel.Location = new Point(27, 521);
+            profilePicLabel.Location = new Point(27, 456);
             profilePicLabel.Name = "profilePicLabel";
             profilePicLabel.Size = new Size(97, 20);
             profilePicLabel.TabIndex = 11;
@@ -151,7 +155,7 @@
             // 
             // previevPictureBox
             // 
-            previevPictureBox.Location = new Point(481, 381);
+            previevPictureBox.Location = new Point(478, 316);
             previevPictureBox.Name = "previevPictureBox";
             previevPictureBox.Size = new Size(240, 160);
             previevPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -171,11 +175,11 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(buttonsFlowLayoutPanel);
             panel1.Controls.Add(tagsGroupBox);
             panel1.Controls.Add(deleteModuleButton);
             panel1.Controls.Add(moduleFlowLayoutPanel);
             panel1.Controls.Add(addModuleButton);
-            panel1.Controls.Add(createButton);
             panel1.Controls.Add(courseCreationLabel);
             panel1.Controls.Add(backButton);
             panel1.Controls.Add(nameLabel);
@@ -191,8 +195,55 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(750, 900);
+            panel1.Size = new Size(767, 813);
             panel1.TabIndex = 14;
+            // 
+            // buttonsFlowLayoutPanel
+            // 
+            buttonsFlowLayoutPanel.Controls.Add(createButton);
+            buttonsFlowLayoutPanel.Controls.Add(changeButton);
+            buttonsFlowLayoutPanel.Controls.Add(deleteButton);
+            buttonsFlowLayoutPanel.FlowDirection = FlowDirection.RightToLeft;
+            buttonsFlowLayoutPanel.Location = new Point(261, 482);
+            buttonsFlowLayoutPanel.Name = "buttonsFlowLayoutPanel";
+            buttonsFlowLayoutPanel.Size = new Size(457, 65);
+            buttonsFlowLayoutPanel.TabIndex = 21;
+            // 
+            // createButton
+            // 
+            createButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            createButton.ForeColor = Color.FromArgb(0, 192, 0);
+            createButton.Location = new Point(310, 3);
+            createButton.Name = "createButton";
+            createButton.Size = new Size(144, 54);
+            createButton.TabIndex = 14;
+            createButton.Text = "Створити";
+            createButton.UseVisualStyleBackColor = true;
+            createButton.Click += createButton_Click;
+            // 
+            // changeButton
+            // 
+            changeButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            changeButton.ForeColor = SystemColors.HotTrack;
+            changeButton.Location = new Point(160, 3);
+            changeButton.Name = "changeButton";
+            changeButton.Size = new Size(144, 54);
+            changeButton.TabIndex = 20;
+            changeButton.Text = "Змінити";
+            changeButton.UseVisualStyleBackColor = true;
+            changeButton.Click += changeButton_Click;
+            // 
+            // deleteButton
+            // 
+            deleteButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            deleteButton.ForeColor = Color.Red;
+            deleteButton.Location = new Point(10, 3);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(144, 54);
+            deleteButton.TabIndex = 18;
+            deleteButton.Text = "Видалити";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // tagsGroupBox
             // 
@@ -207,7 +258,7 @@
             tagsGroupBox.Controls.Add(dataScienceCheckBox);
             tagsGroupBox.Controls.Add(cybersecurityCheckBox);
             tagsGroupBox.Controls.Add(developmentCheckBox);
-            tagsGroupBox.Location = new Point(132, 270);
+            tagsGroupBox.Location = new Point(132, 210);
             tagsGroupBox.Name = "tagsGroupBox";
             tagsGroupBox.Size = new Size(586, 100);
             tagsGroupBox.TabIndex = 6;
@@ -326,12 +377,15 @@
             // 
             // deleteModuleButton
             // 
+            deleteModuleButton.BackColor = SystemColors.HotTrack;
+            deleteModuleButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            deleteModuleButton.ForeColor = SystemColors.ControlLightLight;
             deleteModuleButton.Location = new Point(213, 553);
             deleteModuleButton.Name = "deleteModuleButton";
             deleteModuleButton.Size = new Size(180, 54);
             deleteModuleButton.TabIndex = 17;
             deleteModuleButton.Text = "Видалити модуль";
-            deleteModuleButton.UseVisualStyleBackColor = true;
+            deleteModuleButton.UseVisualStyleBackColor = false;
             deleteModuleButton.Click += deleteModuleButton_Click;
             // 
             // moduleFlowLayoutPanel
@@ -346,23 +400,16 @@
             // 
             // addModuleButton
             // 
+            addModuleButton.BackColor = SystemColors.HotTrack;
+            addModuleButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            addModuleButton.ForeColor = SystemColors.ControlLight;
             addModuleButton.Location = new Point(27, 553);
             addModuleButton.Name = "addModuleButton";
             addModuleButton.Size = new Size(180, 54);
             addModuleButton.TabIndex = 15;
             addModuleButton.Text = "Додати модуль";
-            addModuleButton.UseVisualStyleBackColor = true;
+            addModuleButton.UseVisualStyleBackColor = false;
             addModuleButton.Click += addModuleButton_Click;
-            // 
-            // createButton
-            // 
-            createButton.Location = new Point(532, 553);
-            createButton.Name = "createButton";
-            createButton.Size = new Size(186, 54);
-            createButton.TabIndex = 14;
-            createButton.Text = "Створити";
-            createButton.UseVisualStyleBackColor = true;
-            createButton.Click += createButton_Click;
             // 
             // pictureFileDialog
             // 
@@ -377,10 +424,11 @@
             AutoSize = true;
             Controls.Add(panel1);
             Name = "CourseCreation";
-            Size = new Size(750, 900);
+            Size = new Size(767, 813);
             ((System.ComponentModel.ISupportInitialize)previevPictureBox).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            buttonsFlowLayoutPanel.ResumeLayout(false);
             tagsGroupBox.ResumeLayout(false);
             tagsGroupBox.PerformLayout();
             ResumeLayout(false);
@@ -417,5 +465,8 @@
         private CheckBox cybersecurityCheckBox;
         private CheckBox developmentCheckBox;
         private OpenFileDialog pictureFileDialog;
+        private Button deleteButton;
+        private Button changeButton;
+        private FlowLayoutPanel buttonsFlowLayoutPanel;
     }
 }

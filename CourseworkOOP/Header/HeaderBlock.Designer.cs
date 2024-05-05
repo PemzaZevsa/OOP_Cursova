@@ -65,6 +65,7 @@
             // searchButton
             // 
             searchButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            searchButton.Cursor = Cursors.Hand;
             searchButton.Image = (Image)resources.GetObject("searchButton.Image");
             searchButton.Location = new Point(831, 30);
             searchButton.Name = "searchButton";

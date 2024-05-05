@@ -82,7 +82,8 @@
             // 
             headingLabel.AutoSize = true;
             headingLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            headingLabel.Location = new Point(96, 48);
+            headingLabel.ForeColor = SystemColors.ControlLightLight;
+            headingLabel.Location = new Point(96, 43);
             headingLabel.Name = "headingLabel";
             headingLabel.Size = new Size(92, 46);
             headingLabel.TabIndex = 7;
@@ -104,14 +105,17 @@
             // loginLabel
             // 
             loginLabel.AutoSize = true;
-            loginLabel.Location = new Point(17, 94);
+            loginLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            loginLabel.ForeColor = SystemColors.ControlLightLight;
+            loginLabel.Location = new Point(17, 84);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(47, 20);
+            loginLabel.Size = new Size(59, 25);
             loginLabel.TabIndex = 8;
             loginLabel.Text = "Логін";
             // 
             // AuthorisationButton
             // 
+            AuthorisationButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             AuthorisationButton.Location = new Point(17, 223);
             AuthorisationButton.Name = "AuthorisationButton";
             AuthorisationButton.Size = new Size(250, 60);
@@ -122,7 +126,7 @@
             // 
             // loginBox
             // 
-            loginBox.Location = new Point(17, 117);
+            loginBox.Location = new Point(17, 112);
             loginBox.Name = "loginBox";
             loginBox.Size = new Size(250, 27);
             loginBox.TabIndex = 9;
@@ -130,9 +134,11 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(17, 147);
+            passwordLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            passwordLabel.ForeColor = SystemColors.ControlLightLight;
+            passwordLabel.Location = new Point(17, 142);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(62, 20);
+            passwordLabel.Size = new Size(79, 25);
             passwordLabel.TabIndex = 11;
             passwordLabel.Text = "Пароль";
             // 

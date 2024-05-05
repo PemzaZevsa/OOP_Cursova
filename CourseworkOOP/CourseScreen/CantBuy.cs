@@ -16,5 +16,10 @@ namespace CourseScreen
         {
             InitializeComponent();
         }
+
+        public void ChangeLabel(string str)
+        {
+            label1.Text = str;
+        }
     }
 }

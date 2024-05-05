@@ -46,7 +46,15 @@ namespace CourseScreenSpace
                 }
                 else
                 {
-                    MessageBox.Show("Курс не було придбано : нестача грошей на рахунку");
+                    if (moneyPayed < course.Cost)
+                    {
+                        MessageBox.Show("Курс не було придбано : нестача грошей на рахунку");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Курс не було придбано : курс вже придбано");
+                    }
                 }
             };
 
@@ -81,24 +89,24 @@ namespace CourseScreenSpace
             else
                 costLabel.Text += $" {cost}";
 
-            if (MyUser is IStudyable)
-            {
-                buyPanel.Controls.Add(MyCanBuy);
-                MyCanBuy.Dock = DockStyle.Fill;                
-            }
+            
             if (MyUser is null)
             {
-                Label label = new Label();
-                label.Text = "Увійдіть в обліковий запис";
-                buyPanel.Controls.Add(label);
-                label.Dock = DockStyle.Fill;
+                buyPanel.Controls.Clear();
+                buyPanel.Controls.Add(MyCantBuy);
+                MyCantBuy.ChangeLabel("Увійдіть в обліковий запис");
+                MyCantBuy.Dock = DockStyle.Fill;
+            }else if (MyUser is IStudyable)
+            {
+                buyPanel.Controls.Add(MyCanBuy);
+                MyCanBuy.Dock = DockStyle.Fill;
             }
             else
             {
-                Label label2 = new Label();
-                label2.Text = "Ви не можете покупати курси";
-                buyPanel.Controls.Add(label2);
-                label2.Dock = DockStyle.Fill;
+                buyPanel.Controls.Clear();
+                buyPanel.Controls.Add(MyCantBuy);
+                MyCantBuy.ChangeLabel("Ви не можете покупати курси");
+                MyCantBuy.Dock = DockStyle.Fill;
             }
             
         }

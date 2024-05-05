@@ -44,12 +44,15 @@
             // 
             // registationButton
             // 
+            registationButton.BackColor = SystemColors.HotTrack;
+            registationButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            registationButton.ForeColor = SystemColors.ControlLightLight;
             registationButton.Location = new Point(50, 10);
             registationButton.Name = "registationButton";
             registationButton.Size = new Size(100, 100);
             registationButton.TabIndex = 0;
             registationButton.Text = "Вхід";
-            registationButton.UseVisualStyleBackColor = true;
+            registationButton.UseVisualStyleBackColor = false;
             registationButton.Click += registationButton_Click;
             // 
             // UnAuthorised

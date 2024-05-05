@@ -1,4 +1,5 @@
 ﻿using CourseworkOOP.Entities.Courses;
+using CourseworkOOP.Entities.Users;
 using MainScreen;
 using System.Data;
 
@@ -8,9 +9,11 @@ namespace UserProfileScreen
     {
         public event Action<CourseEducation> toEducation;
         public event Action returnTo;
-        public StudentCourses(List<Course> courses,List<uint> ids)
+        User User { get; set; }
+        public StudentCourses(List<Course> courses,List<uint> ids,User user)
         {
             InitializeComponent();
+            User = user;
 
             if (courses != null && courses.Count > 0)
             {
@@ -32,7 +35,7 @@ namespace UserProfileScreen
 
         private void ToCourse(Course course)
         {
-            CourseEducation courseScreen = new CourseEducation(course);
+            CourseEducation courseScreen = new CourseEducation(course,User);
             toEducation?.Invoke(courseScreen);
             courseScreen.returnTo += returnTo;
         }

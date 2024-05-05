@@ -10,7 +10,7 @@ namespace UserProfileScreen
     {
         public event Action createNewCourse;
         public event Action returnTo;
-        public event Action<CourseScreenSpace.CourseScreenBlock> openCourse;
+        public event Action<CourseCreation> openCourse;
         public CoursesApp MyApp;
         public TeacherCourses(CoursesApp App)
         {
@@ -38,9 +38,9 @@ namespace UserProfileScreen
 
         private void ToCourse(Course course)
         {
-            CourseScreenBlock courseScreen = new CourseScreenBlock(course, MyApp.CurrentUser);
+            CourseCreation courseScreen = new CourseCreation(course);
             openCourse?.Invoke(courseScreen);
-            courseScreen.returnToScreen += returnTo;
+            courseScreen.returnToMyCourses += returnTo;
         }
 
         private void createButton_Click(object sender, EventArgs e)

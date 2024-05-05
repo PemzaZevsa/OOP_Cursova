@@ -42,3 +42,4 @@ C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileS
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.LessonCreation.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.ModuleCreation.resources
 C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.CourseEducation.resources
+C:\Users\Pemza\source\repos\CourseworkOOP\OOP_Cursova\CourseworkOOP\UserProfileScreen\obj\Debug\net8.0-windows\UserProfileScreen.SetRaiting.resources

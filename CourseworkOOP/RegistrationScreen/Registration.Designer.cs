@@ -78,15 +78,17 @@
             panel1.Controls.Add(surnameBox);
             panel1.Location = new Point(164, 39);
             panel1.Name = "panel1";
-            panel1.Size = new Size(272, 441);
+            panel1.Size = new Size(272, 495);
             panel1.TabIndex = 14;
             // 
             // WhoAreYouLabel
             // 
             WhoAreYouLabel.AutoSize = true;
-            WhoAreYouLabel.Location = new Point(4, 268);
+            WhoAreYouLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            WhoAreYouLabel.ForeColor = SystemColors.ControlLightLight;
+            WhoAreYouLabel.Location = new Point(4, 294);
             WhoAreYouLabel.Name = "WhoAreYouLabel";
-            WhoAreYouLabel.Size = new Size(54, 20);
+            WhoAreYouLabel.Size = new Size(69, 25);
             WhoAreYouLabel.TabIndex = 16;
             WhoAreYouLabel.Text = "Хто ви";
             // 
@@ -94,7 +96,7 @@
             // 
             userTypeBox.FormattingEnabled = true;
             userTypeBox.Items.AddRange(new object[] { "Студент", "Вчитель" });
-            userTypeBox.Location = new Point(4, 291);
+            userTypeBox.Location = new Point(4, 322);
             userTypeBox.Name = "userTypeBox";
             userTypeBox.Size = new Size(250, 28);
             userTypeBox.TabIndex = 15;
@@ -114,7 +116,7 @@
             AlreadyHaveAccountLabel.Cursor = Cursors.Hand;
             AlreadyHaveAccountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
             AlreadyHaveAccountLabel.ForeColor = SystemColors.Highlight;
-            AlreadyHaveAccountLabel.Location = new Point(4, 408);
+            AlreadyHaveAccountLabel.Location = new Point(4, 451);
             AlreadyHaveAccountLabel.Name = "AlreadyHaveAccountLabel";
             AlreadyHaveAccountLabel.Size = new Size(104, 20);
             AlreadyHaveAccountLabel.TabIndex = 12;
@@ -125,7 +127,8 @@
             // 
             headingLabel.AutoSize = true;
             headingLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            headingLabel.Location = new Point(31, 10);
+            headingLabel.ForeColor = SystemColors.ControlLightLight;
+            headingLabel.Location = new Point(31, 8);
             headingLabel.Name = "headingLabel";
             headingLabel.Size = new Size(195, 46);
             headingLabel.TabIndex = 0;
@@ -134,15 +137,18 @@
             // loginLabel
             // 
             loginLabel.AutoSize = true;
-            loginLabel.Location = new Point(4, 56);
+            loginLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            loginLabel.ForeColor = SystemColors.ControlLightLight;
+            loginLabel.Location = new Point(4, 62);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(47, 20);
+            loginLabel.Size = new Size(59, 25);
             loginLabel.TabIndex = 1;
             loginLabel.Text = "Логін";
             // 
             // RegestrationButton
             // 
-            RegestrationButton.Location = new Point(4, 345);
+            RegestrationButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            RegestrationButton.Location = new Point(4, 388);
             RegestrationButton.Name = "RegestrationButton";
             RegestrationButton.Size = new Size(250, 60);
             RegestrationButton.TabIndex = 2;
@@ -152,7 +158,7 @@
             // 
             // loginBox
             // 
-            loginBox.Location = new Point(4, 79);
+            loginBox.Location = new Point(4, 90);
             loginBox.Name = "loginBox";
             loginBox.Size = new Size(250, 27);
             loginBox.TabIndex = 3;
@@ -160,24 +166,28 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(4, 109);
+            passwordLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            passwordLabel.ForeColor = SystemColors.ControlLightLight;
+            passwordLabel.Location = new Point(4, 120);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(62, 20);
+            passwordLabel.Size = new Size(79, 25);
             passwordLabel.TabIndex = 4;
             passwordLabel.Text = "Пароль";
             // 
             // surnameLabel
             // 
             surnameLabel.AutoSize = true;
-            surnameLabel.Location = new Point(4, 215);
+            surnameLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            surnameLabel.ForeColor = SystemColors.ControlLightLight;
+            surnameLabel.Location = new Point(4, 236);
             surnameLabel.Name = "surnameLabel";
-            surnameLabel.Size = new Size(77, 20);
+            surnameLabel.Size = new Size(98, 25);
             surnameLabel.TabIndex = 9;
             surnameLabel.Text = "Прізвище";
             // 
             // passwordBox
             // 
-            passwordBox.Location = new Point(4, 132);
+            passwordBox.Location = new Point(4, 148);
             passwordBox.Name = "passwordBox";
             passwordBox.Size = new Size(250, 27);
             passwordBox.TabIndex = 5;
@@ -185,22 +195,24 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(4, 162);
+            nameLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            nameLabel.ForeColor = SystemColors.ControlLightLight;
+            nameLabel.Location = new Point(4, 178);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(35, 20);
+            nameLabel.Size = new Size(47, 25);
             nameLabel.TabIndex = 8;
             nameLabel.Text = "Ім'я";
             // 
             // nameBox
             // 
-            nameBox.Location = new Point(4, 185);
+            nameBox.Location = new Point(3, 206);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(250, 27);
             nameBox.TabIndex = 6;
             // 
             // surnameBox
             // 
-            surnameBox.Location = new Point(4, 238);
+            surnameBox.Location = new Point(4, 264);
             surnameBox.Name = "surnameBox";
             surnameBox.Size = new Size(250, 27);
             surnameBox.TabIndex = 7;

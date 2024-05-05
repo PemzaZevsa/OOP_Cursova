@@ -137,6 +137,11 @@ namespace CourseworkOOP
                 ToMain();
             };
 
+            screen.changeHeaderNameSurname += () =>
+            {
+                myHeader.ChangeCurrentUserLabel(coursesApp.CurrentUser.Name, coursesApp.CurrentUser.Surname);
+            };
+
             mainPanel.Controls.Add(screen);
             screen.Dock = DockStyle.Fill;
         }

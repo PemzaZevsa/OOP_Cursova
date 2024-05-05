@@ -16,6 +16,9 @@
     <Compile Update="ModuleCreation.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="SetRaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Statistics.cs">
       <SubType>UserControl</SubType>
     </Compile>

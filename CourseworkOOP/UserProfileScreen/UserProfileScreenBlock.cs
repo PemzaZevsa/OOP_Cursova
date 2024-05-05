@@ -8,6 +8,7 @@ namespace UserProfileScreen
 {
     public partial class UserProfileScreenBlock : UserControl
     {
+        public event Action changeHeaderNameSurname;
         public event Action logOut;
         private CoursesApp MyApp;
         public User MyUser { get; set; }
@@ -21,24 +22,29 @@ namespace UserProfileScreen
             nameLabel.Text += MyUser.Name;
             surnameLabel.Text += MyUser.Surname;
             userTypeLabel.Text += MyUser.UserType == 2 ? "Студент" : MyUser.UserType == 1 ? "Вчитель" : "Адміністратор";
-            
+            CreatingButton(MyUser.UserType);
+        }      
+        
+        private void CreatingButton(int userType)
+        {
+            if(userType == 2)
+            {
+                buttonsTableLayoutPanel.Controls.Clear();
+                buttonsTableLayoutPanel.Controls.Add(istudyableButton);
+            }
+            else if(userType == 1)
+            {
+                buttonsTableLayoutPanel.Controls.Clear();
+                buttonsTableLayoutPanel.Controls.Add(iTeachebleButton);
+            }
+            else
+            {
+                buttonsTableLayoutPanel.Controls.Clear();
+                buttonsTableLayoutPanel.Controls.Add(iTeachebleButton);
+                buttonsTableLayoutPanel.Controls.Add(iControlableButton);
+                buttonsTableLayoutPanel.Controls.Add(statisticButton);
+            }
         }
-        //TODO delete
-        //private void SetPicture(string path)
-        //{
-        //    try
-        //    {
-        //        Image image = Image.FromFile(path);
-        //        userProfilePictureBox.Image = image;
-        //        //image.Dispose();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
-        //        userProfilePictureBox.Image = image2;
-        //        //MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
-        //    }
-        //}        
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
@@ -50,7 +56,7 @@ namespace UserProfileScreen
             infoPanel.Controls.Add(settings);
             settings.Dock = DockStyle.Fill;
         }
-        //TODO change
+        
         private void UpdateUser(string newPassword,string newName,string newSurname)
         {
             try
@@ -66,20 +72,18 @@ namespace UserProfileScreen
                 if (newName is not null && newName.Length != 0)
                 {
                     MyUser.Name = newName;
+                    nameLabel.Text = "Ім'я : "+MyUser.Name;
                     strMessage += $"\nНове ім'я : {MyUser.Name}";
                 }
 
                 if (newSurname is not null && newSurname.Length != 0)
                 {
                     MyUser.Surname = newSurname;
+                    surnameLabel.Text = "Прізвище : "+MyUser.Surname;
                     strMessage += $"\nНове прізвище : {MyUser.Surname}";
                 }
+                changeHeaderNameSurname?.Invoke();
                 MessageBox.Show(strMessage, "Успішна зміна властивостей користувача");
-                //string imagePath = "PP.jpg";
-                //File.Delete(MyUser.ProfilePicturePath);
-
-                //delete
-                //File.WriteAllBytes(MyUser.ProfilePicturePath, ImageToByteArray(newImage));
             }
             catch (Exception ex)
             {
@@ -97,6 +101,22 @@ namespace UserProfileScreen
         //        return ms.ToArray();
         //    }
         //}
+        //
+        //private void SetPicture(string path)
+        //{
+        //    try
+        //    {
+        //        Image image = Image.FromFile(path);
+        //        userProfilePictureBox.Image = image;
+        //        //image.Dispose();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
+        //        userProfilePictureBox.Image = image2;
+        //        //MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
+        //    }
+        //}        
 
         private void istudyableButton_Click(object sender, EventArgs e)
         {
@@ -108,7 +128,7 @@ namespace UserProfileScreen
             }
 
             infoPanel.Controls.Clear();
-            var myCourses = new StudentCourses(MyApp.Courses,((Student)MyUser).CoursesIds);
+            var myCourses = new StudentCourses(MyApp.Courses,((Student)MyUser).CoursesIds,MyUser);
 
             //перехід до сторінки навчання
             myCourses.toEducation += (courseEdu) =>
@@ -190,12 +210,18 @@ namespace UserProfileScreen
                 infoPanel.Controls.Clear();
                 infoPanel.Controls.Add(courseEl);
 
-                courseEl.returnToScreen += () =>
+                courseEl.returnToMyCourses += () =>
                 {
                     infoPanel.Controls.Clear();
                     infoPanel.Controls.Add(myCreatedCourses);
                     myCreatedCourses.Dock = DockStyle.Fill;
                 };
+
+                courseEl.deleteCourse += (course) =>
+                {
+                    MyApp.Courses.Remove(course);
+                };
+
 
                 courseEl.Dock = DockStyle.Fill;
             };

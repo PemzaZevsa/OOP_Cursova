@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             buttonPanel = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            statisticButton = new Button();
-            iTeachebleButton = new Button();
+            userTypeLabel = new Label();
+            surnameLabel = new Label();
             settingsButton = new Button();
-            istudyableButton = new Button();
+            nameLabel = new Label();
+            buttonsTableLayoutPanel = new TableLayoutPanel();
+            statisticButton = new Button();
             iControlableButton = new Button();
+            iTeachebleButton = new Button();
+            istudyableButton = new Button();
             logOutButton = new Button();
             infoPanel = new Panel();
-            nameLabel = new Label();
-            surnameLabel = new Label();
-            userTypeLabel = new Label();
             buttonPanel.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
+            buttonsTableLayoutPanel.SuspendLayout();
             SuspendLayout();
             // 
             // buttonPanel
             // 
-            buttonPanel.BackColor = SystemColors.ActiveBorder;
+            buttonPanel.BackColor = SystemColors.AppWorkspace;
             buttonPanel.Controls.Add(userTypeLabel);
             buttonPanel.Controls.Add(surnameLabel);
+            buttonPanel.Controls.Add(settingsButton);
             buttonPanel.Controls.Add(nameLabel);
-            buttonPanel.Controls.Add(tableLayoutPanel1);
+            buttonPanel.Controls.Add(buttonsTableLayoutPanel);
             buttonPanel.Controls.Add(logOutButton);
             buttonPanel.Dock = DockStyle.Left;
             buttonPanel.Location = new Point(0, 0);
@@ -58,50 +59,31 @@
             buttonPanel.Size = new Size(300, 683);
             buttonPanel.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // userTypeLabel
             // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(statisticButton, 0, 4);
-            tableLayoutPanel1.Controls.Add(iTeachebleButton, 0, 2);
-            tableLayoutPanel1.Controls.Add(settingsButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(istudyableButton, 0, 1);
-            tableLayoutPanel1.Controls.Add(iControlableButton, 0, 3);
-            tableLayoutPanel1.Location = new Point(25, 306);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 5;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(250, 301);
-            tableLayoutPanel1.TabIndex = 0;
+            userTypeLabel.AutoSize = true;
+            userTypeLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            userTypeLabel.ForeColor = SystemColors.ControlLightLight;
+            userTypeLabel.Location = new Point(25, 200);
+            userTypeLabel.Name = "userTypeLabel";
+            userTypeLabel.Size = new Size(142, 20);
+            userTypeLabel.TabIndex = 5;
+            userTypeLabel.Text = "Тип користувача : ";
             // 
-            // statisticButton
+            // surnameLabel
             // 
-            statisticButton.Location = new Point(3, 243);
-            statisticButton.Name = "statisticButton";
-            statisticButton.Size = new Size(244, 55);
-            statisticButton.TabIndex = 4;
-            statisticButton.Text = "Статистика";
-            statisticButton.UseVisualStyleBackColor = true;
-            statisticButton.Click += statisticButton_Click;
-            // 
-            // iTeachebleButton
-            // 
-            iTeachebleButton.Location = new Point(3, 123);
-            iTeachebleButton.Name = "iTeachebleButton";
-            iTeachebleButton.Size = new Size(244, 54);
-            iTeachebleButton.TabIndex = 3;
-            iTeachebleButton.Text = "Створені курси";
-            iTeachebleButton.UseVisualStyleBackColor = true;
-            iTeachebleButton.Click += iTeachebleButton_Click;
+            surnameLabel.AutoSize = true;
+            surnameLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            surnameLabel.ForeColor = SystemColors.ControlLightLight;
+            surnameLabel.Location = new Point(25, 150);
+            surnameLabel.Name = "surnameLabel";
+            surnameLabel.Size = new Size(113, 25);
+            surnameLabel.TabIndex = 4;
+            surnameLabel.Text = "Прізвище : ";
             // 
             // settingsButton
             // 
-            settingsButton.Location = new Point(3, 3);
+            settingsButton.Location = new Point(28, 272);
             settingsButton.Name = "settingsButton";
             settingsButton.Size = new Size(244, 54);
             settingsButton.TabIndex = 0;
@@ -109,25 +91,75 @@
             settingsButton.UseVisualStyleBackColor = true;
             settingsButton.Click += settingsButton_Click;
             // 
-            // istudyableButton
+            // nameLabel
             // 
-            istudyableButton.Location = new Point(3, 63);
-            istudyableButton.Name = "istudyableButton";
-            istudyableButton.Size = new Size(244, 54);
-            istudyableButton.TabIndex = 1;
-            istudyableButton.Text = "Моє навчання";
-            istudyableButton.UseVisualStyleBackColor = true;
-            istudyableButton.Click += istudyableButton_Click;
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            nameLabel.ForeColor = SystemColors.ControlLightLight;
+            nameLabel.Location = new Point(25, 100);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(62, 25);
+            nameLabel.TabIndex = 3;
+            nameLabel.Text = "Ім'я : ";
+            // 
+            // buttonsTableLayoutPanel
+            // 
+            buttonsTableLayoutPanel.ColumnCount = 1;
+            buttonsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            buttonsTableLayoutPanel.Controls.Add(statisticButton, 0, 3);
+            buttonsTableLayoutPanel.Controls.Add(iControlableButton, 0, 2);
+            buttonsTableLayoutPanel.Controls.Add(iTeachebleButton, 0, 1);
+            buttonsTableLayoutPanel.Controls.Add(istudyableButton, 0, 0);
+            buttonsTableLayoutPanel.Location = new Point(25, 329);
+            buttonsTableLayoutPanel.Name = "buttonsTableLayoutPanel";
+            buttonsTableLayoutPanel.RowCount = 4;
+            buttonsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            buttonsTableLayoutPanel.Size = new Size(250, 251);
+            buttonsTableLayoutPanel.TabIndex = 0;
+            // 
+            // statisticButton
+            // 
+            statisticButton.Location = new Point(3, 189);
+            statisticButton.Name = "statisticButton";
+            statisticButton.Size = new Size(244, 54);
+            statisticButton.TabIndex = 4;
+            statisticButton.Text = "Статистика";
+            statisticButton.UseVisualStyleBackColor = true;
+            statisticButton.Click += statisticButton_Click;
             // 
             // iControlableButton
             // 
-            iControlableButton.Location = new Point(3, 183);
+            iControlableButton.Location = new Point(3, 127);
             iControlableButton.Name = "iControlableButton";
             iControlableButton.Size = new Size(244, 54);
             iControlableButton.TabIndex = 4;
             iControlableButton.Text = "Користувачі";
             iControlableButton.UseVisualStyleBackColor = true;
             iControlableButton.Click += iControlableButton_Click;
+            // 
+            // iTeachebleButton
+            // 
+            iTeachebleButton.Location = new Point(3, 65);
+            iTeachebleButton.Name = "iTeachebleButton";
+            iTeachebleButton.Size = new Size(244, 54);
+            iTeachebleButton.TabIndex = 3;
+            iTeachebleButton.Text = "Створені курси";
+            iTeachebleButton.UseVisualStyleBackColor = true;
+            iTeachebleButton.Click += iTeachebleButton_Click;
+            // 
+            // istudyableButton
+            // 
+            istudyableButton.Location = new Point(3, 3);
+            istudyableButton.Name = "istudyableButton";
+            istudyableButton.Size = new Size(244, 54);
+            istudyableButton.TabIndex = 1;
+            istudyableButton.Text = "Моє навчання";
+            istudyableButton.UseVisualStyleBackColor = true;
+            istudyableButton.Click += istudyableButton_Click;
             // 
             // logOutButton
             // 
@@ -149,33 +181,6 @@
             infoPanel.Size = new Size(702, 683);
             infoPanel.TabIndex = 1;
             // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(25, 30);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(46, 20);
-            nameLabel.TabIndex = 3;
-            nameLabel.Text = "Ім'я : ";
-            // 
-            // surnameLabel
-            // 
-            surnameLabel.AutoSize = true;
-            surnameLabel.Location = new Point(25, 80);
-            surnameLabel.Name = "surnameLabel";
-            surnameLabel.Size = new Size(88, 20);
-            surnameLabel.TabIndex = 4;
-            surnameLabel.Text = "Прізвище : ";
-            // 
-            // userTypeLabel
-            // 
-            userTypeLabel.AutoSize = true;
-            userTypeLabel.Location = new Point(25, 130);
-            userTypeLabel.Name = "userTypeLabel";
-            userTypeLabel.Size = new Size(136, 20);
-            userTypeLabel.TabIndex = 5;
-            userTypeLabel.Text = "Тип користувача : ";
-            // 
             // UserProfileScreenBlock
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -186,7 +191,7 @@
             Size = new Size(1002, 683);
             buttonPanel.ResumeLayout(false);
             buttonPanel.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
+            buttonsTableLayoutPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -197,7 +202,7 @@
         private Button istudyableButton;
         private Button settingsButton;
         private Panel infoPanel;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel buttonsTableLayoutPanel;
         private Button iTeachebleButton;
         private Button iControlableButton;
         private Button statisticButton;

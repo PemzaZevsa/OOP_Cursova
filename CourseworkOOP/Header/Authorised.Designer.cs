@@ -46,17 +46,22 @@
             // 
             // nameLabel
             // 
+            nameLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(3, 96);
+            nameLabel.Location = new Point(41, 96);
+            nameLabel.MaximumSize = new Size(180, 0);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(111, 20);
             nameLabel.TabIndex = 4;
             nameLabel.Text = "Name Surname";
+            nameLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // userProfileButton
             // 
             userProfileButton.BackgroundImage = Properties.Resources.UserProfile_Icon;
             userProfileButton.BackgroundImageLayout = ImageLayout.Stretch;
+            userProfileButton.Cursor = Cursors.Hand;
+            userProfileButton.FlatStyle = FlatStyle.Popup;
             userProfileButton.Font = new Font("Times New Roman", 15F, FontStyle.Bold);
             userProfileButton.ForeColor = SystemColors.Control;
             userProfileButton.Location = new Point(51, 3);

@@ -78,12 +78,15 @@
             // toCourseButton
             // 
             toCourseButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            toCourseButton.BackColor = SystemColors.HotTrack;
+            toCourseButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            toCourseButton.ForeColor = SystemColors.ControlLightLight;
             toCourseButton.Location = new Point(311, 144);
             toCourseButton.Name = "toCourseButton";
             toCourseButton.Size = new Size(126, 53);
             toCourseButton.TabIndex = 6;
             toCourseButton.Text = "Перейти";
-            toCourseButton.UseVisualStyleBackColor = true;
+            toCourseButton.UseVisualStyleBackColor = false;
             toCourseButton.Click += toCourseButton_Click;
             // 
             // nameLabel

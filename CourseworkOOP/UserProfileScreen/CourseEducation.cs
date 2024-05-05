@@ -1,4 +1,5 @@
 ﻿using CourseworkOOP.Entities.Courses;
+using CourseworkOOP.Entities.Users;
 using System;
 
 namespace UserProfileScreen
@@ -7,12 +8,14 @@ namespace UserProfileScreen
     {
         public event Action returnTo;
         Course MyCourse { get; set; }
-        public CourseEducation(Course course)
+        User MyUser { get; set; }
+        public CourseEducation(Course course,User user)
         {
             InitializeComponent();
             MyCourse = course;
             courseNameLabel.Text = course.Name;
-           
+            MyUser = user;
+
             //нужно, если бы грузились курсы отдельно от модулей
             //MyCourse.Load();
 
@@ -55,7 +58,7 @@ namespace UserProfileScreen
 
                 courseStuctureFlowLayoutPanel.Controls.Add(moduleElem);
             }
-            
+
         }
 
         private void returnButton_Click(object sender, EventArgs e)
@@ -68,6 +71,29 @@ namespace UserProfileScreen
             nameLessonLabel.Text = currentLesson.Name;
             contentListBox.Items.Clear();
             contentListBox.Items.Add(currentLesson.Materials);
+        }
+
+        private void rateButton_Click(object sender, EventArgs e)
+        {
+            if (!MyCourse.RaitedUsersId.Contains(MyUser.Id))
+            {
+                try
+                {
+                    var raitingform = new SetRaiting();
+                    raitingform.raiting += (r) =>
+                    {
+                        MyCourse.Rating = r;
+                        MyCourse.RaitedUsersId.Add(MyUser.Id);
+                    };
+
+                    raitingform.ShowDialog();
+                    MessageBox.Show($"Успішна оцінка");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Помилка : {ex.Message}");
+                }
+            }
         }
     }
 }

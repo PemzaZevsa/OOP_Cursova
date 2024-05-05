@@ -55,9 +55,9 @@
             panel1.Controls.Add(backButton);
             panel1.Controls.Add(coursePictureBox);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(688, 0);
+            panel1.Location = new Point(680, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(392, 649);
+            panel1.Size = new Size(400, 649);
             panel1.TabIndex = 0;
             // 
             // costLabel
@@ -65,7 +65,7 @@
             costLabel.AutoSize = true;
             costLabel.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 204);
             costLabel.ForeColor = SystemColors.ButtonHighlight;
-            costLabel.Location = new Point(6, 464);
+            costLabel.Location = new Point(12, 464);
             costLabel.Name = "costLabel";
             costLabel.Size = new Size(65, 25);
             costLabel.TabIndex = 6;
@@ -76,11 +76,12 @@
             buyPanel.Dock = DockStyle.Bottom;
             buyPanel.Location = new Point(0, 492);
             buyPanel.Name = "buyPanel";
-            buyPanel.Size = new Size(392, 157);
+            buyPanel.Size = new Size(400, 157);
             buyPanel.TabIndex = 5;
             // 
             // backButton
             // 
+            backButton.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             backButton.Location = new Point(221, 15);
             backButton.Name = "backButton";
             backButton.Size = new Size(160, 60);
@@ -91,7 +92,7 @@
             // 
             // coursePictureBox
             // 
-            coursePictureBox.Location = new Point(6, 100);
+            coursePictureBox.Location = new Point(12, 100);
             coursePictureBox.Name = "coursePictureBox";
             coursePictureBox.Size = new Size(375, 250);
             coursePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -116,7 +117,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(688, 649);
+            panel2.Size = new Size(680, 649);
             panel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -139,7 +140,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(616, 600);
+            tableLayoutPanel1.Size = new Size(608, 600);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // nameLabel
