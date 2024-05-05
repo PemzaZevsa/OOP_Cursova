@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MainScreen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f3ec073ad53444bb17266e51adf6b3be286ac24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7d63ed7003e652714be7ecad4a816a77e30563")]
 [assembly: System.Reflection.AssemblyProductAttribute("MainScreen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MainScreen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

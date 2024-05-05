@@ -32,7 +32,6 @@ namespace Tests
             Student student = new Student("Steve", "Smith");
 
             Assert.IsTrue(student.BuyCourse(testCourse, 400));
-            Assert.IsTrue(student.BuyCourse(testCourse, 500));
         }
         [TestMethod]
         public void StudentBuysCourseWithNotEnoughMoney()
@@ -41,6 +40,16 @@ namespace Tests
             Student student = new Student("Steve", "Smith");
 
             Assert.IsFalse(student.BuyCourse(testCourse, 300));
+        }
+        [TestMethod]
+        public void StudentBuysTheSameCourse()
+        {
+            Course testCourse = new Course((uint)0, "TestCourse", "Testing", 0, "", "", 0, 0, 400, 0, null, null);
+            Student student = new Student("Steve", "Smith");
+
+            student.BuyCourse(testCourse, 400);
+
+            Assert.IsFalse(student.BuyCourse(testCourse, 400));
         }
         [TestMethod]
         public void AdminCreatesCourse()

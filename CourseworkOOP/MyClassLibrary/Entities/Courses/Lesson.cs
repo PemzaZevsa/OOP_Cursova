@@ -14,13 +14,6 @@ namespace CourseworkOOP.Entities.Courses
         public string Name { get; set; }
         public string Materials { get; set; }
         public static uint counter;
-
-        //public event Action LoadError;
-        //public event Action SaveError;
-        //public event Action LoadComplete;
-        //public event Action SaveComplete;
-        //public event Action<string> LoadLessonMaterials;
-
         public Lesson()
         {
         }
@@ -36,54 +29,5 @@ namespace CourseworkOOP.Entities.Courses
             Name = name;
             Materials = materials;
         }
-        //public bool Save(string text)
-        //{
-        //    string path = Materials;
-
-        //    path += @$"\{Id}\Materials.txt";
-        //    try
-        //    {
-        //        File.WriteAllText(path, text);
-        //    }
-        //    catch (IOException e)
-        //    {
-        //        SaveError?.Invoke();
-        //        return false;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        SaveError?.Invoke();
-        //        return false;
-        //    }
-
-        //    SaveComplete?.Invoke();
-        //    return true;
-        //}
-        //public bool Load(string text)
-        //{
-        //    string path = Materials;
-
-        //    path += @$"\{Id}\Materials.txt";
-
-        //    try
-        //    {
-        //        string lines = File.ReadAllText(path);
-                
-        //        LoadLessonMaterials?.Invoke(lines);
-        //    }
-        //    catch (IOException e)
-        //    {
-        //        LoadError?.Invoke();
-        //        return false;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        LoadError?.Invoke();
-        //        return false;
-        //    }
-
-        //    LoadComplete?.Invoke();
-        //    return true;
-        //}
     }
 }

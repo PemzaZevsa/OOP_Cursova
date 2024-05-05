@@ -1,11 +1,6 @@
 ﻿using CourseworkOOP.Entities.Courses;
 using CourseworkOOP.Iterfaces;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace CourseworkOOP.Entities.Users
 {

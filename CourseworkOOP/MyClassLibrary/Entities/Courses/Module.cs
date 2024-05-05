@@ -15,7 +15,6 @@ namespace CourseworkOOP.Entities.Courses
         public uint Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        //public string LessonsPath { get; set; }
         private List<Lesson> lessons;
         //[JsonIgnore]
         public List<Lesson> Lessons { get => lessons; set => lessons = value; }
