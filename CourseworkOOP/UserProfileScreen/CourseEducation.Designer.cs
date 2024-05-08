@@ -33,13 +33,15 @@
             panel3 = new Panel();
             rateButton = new Button();
             returnButton = new Button();
-            panel2 = new Panel();
+            materialsPanel = new Panel();
             contentListBox = new ListBox();
             nameLessonLabel = new Label();
             courseNameLabel = new Label();
+            listBoxPanel = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            materialsPanel.SuspendLayout();
+            listBoxPanel.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -97,23 +99,24 @@
             returnButton.UseVisualStyleBackColor = true;
             returnButton.Click += returnButton_Click;
             // 
-            // panel2
+            // materialsPanel
             // 
-            panel2.Controls.Add(contentListBox);
-            panel2.Controls.Add(nameLessonLabel);
-            panel2.Controls.Add(courseNameLabel);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(695, 581);
-            panel2.TabIndex = 1;
+            materialsPanel.Controls.Add(listBoxPanel);
+            materialsPanel.Controls.Add(nameLessonLabel);
+            materialsPanel.Controls.Add(courseNameLabel);
+            materialsPanel.Dock = DockStyle.Fill;
+            materialsPanel.Location = new Point(0, 0);
+            materialsPanel.Name = "materialsPanel";
+            materialsPanel.Size = new Size(695, 581);
+            materialsPanel.TabIndex = 1;
             // 
             // contentListBox
             // 
+            contentListBox.Dock = DockStyle.Fill;
             contentListBox.FormattingEnabled = true;
-            contentListBox.Location = new Point(27, 92);
+            contentListBox.Location = new Point(0, 0);
             contentListBox.Name = "contentListBox";
-            contentListBox.Size = new Size(648, 464);
+            contentListBox.Size = new Size(648, 453);
             contentListBox.TabIndex = 1;
             // 
             // nameLessonLabel
@@ -135,19 +138,30 @@
             courseNameLabel.TabIndex = 0;
             courseNameLabel.Text = "Course name";
             // 
+            // listBoxPanel
+            // 
+            listBoxPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxPanel.AutoSize = true;
+            listBoxPanel.Controls.Add(contentListBox);
+            listBoxPanel.Location = new Point(27, 99);
+            listBoxPanel.Name = "listBoxPanel";
+            listBoxPanel.Size = new Size(648, 453);
+            listBoxPanel.TabIndex = 3;
+            // 
             // CourseEducation
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel2);
+            Controls.Add(materialsPanel);
             Controls.Add(panel1);
             Name = "CourseEducation";
             Size = new Size(1044, 581);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            materialsPanel.ResumeLayout(false);
+            materialsPanel.PerformLayout();
+            listBoxPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -156,12 +170,13 @@
         private Panel panel1;
         private FlowLayoutPanel courseStuctureFlowLayoutPanel;
         private Button returnButton;
-        private Panel panel2;
+        private Panel materialsPanel;
         private Label nameLessonLabel;
         private ListBox contentListBox;
         private Label courseNameLabel;
         private Panel panel3;
         private RichTextBox richTextBox1;
         private Button rateButton;
+        private Panel listBoxPanel;
     }
 }

@@ -22,6 +22,8 @@ namespace CourseScreenSpace
             MyUser = user;
             MyCantBuy = new CantBuy();
             MyCanBuy = new CanBuy();
+            
+            //покупка курса
             MyCanBuy.buyCourse += () =>
             {
                 if (MessageBox.Show($"Купити курс?\nНазва : {course.Name}\nЦіна : {course.Cost}","Покупка курса",MessageBoxButtons.OKCancel) == DialogResult.Cancel) 
@@ -75,7 +77,7 @@ namespace CourseScreenSpace
                 Image image = Image.FromFile(path);
                 coursePictureBox.Image = image;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Image image2 = Image.FromFile(@"Data/Config/CoursePlaceholder.png");
                 coursePictureBox.Image = image2;

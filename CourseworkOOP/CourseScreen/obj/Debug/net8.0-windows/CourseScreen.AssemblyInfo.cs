@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CourseScreen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7d63ed7003e652714be7ecad4a816a77e30563")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ab98f5efe8556e248c4c0f0fcc3eb3b2d4ddfe1")]
 [assembly: System.Reflection.AssemblyProductAttribute("CourseScreen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CourseScreen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

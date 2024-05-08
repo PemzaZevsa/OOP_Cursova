@@ -71,7 +71,6 @@ namespace CourseworkOOP.Entities.Users
                 surname = value;
             }
         }
-        //public string ProfilePicturePath { get; set; }
 
         public static uint counter;
         public event Action<String> UpdatePassword;

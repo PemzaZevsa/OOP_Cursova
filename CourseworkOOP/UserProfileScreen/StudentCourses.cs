@@ -28,7 +28,7 @@ namespace UserProfileScreen
             {
                 var courseEl = new CourseElement(course);
                 courseEl.toCourse += ToCourse;
-
+                courseEl.Width = 1200;
                 coursesFlowLayoutPanel.Controls.Add(courseEl);
             }
         }

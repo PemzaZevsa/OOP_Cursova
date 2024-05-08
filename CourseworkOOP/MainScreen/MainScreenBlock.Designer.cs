@@ -44,7 +44,7 @@ namespace MainScreen
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(996, 657);
+            panel2.Size = new Size(1068, 657);
             panel2.TabIndex = 1;
             // 
             // aboutCoursesLabel
@@ -63,7 +63,7 @@ namespace MainScreen
             coursesFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             coursesFlowLayoutPanel.Location = new Point(43, 74);
             coursesFlowLayoutPanel.Name = "coursesFlowLayoutPanel";
-            coursesFlowLayoutPanel.Size = new Size(915, 456);
+            coursesFlowLayoutPanel.Size = new Size(982, 456);
             coursesFlowLayoutPanel.TabIndex = 0;
             // 
             // MainScreenBlock
@@ -72,7 +72,7 @@ namespace MainScreen
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
             Name = "MainScreenBlock";
-            Size = new Size(996, 657);
+            Size = new Size(1068, 657);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);

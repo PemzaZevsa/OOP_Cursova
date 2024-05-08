@@ -65,6 +65,7 @@ namespace UserProfileScreen
 
                 if (newPassword is not null && newPassword.Length != 0)
                 {
+                    //todo event change password
                     MyUser.Password = newPassword;
                     strMessage += $"\nНовий пароль : {MyUser.Password}";
                 }

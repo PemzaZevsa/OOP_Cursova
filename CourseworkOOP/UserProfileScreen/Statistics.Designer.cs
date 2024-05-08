@@ -39,21 +39,21 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(userCreatedLabel);
             panel1.Controls.Add(lessonsCreatedLabel);
             panel1.Controls.Add(moduleCreatedLabel);
             panel1.Controls.Add(coursesCreatedLabel);
             panel1.Controls.Add(statisticsLabel);
-            panel1.Location = new Point(45, 29);
+            panel1.Location = new Point(100, 20);
             panel1.Name = "panel1";
-            panel1.Size = new Size(314, 285);
+            panel1.Size = new Size(400, 460);
             panel1.TabIndex = 0;
             // 
             // userCreatedLabel
             // 
             userCreatedLabel.AutoSize = true;
-            userCreatedLabel.Location = new Point(27, 167);
+            userCreatedLabel.Location = new Point(30, 230);
             userCreatedLabel.Name = "userCreatedLabel";
             userCreatedLabel.Size = new Size(216, 20);
             userCreatedLabel.TabIndex = 4;
@@ -62,7 +62,7 @@
             // lessonsCreatedLabel
             // 
             lessonsCreatedLabel.AutoSize = true;
-            lessonsCreatedLabel.Location = new Point(27, 134);
+            lessonsCreatedLabel.Location = new Point(30, 180);
             lessonsCreatedLabel.Name = "lessonsCreatedLabel";
             lessonsCreatedLabel.Size = new Size(131, 20);
             lessonsCreatedLabel.TabIndex = 3;
@@ -71,7 +71,7 @@
             // moduleCreatedLabel
             // 
             moduleCreatedLabel.AutoSize = true;
-            moduleCreatedLabel.Location = new Point(27, 101);
+            moduleCreatedLabel.Location = new Point(30, 130);
             moduleCreatedLabel.Name = "moduleCreatedLabel";
             moduleCreatedLabel.Size = new Size(142, 20);
             moduleCreatedLabel.TabIndex = 2;
@@ -80,7 +80,7 @@
             // coursesCreatedLabel
             // 
             coursesCreatedLabel.AutoSize = true;
-            coursesCreatedLabel.Location = new Point(27, 68);
+            coursesCreatedLabel.Location = new Point(30, 80);
             coursesCreatedLabel.Name = "coursesCreatedLabel";
             coursesCreatedLabel.Size = new Size(129, 20);
             coursesCreatedLabel.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             statisticsLabel.AutoSize = true;
             statisticsLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            statisticsLabel.Location = new Point(64, 9);
+            statisticsLabel.Location = new Point(130, 9);
             statisticsLabel.Name = "statisticsLabel";
             statisticsLabel.Size = new Size(199, 46);
             statisticsLabel.TabIndex = 0;
@@ -102,7 +102,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Name = "Statistics";
-            Size = new Size(381, 336);
+            Size = new Size(600, 500);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

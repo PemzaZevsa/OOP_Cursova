@@ -57,6 +57,7 @@
             // 
             // coursesFlowLayoutPanel
             // 
+            coursesFlowLayoutPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             coursesFlowLayoutPanel.AutoSize = true;
             coursesFlowLayoutPanel.BorderStyle = BorderStyle.FixedSingle;
             coursesFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;

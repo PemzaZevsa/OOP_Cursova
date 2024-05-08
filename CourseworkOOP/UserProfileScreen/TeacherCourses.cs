@@ -1,6 +1,7 @@
 ﻿using CourseScreenSpace;
 using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
+using CourseworkOOP.Iterfaces;
 using MainScreen;
 using System.Data;
 
@@ -23,17 +24,33 @@ namespace UserProfileScreen
         {
             coursesFlowLayoutPanel.Controls.Clear();
             //TODO mb change?
-            var result = courses.Where(x => x.AuthorId == MyApp.CurrentUser.Id);
-
-            foreach (var course in result)
+            if (MyApp.CurrentUser is IControlable)
             {
-                var cElem = new CourseElement(course);
+                foreach (var course in courses)
+                {
+                    var cElem = new CourseElement(course);
 
-                cElem.toCourse += ToCourse;
+                    cElem.toCourse += ToCourse;
 
-                coursesFlowLayoutPanel.Controls.Add(cElem);
-                cElem.Width = 1000;
+                    coursesFlowLayoutPanel.Controls.Add(cElem);
+                    cElem.Width = 1000;
+                }
             }
+            else
+            {
+                //TODO mb change?
+                var result = courses.Where(x => x.AuthorId == MyApp.CurrentUser.Id);
+
+                foreach (var course in result)
+                {
+                    var cElem = new CourseElement(course);
+
+                    cElem.toCourse += ToCourse;
+
+                    coursesFlowLayoutPanel.Controls.Add(cElem);
+                    cElem.Width = 1000;
+                }
+            }            
         }
 
         private void ToCourse(Course course)

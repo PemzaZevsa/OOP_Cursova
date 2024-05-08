@@ -337,7 +337,7 @@
             coursesFlowLayoutPanel.AutoSize = true;
             coursesFlowLayoutPanel.Location = new Point(38, 59);
             coursesFlowLayoutPanel.Name = "coursesFlowLayoutPanel";
-            coursesFlowLayoutPanel.Size = new Size(727, 419);
+            coursesFlowLayoutPanel.Size = new Size(812, 452);
             coursesFlowLayoutPanel.TabIndex = 0;
             // 
             // SeacrchScreenBlock

@@ -35,7 +35,7 @@ namespace MainScreen
                 cElem.toCourse += ToCourse;
 
                 coursesFlowLayoutPanel.Controls.Add(cElem);
-                cElem.Width = 1000;
+                cElem.Width = 1200;
             }
         }
 

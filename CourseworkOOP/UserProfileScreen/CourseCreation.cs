@@ -128,6 +128,7 @@ namespace UserProfileScreen
             catch (Exception ex)
             {
                 MessageBox.Show($"Помилка:{ex.Message}", "Помилка при створенні нового курсу!");
+                return;
             }
             MessageBox.Show("Курс було успішно створено", "Створення нового курсу");
             returnToMyCourses?.Invoke();
@@ -182,6 +183,7 @@ namespace UserProfileScreen
             {
                 courseToChange.Modules = backUpModules;
                 MessageBox.Show($"Помилка:{ex.Message}", "Помилка при зміні курсу!");
+                return;
             }
             MessageBox.Show("Курс було змінено", "Редагування курсу");
             returnToMyCourses?.Invoke();

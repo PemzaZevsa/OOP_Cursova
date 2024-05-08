@@ -77,7 +77,7 @@
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(297, 69);
+            nameTextBox.Location = new Point(402, 69);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(421, 27);
             nameTextBox.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             // descriptionRichTextBox
             // 
-            descriptionRichTextBox.Location = new Point(297, 102);
+            descriptionRichTextBox.Location = new Point(402, 102);
             descriptionRichTextBox.Name = "descriptionRichTextBox";
             descriptionRichTextBox.Size = new Size(421, 69);
             descriptionRichTextBox.TabIndex = 4;
@@ -110,7 +110,7 @@
             // 
             // costTextBox
             // 
-            costTextBox.Location = new Point(601, 177);
+            costTextBox.Location = new Point(706, 177);
             costTextBox.Name = "costTextBox";
             costTextBox.Size = new Size(117, 27);
             costTextBox.TabIndex = 6;
@@ -136,7 +136,7 @@
             // 
             // loadPicButton
             // 
-            loadPicButton.Location = new Point(332, 422);
+            loadPicButton.Location = new Point(444, 422);
             loadPicButton.Name = "loadPicButton";
             loadPicButton.Size = new Size(133, 54);
             loadPicButton.TabIndex = 10;
@@ -155,7 +155,7 @@
             // 
             // previevPictureBox
             // 
-            previevPictureBox.Location = new Point(478, 316);
+            previevPictureBox.Location = new Point(583, 316);
             previevPictureBox.Name = "previevPictureBox";
             previevPictureBox.Size = new Size(240, 160);
             previevPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -164,7 +164,7 @@
             // 
             // backButton
             // 
-            backButton.Location = new Point(595, 10);
+            backButton.Location = new Point(700, 10);
             backButton.Name = "backButton";
             backButton.Size = new Size(123, 53);
             backButton.TabIndex = 13;
@@ -195,7 +195,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(767, 813);
+            panel1.Size = new Size(860, 813);
             panel1.TabIndex = 14;
             // 
             // buttonsFlowLayoutPanel
@@ -204,7 +204,7 @@
             buttonsFlowLayoutPanel.Controls.Add(changeButton);
             buttonsFlowLayoutPanel.Controls.Add(deleteButton);
             buttonsFlowLayoutPanel.FlowDirection = FlowDirection.RightToLeft;
-            buttonsFlowLayoutPanel.Location = new Point(261, 482);
+            buttonsFlowLayoutPanel.Location = new Point(366, 482);
             buttonsFlowLayoutPanel.Name = "buttonsFlowLayoutPanel";
             buttonsFlowLayoutPanel.Size = new Size(457, 65);
             buttonsFlowLayoutPanel.TabIndex = 21;
@@ -258,7 +258,7 @@
             tagsGroupBox.Controls.Add(dataScienceCheckBox);
             tagsGroupBox.Controls.Add(cybersecurityCheckBox);
             tagsGroupBox.Controls.Add(developmentCheckBox);
-            tagsGroupBox.Location = new Point(132, 210);
+            tagsGroupBox.Location = new Point(237, 210);
             tagsGroupBox.Name = "tagsGroupBox";
             tagsGroupBox.Size = new Size(586, 100);
             tagsGroupBox.TabIndex = 6;
@@ -395,7 +395,7 @@
             moduleFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             moduleFlowLayoutPanel.Location = new Point(27, 613);
             moduleFlowLayoutPanel.Name = "moduleFlowLayoutPanel";
-            moduleFlowLayoutPanel.Size = new Size(691, 167);
+            moduleFlowLayoutPanel.Size = new Size(796, 167);
             moduleFlowLayoutPanel.TabIndex = 16;
             // 
             // addModuleButton
@@ -424,7 +424,7 @@
             AutoSize = true;
             Controls.Add(panel1);
             Name = "CourseCreation";
-            Size = new Size(767, 813);
+            Size = new Size(860, 813);
             ((System.ComponentModel.ISupportInitialize)previevPictureBox).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
