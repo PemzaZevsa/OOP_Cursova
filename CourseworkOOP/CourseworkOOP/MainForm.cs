@@ -38,6 +38,12 @@ namespace CourseworkOOP
                 if (tempUser != null)
                 {
                     coursesApp.CurrentUser = tempUser;
+                    tempUser.updatePassword += (newPassword) =>
+                    {
+                        tempUser.Password = newPassword;
+                        MessageBox.Show("”вага, пароль було зм≥нено!","«м≥на парол€");
+                    };
+
                     myHeader.ChangeToAuthorised();
                     //myHeader.ChangePicToUserPic(coursesApp.CurrentUser.ProfilePicturePath);
                     myHeader.ChangeCurrentUserLabel(coursesApp.CurrentUser.Name, coursesApp.CurrentUser.Surname);

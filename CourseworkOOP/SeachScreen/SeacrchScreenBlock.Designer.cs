@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            loadMoreButton = new Button();
             tagsGroupBox = new GroupBox();
             marketingCheckBox = new CheckBox();
             designCheckBox = new CheckBox();
@@ -61,6 +62,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(loadMoreButton);
             panel1.Controls.Add(tagsGroupBox);
             panel1.Controls.Add(filterLabel);
             panel1.Controls.Add(raitingGroupBox);
@@ -68,8 +70,18 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 575);
+            panel1.Size = new Size(300, 617);
             panel1.TabIndex = 0;
+            // 
+            // loadMoreButton
+            // 
+            loadMoreButton.Location = new Point(20, 547);
+            loadMoreButton.Name = "loadMoreButton";
+            loadMoreButton.Size = new Size(260, 60);
+            loadMoreButton.TabIndex = 6;
+            loadMoreButton.Text = "Завантажити наступні курси";
+            loadMoreButton.UseVisualStyleBackColor = true;
+            loadMoreButton.Click += loadMoreButton_Click;
             // 
             // tagsGroupBox
             // 
@@ -318,7 +330,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(300, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(898, 575);
+            panel2.Size = new Size(898, 617);
             panel2.TabIndex = 1;
             // 
             // foundLabel
@@ -337,7 +349,7 @@
             coursesFlowLayoutPanel.AutoSize = true;
             coursesFlowLayoutPanel.Location = new Point(38, 59);
             coursesFlowLayoutPanel.Name = "coursesFlowLayoutPanel";
-            coursesFlowLayoutPanel.Size = new Size(812, 452);
+            coursesFlowLayoutPanel.Size = new Size(812, 535);
             coursesFlowLayoutPanel.TabIndex = 0;
             // 
             // SeacrchScreenBlock
@@ -347,7 +359,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "SeacrchScreenBlock";
-            Size = new Size(1198, 575);
+            Size = new Size(1198, 617);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tagsGroupBox.ResumeLayout(false);
@@ -385,5 +397,6 @@
         private CheckBox cloudComputingCheckBox;
         private CheckBox marketingCheckBox;
         private CheckBox designCheckBox;
+        private Button loadMoreButton;
     }
 }

@@ -1,7 +1,4 @@
 ﻿using CourseworkOOP.Iterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -41,7 +38,6 @@ namespace CourseworkOOP.Entities.Courses
         public string AuthorName { get; set; }
         public string AuthorSurname { get; set; }        
         public string PicturePath { get; set; }
-        //public uint CourseLength { get; set; }
         private double rating;
         public double Rating 
         { 
@@ -104,11 +100,6 @@ namespace CourseworkOOP.Entities.Courses
         public List<uint> RaitedUsersId { get; set; }
         public static uint counter;
 
-        public event Action LoadError;
-        public event Action SaveError;
-        public event Action LoadComplete;
-        public event Action SaveComplete;
-
         public Course()
         {
             tegs = new List<Teg>();
@@ -151,24 +142,6 @@ namespace CourseworkOOP.Entities.Courses
             RatingsAmount = ratingsAmount;
             RaitedUsersId = new List<uint>();
         }
-        public Course(uint id, string name, string description, uint author, string authorName, string authorSurname, double rating, int ratingsAmount, decimal cost,uint boughtCourseAmount, List<Teg> tegs, List<Module> modules)
-        {
-            Id = id;
-            Name = name;
-            Description = description;
-            AuthorId = author;
-            AuthorName = authorName;
-            AuthorSurname = authorSurname;
-            ModulePath = $"Data\\Courses\\{Id}\\Modules.json";
-            PicturePath = $"Data\\Courses\\{Id}\\Icon.bmp";
-            Cost = cost;
-            BoughtCourseAmount = boughtCourseAmount;
-            this.tegs = tegs;
-            this.modules = modules;
-            Rating = rating;
-            RatingsAmount = ratingsAmount;
-            RaitedUsersId = new List<uint>();
-        }
         public bool Save()
         {
             return Save(ModulePath);
@@ -184,16 +157,13 @@ namespace CourseworkOOP.Entities.Courses
             }
             catch (IOException)
             {
-                SaveError?.Invoke();
                 return false;
             }
             catch (Exception)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke();
             return true;
         }
         public bool Load()
@@ -209,16 +179,13 @@ namespace CourseworkOOP.Entities.Courses
             }
             catch (IOException)
             {
-                LoadError?.Invoke();
                 return false;
             }
             catch (Exception)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
     }

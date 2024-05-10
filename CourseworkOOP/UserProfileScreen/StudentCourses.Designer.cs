@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            loadMoreButton = new Button();
             myCoursesLabel = new Label();
             coursesFlowLayoutPanel = new FlowLayoutPanel();
             panel1.SuspendLayout();
@@ -37,6 +38,7 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(loadMoreButton);
             panel1.Controls.Add(myCoursesLabel);
             panel1.Controls.Add(coursesFlowLayoutPanel);
             panel1.Dock = DockStyle.Fill;
@@ -44,6 +46,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(780, 533);
             panel1.TabIndex = 0;
+            // 
+            // loadMoreButton
+            // 
+            loadMoreButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            loadMoreButton.Location = new Point(512, 23);
+            loadMoreButton.Name = "loadMoreButton";
+            loadMoreButton.Size = new Size(238, 60);
+            loadMoreButton.TabIndex = 2;
+            loadMoreButton.Text = "Завантажити наступні курси";
+            loadMoreButton.UseVisualStyleBackColor = true;
+            loadMoreButton.Click += loadMoreButton_Click;
             // 
             // myCoursesLabel
             // 
@@ -84,5 +97,6 @@
         private Panel panel1;
         private Label myCoursesLabel;
         private FlowLayoutPanel coursesFlowLayoutPanel;
+        private Button loadMoreButton;
     }
 }

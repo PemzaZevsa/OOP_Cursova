@@ -29,7 +29,6 @@ namespace UserProfileScreen
         //        }
         //        catch (Exception ex)
         //        {
-        //            //TODO?
         //            MessageBox.Show("Помилка при завантаженні зображення: " + ex.Message);
         //        }
         //    }

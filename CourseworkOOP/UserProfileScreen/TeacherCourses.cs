@@ -1,5 +1,4 @@
-﻿using CourseScreenSpace;
-using CourseworkOOP.Entities;
+﻿using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
 using CourseworkOOP.Iterfaces;
 using MainScreen;
@@ -13,44 +12,53 @@ namespace UserProfileScreen
         public event Action returnTo;
         public event Action<CourseCreation> openCourse;
         public CoursesApp MyApp;
+        private IEnumerable<Course> result;
+        private IEnumerator<Course>? iterator;
         public TeacherCourses(CoursesApp App)
         {
             InitializeComponent();
-            MyApp = App;
+            MyApp = App;            
+            result = null;
             LoadCourses(MyApp.Courses);
+
+            var tempRes = GetCourse();
+            iterator = tempRes.GetEnumerator();
+            GetNextCourses();
         }
 
         private void LoadCourses(List<Course> courses)
         {
             coursesFlowLayoutPanel.Controls.Clear();
-            //TODO mb change?
-            if (MyApp.CurrentUser is IControlable)
+
+            result = ((ITeacheble)MyApp.CurrentUser).GetMyCourses(courses);
+        }
+
+        private void GetNextCourses()
+        {
+            for (int i = 0; i < 5; i++)
             {
-                foreach (var course in courses)
+                if (iterator.MoveNext())
                 {
-                    var cElem = new CourseElement(course);
+                    var cElem = new CourseElement(iterator.Current);
 
                     cElem.toCourse += ToCourse;
 
                     coursesFlowLayoutPanel.Controls.Add(cElem);
-                    cElem.Width = 1000;
+                    cElem.Width = 1200;
+                }
+                else
+                {
+                    break;
                 }
             }
-            else
+        }
+
+        private IEnumerable<Course> GetCourse()
+        {
+            foreach (var item in result)
             {
-                //TODO mb change?
-                var result = courses.Where(x => x.AuthorId == MyApp.CurrentUser.Id);
-
-                foreach (var course in result)
-                {
-                    var cElem = new CourseElement(course);
-
-                    cElem.toCourse += ToCourse;
-
-                    coursesFlowLayoutPanel.Controls.Add(cElem);
-                    cElem.Width = 1000;
-                }
-            }            
+                yield return item;
+            }
         }
 
         private void ToCourse(Course course)
@@ -65,6 +73,9 @@ namespace UserProfileScreen
             createNewCourse?.Invoke();
         }
 
-
+        private void loadMoreButton_Click(object sender, EventArgs e)
+        {
+            GetNextCourses();
+        }
     }
 }

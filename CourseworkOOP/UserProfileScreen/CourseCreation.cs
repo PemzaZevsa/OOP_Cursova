@@ -91,13 +91,6 @@ namespace UserProfileScreen
             previevPictureBox.ImageLocation = course.PicturePath;
         }
 
-
-        //private void Paste(TextBox sender, EventArgs e)
-        //{
-        //    string str = Clipboard.GetText();
-        //    sender.Text = str;
-        //}
-
         private void backButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Ви впевнені, що хочете вийти зі сторінки створення курсу? Введені дані не збережуться.", "Вихід до сторінки своїх курсів", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
@@ -212,7 +205,6 @@ namespace UserProfileScreen
                 }
                 catch (Exception ex)
                 {
-                    //TODO?
                     MessageBox.Show("Помилка при завантаженні зображення: " + ex.Message);
                 }
             }

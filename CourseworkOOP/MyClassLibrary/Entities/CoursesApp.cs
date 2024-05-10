@@ -1,25 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CourseworkOOP.Entities.Users;
 using CourseworkOOP.Entities.Courses;
-using System.IO;
-using System.Diagnostics;
-using System.Security.Principal;
 using System.Text.Json;
 using CourseworkOOP.Iterfaces;
-
 
 namespace CourseworkOOP.Entities
 {
     public class CoursesApp : ISaveble
     {
-        public event Action LoadError;
-        public event Action SaveError;
-        public event Action LoadComplete;
-        public event Action SaveComplete;
         public event Action<string,string> CurrentUserNameLabel;
 
         private User currentUser;
@@ -53,12 +41,6 @@ namespace CourseworkOOP.Entities
             users = new List<User>();
             courses = new List<Course>();
         }
-        //public CoursesApp(Action<string, string> currentUserNameLabel)
-        //{
-        //    users = new List<User>();
-        //    courses = new List<Course>();
-        //    CurrentUserNameLabel = currentUserNameLabel;
-        //}
         public bool Save(string path = @"Data")
         {
             try
@@ -69,11 +51,9 @@ namespace CourseworkOOP.Entities
             }
             catch (Exception e)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveUsers(string usersPath = @"Data\Users\UsersData.json")
@@ -101,16 +81,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveCourses(string coursesPath = @"Data\Courses\CoursesData.json")
@@ -128,16 +105,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke();
             return true;
         }
         public bool SaveSettings(string dataPath = @"Data\Config\Settings.json")
@@ -154,16 +128,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke() ;
             return true;
         }
         public bool Load(string path = @"Data")
@@ -176,11 +147,9 @@ namespace CourseworkOOP.Entities
             }
             catch (Exception e)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadCourses(string coursesPath = @"Data\Courses\CoursesData.json")
@@ -201,16 +170,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadUsers(string usersPath = @"Data\Users\UsersData.json")
@@ -240,16 +206,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
         public bool LoadSettings(string dataPath = @"Data\Config\Settings.json")
@@ -267,16 +230,13 @@ namespace CourseworkOOP.Entities
             }
             catch (IOException e)
             {
-                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
         

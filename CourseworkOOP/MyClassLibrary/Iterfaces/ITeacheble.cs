@@ -6,7 +6,7 @@ namespace CourseworkOOP.Iterfaces
     public interface ITeacheble
     {
         bool AddCourse(List<Course> courses, Course newCourse);
-        Course? GetCourse(List<Course> courses, uint courseId);
+        IEnumerable<Course> GetMyCourses(List<Course> courses);
         bool DeleteCourse(List<Course> courses, uint courseId);
     }
 }

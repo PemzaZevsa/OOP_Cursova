@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CourseworkOOP.Iterfaces
 {
-    public interface IStudyable : IPayble
+    public interface IStudyable
     {
-        List<Course> Courses {  get; }
+        public List<uint> CoursesIds { get; set; }
         bool BuyCourse(Course course, decimal cost);
     }
 }

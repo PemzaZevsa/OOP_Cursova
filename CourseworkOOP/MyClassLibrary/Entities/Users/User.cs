@@ -73,7 +73,7 @@ namespace CourseworkOOP.Entities.Users
         }
 
         public static uint counter;
-        public event Action<String> UpdatePassword;
+        public event Action<String> updatePassword;
         public short UserType { get; set; }
 
         public User() 
@@ -93,7 +93,10 @@ namespace CourseworkOOP.Entities.Users
             Login = login;
             Password = password;
         }
-
+        public void UpdatePassword(string newPassword)
+        {
+            updatePassword?.Invoke(newPassword);
+        }
         public int CompareTo(User? other)
         {
             if (other == null)

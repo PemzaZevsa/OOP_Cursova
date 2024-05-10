@@ -30,6 +30,7 @@
         {
             coursesFlowLayoutPanel = new FlowLayoutPanel();
             createButton = new Button();
+            loadMoreButton = new Button();
             SuspendLayout();
             // 
             // coursesFlowLayoutPanel
@@ -51,11 +52,23 @@
             createButton.UseVisualStyleBackColor = true;
             createButton.Click += createButton_Click;
             // 
+            // loadMoreButton
+            // 
+            loadMoreButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            loadMoreButton.Location = new Point(530, 21);
+            loadMoreButton.Name = "loadMoreButton";
+            loadMoreButton.Size = new Size(229, 60);
+            loadMoreButton.TabIndex = 2;
+            loadMoreButton.Text = "Завантажити наступні курси";
+            loadMoreButton.UseVisualStyleBackColor = true;
+            loadMoreButton.Click += loadMoreButton_Click;
+            // 
             // TeacherCourses
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(loadMoreButton);
             Controls.Add(createButton);
             Controls.Add(coursesFlowLayoutPanel);
             Name = "TeacherCourses";
@@ -68,5 +81,6 @@
 
         private FlowLayoutPanel coursesFlowLayoutPanel;
         private Button createButton;
+        private Button loadMoreButton;
     }
 }

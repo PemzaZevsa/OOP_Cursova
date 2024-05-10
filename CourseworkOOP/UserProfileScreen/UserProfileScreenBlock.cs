@@ -23,27 +23,41 @@ namespace UserProfileScreen
             surnameLabel.Text += MyUser.Surname;
             userTypeLabel.Text += MyUser.UserType == 2 ? "Студент" : MyUser.UserType == 1 ? "Вчитель" : "Адміністратор";
             CreatingButton(MyUser.UserType);
-        }      
+        } 
         
+        //Щось на подобії шаблону Builder 
         private void CreatingButton(int userType)
         {
-            if(userType == 2)
+            buttonsTableLayoutPanel.Controls.Clear();
+
+            if (userType == 2)
             {
-                buttonsTableLayoutPanel.Controls.Clear();
-                buttonsTableLayoutPanel.Controls.Add(istudyableButton);
+                StudentButtons(buttonsTableLayoutPanel);
             }
             else if(userType == 1)
             {
-                buttonsTableLayoutPanel.Controls.Clear();
-                buttonsTableLayoutPanel.Controls.Add(iTeachebleButton);
+                TeacherButtons(buttonsTableLayoutPanel);
             }
-            else
+            else if (userType == 0)
             {
-                buttonsTableLayoutPanel.Controls.Clear();
-                buttonsTableLayoutPanel.Controls.Add(iTeachebleButton);
-                buttonsTableLayoutPanel.Controls.Add(iControlableButton);
-                buttonsTableLayoutPanel.Controls.Add(statisticButton);
+                AdminButtons(buttonsTableLayoutPanel);
             }
+        }
+        private void AdminButtons(TableLayoutPanel tableLayoutPanel)
+        {
+            tableLayoutPanel.Controls.Add(iTeachebleButton);
+            tableLayoutPanel.Controls.Add(iControlableButton);
+            tableLayoutPanel.Controls.Add(statisticButton);
+        }
+
+        private void TeacherButtons(TableLayoutPanel tableLayoutPanel)
+        {
+            tableLayoutPanel.Controls.Add(iTeachebleButton);
+        }       
+
+        private void StudentButtons(TableLayoutPanel tableLayoutPanel)
+        {
+            tableLayoutPanel.Controls.Add(istudyableButton);
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -65,8 +79,7 @@ namespace UserProfileScreen
 
                 if (newPassword is not null && newPassword.Length != 0)
                 {
-                    //todo event change password
-                    MyUser.Password = newPassword;
+                    MyUser.UpdatePassword(newPassword);
                     strMessage += $"\nНовий пароль : {MyUser.Password}";
                 }
 
@@ -91,43 +104,10 @@ namespace UserProfileScreen
                 MessageBox.Show($"Помилка : {ex.Message}", "Помилка при зміні властивостей користувача");
             }
                 
-        }
-
-        //TODO delete
-        //static byte[] ImageToByteArray(Image image)
-        //{
-        //    using (MemoryStream ms = new MemoryStream())
-        //    {
-        //        image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-        //        return ms.ToArray();
-        //    }
-        //}
-        //
-        //private void SetPicture(string path)
-        //{
-        //    try
-        //    {
-        //        Image image = Image.FromFile(path);
-        //        userProfilePictureBox.Image = image;
-        //        //image.Dispose();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Image image2 = Image.FromFile(@"Data/Config/UserProfilePicturePlaceholder.png");
-        //        userProfilePictureBox.Image = image2;
-        //        //MessageBox.Show("Помилка завантаження зображения: " + ex.Message);
-        //    }
-        //}        
+        }      
 
         private void istudyableButton_Click(object sender, EventArgs e)
         {
-            if (MyUser is not IStudyable)
-            {
-                //TODO
-                MessageBox.Show("Ви не учень");
-                return;
-            }
-
             infoPanel.Controls.Clear();
             var myCourses = new StudentCourses(MyApp.Courses,((Student)MyUser).CoursesIds,MyUser);
 
@@ -152,13 +132,6 @@ namespace UserProfileScreen
 
         private void iTeachebleButton_Click(object sender, EventArgs e)
         {
-            if (MyUser is not ITeacheble)
-            {
-                //TODO
-                MessageBox.Show("Ви не вчитель");
-                return;
-            }
-
             infoPanel.Controls.Clear();
             var myCreatedCourses = new TeacherCourses(MyApp);
            
@@ -170,17 +143,14 @@ namespace UserProfileScreen
                 infoPanel.Controls.Add(courseCreat);
 
                 courseCreat.createCourse += (name, description, cost,modules,tegs,imagePath) =>
-                {
-                    //TODO COURSE FILE SYSTEM CREATEON
-                    
+                {                    
                     var newCourse = new Course(name, description,MyApp.CurrentUser.Id, MyApp.CurrentUser.Name, MyApp.CurrentUser.Surname, 0, 0, cost, tegs,modules);
                     string pathToFolder = $"Data\\Courses\\{newCourse.Id}";
                     Directory.CreateDirectory(pathToFolder);
 
                     newCourse.Save();
-                    //
+                    
                     string destinationImagePath = $"Data\\Courses\\{newCourse.Id}\\Icon.bmp";
-
                     try
                     {
                         byte[] imageBytes = File.ReadAllBytes(imagePath);
@@ -192,7 +162,7 @@ namespace UserProfileScreen
                     {
                         MessageBox.Show("Ошибка при копировании изображения: " + ex.Message);
                     }
-                    //
+                    
                     MyApp.Courses.Add(newCourse);
                 };
 
@@ -223,7 +193,6 @@ namespace UserProfileScreen
                     MyApp.Courses.Remove(course);
                 };
 
-
                 courseEl.Dock = DockStyle.Fill;
             };
 
@@ -233,13 +202,6 @@ namespace UserProfileScreen
 
         private void iControlableButton_Click(object sender, EventArgs e)
         {
-            if (MyUser is not IControlable)
-            {
-                //TODO
-                MessageBox.Show("У вас немає необхідних прав");
-                return;
-            }
-
             infoPanel.Controls.Clear();
             var usersScreen = new AdminUsers(MyApp);
             infoPanel.Controls.Add(usersScreen);
@@ -248,13 +210,6 @@ namespace UserProfileScreen
 
         private void statisticButton_Click(object sender, EventArgs e)
         {
-            if (MyUser is not IControlable)
-            {
-                //TODO
-                MessageBox.Show("У вас немає необхідних прав");
-                return;
-            }
-
             infoPanel.Controls.Clear();
             var statistic = new Statistics(Course.counter, CourseworkOOP.Entities.Courses.Module.counter, Lesson.counter, User.counter);
             infoPanel.Controls.Add(statistic);

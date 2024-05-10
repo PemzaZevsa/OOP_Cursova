@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
@@ -16,12 +9,12 @@ namespace UserProfileScreen
     public partial class AdminUsers : UserControl
     {
         private List<User> Users;
-        CoursesApp Courses;
+        CoursesApp coursesApp;
         public AdminUsers(CoursesApp courses)
         {
             InitializeComponent();
-            Courses = courses;
-            Users = Courses.Users;
+            coursesApp = courses;
+            Users = coursesApp.Users;
             foreach (var item in Users)
             {
                 dataGridView1.Rows.Add(item.Id.ToString(), item.Login,item.Password,item.Name, item.Surname,item.UserType);
@@ -38,10 +31,20 @@ namespace UserProfileScreen
 
                 if (res == DialogResult.Yes)
                 {
-                    var idToDelete = dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
+                    try
+                    {
+                        uint idToDelete = uint.Parse((string)dataGridView1.Rows[e.RowIndex].Cells["id"].Value);                    
 
-                    Users.RemoveAll(p => p.Id == uint.Parse(idToDelete.ToString()) );
-                    dataGridView1.Rows.RemoveAt(rowIndex);
+                        if(((Admin)coursesApp.CurrentUser).DeleteUser(coursesApp.Users, idToDelete))
+                        {
+                            dataGridView1.Rows.RemoveAt(rowIndex);
+                        }                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Помилка при видаленні користувача: {ex.Message}");
+                        throw;
+                    }                   
                 }
             }
         }

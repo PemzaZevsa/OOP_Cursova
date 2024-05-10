@@ -32,6 +32,8 @@ namespace CourseworkOOP.Entities.Users
             if (newCourse is null) return false;
 
             newCourse.AuthorId = Id;
+            newCourse.AuthorSurname = Surname;
+            newCourse.AuthorName = Name;
             courses.Add(newCourse);
             return true;
         }
@@ -47,9 +49,9 @@ namespace CourseworkOOP.Entities.Users
             return true;
         }
 
-        public Course? GetCourse(List<Course> courses, uint courseId)
+        public IEnumerable<Course> GetMyCourses(List<Course> courses)
         {
-            return courses.Find(x => x.Id == courseId).AuthorId == Id ? courses.Find(x => x.Id == courseId) : null;
+            return courses.Where(x => x.AuthorId == Id).OrderBy(x => x.Id);
         }
     }
 }

@@ -155,6 +155,7 @@
             saveUserButton.TabIndex = 4;
             saveUserButton.Text = "Зберегти зміни";
             saveUserButton.UseVisualStyleBackColor = true;
+            saveUserButton.Click += saveUserButton_Click;
             // 
             // settingsLabel
             // 

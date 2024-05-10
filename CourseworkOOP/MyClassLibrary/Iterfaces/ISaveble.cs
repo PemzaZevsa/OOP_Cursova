@@ -4,9 +4,5 @@
     {
         bool Save(string path);
         bool Load(string path);
-        event Action LoadError;
-        event Action SaveError; 
-        event Action LoadComplete;
-        event Action SaveComplete;
     }
 }

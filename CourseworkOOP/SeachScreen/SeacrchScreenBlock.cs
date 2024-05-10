@@ -3,6 +3,7 @@ using CourseworkOOP.Entities;
 using CourseworkOOP.Entities.Courses;
 using CourseworkOOP.Entities.Users;
 using MainScreen;
+using Microsoft.VisualBasic.Devices;
 
 namespace SeachScreen
 {
@@ -14,6 +15,8 @@ namespace SeachScreen
         public string Query { get; set; }
         public CoursesApp MyCoursesApp { get; set; }
         private IEnumerable<Course> result;
+        private IEnumerator<Course>? iterator;
+
         private List<Teg> tegs;
         private double raitings;
         public SeacrchScreenBlock(string query, CoursesApp coursesApp)
@@ -22,9 +25,13 @@ namespace SeachScreen
             tegs = new List<Teg>();
             Query = query;
             MyCoursesApp = coursesApp;
-
             foundLabel.Text += $"\"{query}\"";
             LoadCourses(coursesApp.Courses);
+
+            var tempRes = GetCourse();
+            iterator = tempRes.GetEnumerator();
+
+            GetNextCourses();
         }
 
         private void filterButton_Click(object sender, EventArgs e)
@@ -32,7 +39,7 @@ namespace SeachScreen
             coursesFlowLayoutPanel.Controls.Clear();
 
             var loadingCourses = result.Where(x => x.Rating >= raitings);
-            
+
             //Якщо користувач не вказав жодний checkBox, то це не виконується
             if (tegs.Count > 0)
             {
@@ -41,32 +48,47 @@ namespace SeachScreen
                                  select o;
             }
 
-            foreach (var course in loadingCourses)
-            {
-                var cElem = new CourseElement(course);
-
-                cElem.toCourse += ToCourse;
-
-                coursesFlowLayoutPanel.Controls.Add(cElem);
-                cElem.Width = 1000;
-            }
+            iterator = loadingCourses.GetEnumerator();
+            GetNextCourses();
         }
 
         private void LoadCourses(List<Course> courses)
         {
             coursesFlowLayoutPanel.Controls.Clear();
-            //mb change?
-            result = courses.Where(x => x.Name.ToLowerInvariant().Contains(Query.ToLowerInvariant()));
+            result = courses.Where(x => x.Name.ToLowerInvariant().Contains(Query.ToLowerInvariant())).OrderByDescending(x => x.Rating);
+        }
 
-            foreach (var course in result)
+        private void GetNextCourses()
+        {           
+            for (int i = 0; i < 5; i++)
             {
-                var cElem = new CourseElement(course);
+                if (iterator.MoveNext())
+                {
+                    var cElem = new CourseElement(iterator.Current);
 
-                cElem.toCourse += ToCourse;
+                    cElem.toCourse += ToCourse;
 
-                coursesFlowLayoutPanel.Controls.Add(cElem);
-                cElem.Width = 1200;
+                    coursesFlowLayoutPanel.Controls.Add(cElem);
+                    cElem.Width = 1200;
+                }
+                else
+                {
+                    break;
+                }
             }
+        }
+
+        private IEnumerable<Course> GetCourse()
+        {
+            foreach (var item in result)
+            {
+                yield return item;
+            }
+        }
+
+        private void loadMoreButton_Click(object sender, EventArgs e)
+        {
+            GetNextCourses();
         }
 
         private void ToCourse(Course course)
@@ -246,5 +268,7 @@ namespace SeachScreen
                 tegs.RemoveAll(x => x == Teg.Marketing);
             }
         }
+
+
     }
 }

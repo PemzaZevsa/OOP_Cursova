@@ -25,17 +25,6 @@ namespace CourseworkOOP.Entities.Users
             Statistics?.Invoke(settings);
         }
 
-        public bool AddUser(List<User> users, User newUser)
-        {
-            if (newUser is null) return false;
-            if (newUser == this) return false;
-            if (users is null) return false;
-            
-
-            users.Add(newUser);
-            return true;
-        }
-
         public bool DeleteUser(List<User> users, uint id)
         {
             if (id == this.Id) return false;
@@ -51,6 +40,8 @@ namespace CourseworkOOP.Entities.Users
             if (newCourse is null) return false;
 
             newCourse.AuthorId = 0;
+            newCourse.AuthorSurname = Surname;
+            newCourse.AuthorName = Name;
             courses.Add(newCourse);
             return true;
         }
@@ -63,9 +54,9 @@ namespace CourseworkOOP.Entities.Users
             return true;
         }
 
-        public Course? GetCourse(List<Course> courses, uint courseId)
+        public IEnumerable<Course> GetMyCourses(List<Course> courses)
         {
-            return courses.Find(x => x.Id == courseId);
+            return courses.OrderBy(x => x.Id);
         }
     }
 }

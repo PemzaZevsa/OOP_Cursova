@@ -16,21 +16,17 @@ namespace MainScreen
             CoursesApp = coursesApp;
             LoadCourses(CoursesApp.Courses);
         }
-        //TODO
+
         private void LoadCourses(List<Course> courses)
         {
             Random rnd = new Random();
             int randNum = rnd.Next(1, 10);
 
-            //change
-            var loadingCourses = courses.Where(x => x.Id % randNum == 0).Take(20);
+            var loadingCourses = courses.Where(x => x.Id % randNum == 0).Take(20).OrderByDescending(x => x.Rating);
 
             foreach (var course in loadingCourses)
             {
                 var cElem = new CourseElement(course);
-
-                //var cScreen = new CourseScreenBlock(course, CoursesApp.CurrentUser);
-                //cScreen.returnToScreen += returnTo;
 
                 cElem.toCourse += ToCourse;
 

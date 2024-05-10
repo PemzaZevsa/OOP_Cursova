@@ -1,9 +1,4 @@
 ﻿using CourseworkOOP.Iterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
@@ -13,17 +8,33 @@ namespace CourseworkOOP.Entities.Courses
     public class Module : ISaveble
     {
         public uint Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        private string name;
+        public string Name { 
+            get => name;
+            set 
+            {
+                if (value.Length < 4)
+                {
+                    throw new ArgumentException("Занадто коротка назва модуля", nameof(value));
+                }
+                name = value;
+            }
+        }
+        private string description;
+        public string Description { 
+            get => description;
+            set
+            {
+                if (value.Length < 4)
+                {
+                    throw new ArgumentException("Занадто короткий опис модуля", nameof(value));
+                }
+                description = value;
+            }
+        }
         private List<Lesson> lessons;
-        //[JsonIgnore]
         public List<Lesson> Lessons { get => lessons; set => lessons = value; }
         public static uint counter;
-
-        public event Action LoadError;
-        public event Action SaveError;
-        public event Action LoadComplete;
-        public event Action SaveComplete;
 
         public Module()
         {
@@ -65,16 +76,13 @@ namespace CourseworkOOP.Entities.Courses
             }
             catch (IOException e)
             {
-                SaveError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                SaveError?.Invoke();
                 return false;
             }
 
-            SaveComplete?.Invoke();
             return true;
         }
         public bool Load(string path)
@@ -95,16 +103,13 @@ namespace CourseworkOOP.Entities.Courses
             }
             catch (IOException e)
             {
-                LoadError?.Invoke();
                 return false;
             }
             catch (Exception e)
             {
-                LoadError?.Invoke();
                 return false;
             }
 
-            LoadComplete?.Invoke();
             return true;
         }
     }

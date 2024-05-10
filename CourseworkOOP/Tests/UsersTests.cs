@@ -15,20 +15,17 @@ namespace Tests
         [TestMethod]
         public void CreatingStudent()
         {
-            Course testCourse = new Course("TestCourse", "Testing");
             List<Course> courses = new List<Course>();
-            courses.Add(testCourse);
 
-            Student student = new Student("Steve", "Smith", courses);
+            Student student = new Student("Steve", "Smith");
 
             Assert.IsNotNull(student);
             Assert.AreEqual(student.Name, "Steve");
-            Assert.AreEqual("TestCourse", student.Courses[0].Name);
         }
         [TestMethod]
         public void StudentBuysCourse()
         {
-            Course testCourse = new Course((uint)0, "TestCourse", "Testing", 0,"","",0,0, 400,0, null, null);
+            Course testCourse = new Course( "TestCourse", "Testing", 0,"","",0,0, 400, null, null);
             Student student = new Student("Steve", "Smith");
 
             Assert.IsTrue(student.BuyCourse(testCourse, 400));
@@ -36,7 +33,7 @@ namespace Tests
         [TestMethod]
         public void StudentBuysCourseWithNotEnoughMoney()
         {
-            Course testCourse = new Course((uint)0, "TestCourse", "Testing", 0,"","", 0, 0, 400,0, null, null);
+            Course testCourse = new Course( "TestCourse", "Testing", 0,"","", 0, 0, 400, null, null);
             Student student = new Student("Steve", "Smith");
 
             Assert.IsFalse(student.BuyCourse(testCourse, 300));
@@ -44,7 +41,7 @@ namespace Tests
         [TestMethod]
         public void StudentBuysTheSameCourse()
         {
-            Course testCourse = new Course((uint)0, "TestCourse", "Testing", 0, "", "", 0, 0, 400, 0, null, null);
+            Course testCourse = new Course("TestCourse", "Testing", 0, "", "", 0, 0, 400, null, null);
             Student student = new Student("Steve", "Smith");
 
             student.BuyCourse(testCourse, 400);
@@ -63,7 +60,7 @@ namespace Tests
             Assert.IsTrue(coursesApp.Courses.Contains(course));
         }
         [TestMethod]
-        public void AdminGetsHisCourse()
+        public void AdminGetsHisCourses()
         {
             Admin admin = new Admin();
             Course course = new Course("Test", "Course");
@@ -71,7 +68,7 @@ namespace Tests
             uint courseId = course.Id;
             admin.AddCourse(coursesApp.Courses, course);
 
-            Course? gotCourse = admin.GetCourse(coursesApp.Courses, courseId);
+            var gotCourse = admin.GetMyCourses(coursesApp.Courses);
 
             Assert.IsTrue(coursesApp.Courses.Contains(course));
             Assert.IsNotNull(gotCourse);
@@ -86,7 +83,7 @@ namespace Tests
             uint courseId = course.Id;
             teacher.AddCourse(coursesApp.Courses, course);
 
-            Course? gotCourse = admin.GetCourse(coursesApp.Courses, courseId);
+            var gotCourse = admin.GetMyCourses(coursesApp.Courses);
 
             Assert.IsTrue(coursesApp.Courses.Contains(course));
             Assert.IsNotNull(gotCourse);
@@ -104,17 +101,17 @@ namespace Tests
 
             Assert.AreEqual(coursesApp.Courses.Count, 0);
         }
-        [TestMethod]
-        public void AdminCreateUser()
-        {
-            Admin admin = new Admin();
-            CoursesApp coursesApp = new CoursesApp();
-            Student user = new Student("Tom", "Tommer");
+        //[TestMethod]
+        //public void AdminCreateUser()
+        //{
+        //    Admin admin = new Admin();
+        //    CoursesApp coursesApp = new CoursesApp();
+        //    Student user = new Student("Tom", "Tommer");
 
-            admin.AddUser(coursesApp.Users, user);
+        //    admin.AddUser(coursesApp.Users, user);
 
-            Assert.IsTrue(coursesApp.Users.Contains(user));
-        }
+        //    Assert.IsTrue(coursesApp.Users.Contains(user));
+        //}
         [TestMethod]
         public void AdminTryesToDeletesHimself()
         {
@@ -127,19 +124,19 @@ namespace Tests
 
             Assert.AreEqual(coursesApp.Users.Count, 1);
         }
-        [TestMethod]
-        public void AdminDeletesUser()
-        {
-            Admin admin = new Admin();
-            CoursesApp coursesApp = new CoursesApp();
-            Student user = new Student("Tom", "Tommer");
-            admin.AddUser(coursesApp.Users, user);
-            uint id = user.Id;
+        //[TestMethod]
+        //public void AdminDeletesUser()
+        //{
+        //    Admin admin = new Admin();
+        //    CoursesApp coursesApp = new CoursesApp();
+        //    Student user = new Student("Tom", "Tommer");
+        //    admin.AddUser(coursesApp.Users, user);
+        //    uint id = user.Id;
 
-            admin.DeleteUser(coursesApp.Users, id);
+        //    admin.DeleteUser(coursesApp.Users, id);
 
-            Assert.AreEqual(coursesApp.Users.Count, 0);
-        }
+        //    Assert.AreEqual(coursesApp.Users.Count, 0);
+        //}
         [TestMethod]
         public void TeacherCreatesCourse()
         {
@@ -161,7 +158,7 @@ namespace Tests
             uint courseId = course.Id;
             teacher.AddCourse(coursesApp.Courses, course);
 
-            Course? gotCourse = teacher.GetCourse(coursesApp.Courses, courseId);
+            var gotCourse = teacher.GetMyCourses(coursesApp.Courses);
 
             Assert.IsTrue(coursesApp.Courses.Contains(course));
             Assert.IsNotNull(gotCourse);
@@ -176,10 +173,10 @@ namespace Tests
             anotherTeacher.AddCourse(coursesApp.Courses, course);
             uint courseId = course.Id;
 
-            Course? gotCourse = teacher.GetCourse(coursesApp.Courses, courseId);
+            var gotCourse = teacher.GetMyCourses(coursesApp.Courses);
 
             Assert.IsTrue(coursesApp.Courses.Contains(course));
-            Assert.IsNull(gotCourse);
+            Assert.IsFalse(gotCourse.Contains(course));
         }
         [TestMethod]
         public void TeacherDeletesHisCourse()
